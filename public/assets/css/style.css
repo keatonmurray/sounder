@@ -2,14 +2,14 @@
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i");
 /* :: 2.0 Import All CSS */
-@import url(css/bootstrap.min.css);
-@import url(css/classy-nav.css);
-@import url(css/owl.carousel.min.css);
-@import url(css/animate.css);
-@import url(css/magnific-popup.css);
-@import url(css/font-awesome.min.css);
-@import url(css/audioplayer.css);
-@import url(css/one-music-icon.css);
+@import url(plugins/bootstrap.min.css);
+@import url(plugins/classy-nav.css);
+@import url(plugins/owl.carousel.min.css);
+@import url(plugins/animate.css);
+@import url(plugins/magnific-popup.css);
+@import url(plugins/font-awesome.min.css);
+@import url(plugins/audioplayer.css);
+@import url(plugins/one-music-icon.css);
 /* :: 3.0 Base CSS */
 * {
   margin: 0;
@@ -513,11 +513,6 @@ img {
 .classycloseIcon .cross-wrap span {
   background: #ffffff; }
 
-/* :: 5.0 Hero Slides Area */
-.hero-area,
-.hero-slides {
-  position: relative;
-  z-index: 1; }
 
 .single-hero-slide {
   width: 100%;
