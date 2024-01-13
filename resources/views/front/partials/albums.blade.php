@@ -23,7 +23,7 @@
                     <div class="single-album">
                         <img src="{{asset('assets/img/bg-img/a1.jpg')}}" alt="">
                         <div class="album-info">
-                            <a href="#">
+                            <a href="/show">
                                 <h5>The Cure</h5>
                             </a>
                             <p>Second Song</p>
@@ -34,7 +34,7 @@
                     <div class="single-album">
                         <img src="{{asset('assets/img/bg-img/a2.jpg')}}" alt="">
                         <div class="album-info">
-                            <a href="#">
+                            <a href="/show">
                                 <h5>Sam Smith</h5>
                             </a>
                             <p>Underground</p>
@@ -45,7 +45,7 @@
                     <div class="single-album">
                         <img src="{{asset('assets/img/bg-img/a3.jpg')}}" alt="">
                         <div class="album-info">
-                            <a href="#">
+                            <a href="/show">
                                 <h5>Will I am</h5>
                             </a>
                             <p>First</p>
@@ -56,7 +56,7 @@
                     <div class="single-album">
                         <img src="{{asset('assets/img/bg-img/a4.jpg')}}" alt="">
                         <div class="album-info">
-                            <a href="#">
+                            <a href="/show">
                                 <h5>The Cure</h5>
                             </a>
                             <p>Second Song</p>
@@ -67,7 +67,7 @@
                     <div class="single-album">
                         <img src="{{asset('assets/img/bg-img/a5.jpg')}}" alt="">
                         <div class="album-info">
-                            <a href="#">
+                            <a href="/show">
                                 <h5>DJ SMITH</h5>
                             </a>
                             <p>The Album</p>
@@ -78,7 +78,7 @@
                     <div class="single-album">
                         <img src="{{asset('assets/img/bg-img/a6.jpg')}}" alt="">
                         <div class="album-info">
-                            <a href="#">
+                            <a href="/show">
                                 <h5>The Ustopable</h5>
                             </a>
                             <p>Unplugged</p>
@@ -89,7 +89,7 @@
                     <div class="single-album">
                         <img src="{{asset('assets/img/bg-img/a7.jpg')}}" alt="">
                         <div class="album-info">
-                            <a href="#">
+                            <a href="/show">
                                 <h5>Beyonce</h5>
                             </a>
                             <p>Songs</p>

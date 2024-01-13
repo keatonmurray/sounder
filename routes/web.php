@@ -15,3 +15,4 @@ use App\Http\Controllers\FrontController;
 */
 
 Route::get('/', [FrontController::class, 'index']); 
+Route::get('/show', [FrontController::class, 'show']);
