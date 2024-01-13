@@ -38,4 +38,5 @@
             </x-hero-slide>
         </x-hero>
     </section>
+    @include('front.partials.albums')
 @endsection
