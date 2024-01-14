@@ -4,7 +4,7 @@
             <div class="col-12">
                 <div class="section-heading style-2">
                     <p>See what’s new</p>
-                    <h2>Latest Albums</h2>
+                    <h2>Discover Sounder Community</h2>
                 </div>
             </div>
         </div>

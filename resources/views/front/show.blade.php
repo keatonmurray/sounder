@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-fixed" style="background-image: url({{asset('assets/img/bg-img/bg-4.jpg')}}); height: 100vh;">
+<section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-fixed" style="background-image: url({{asset('assets/img/bg-img/bg-4.jpg')}}); height: auto;">
     <div class="container my-4">
         <div class="row align-items-end">
             <div class="col-12 col-md-5 col-lg-4">
@@ -19,6 +19,12 @@
                     <div class="song-play-area">
                         <div class="song-name">
                             <p>01. Main Hit Song</p>
+                        </div>
+                        <audio preload="auto" controls>
+                            <source src="audio/dummy-audio.mp3">
+                        </audio>
+                        <div class="song-name">
+                            <p>02. Second Hit Song</p>
                         </div>
                         <audio preload="auto" controls>
                             <source src="audio/dummy-audio.mp3">
