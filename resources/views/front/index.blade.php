@@ -25,4 +25,5 @@
         </x-hero>
     </section>
     @include('front.partials.albums')
+    @include('front.partials.buy')
 @endsection
