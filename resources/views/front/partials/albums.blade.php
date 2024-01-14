@@ -1,13 +1,9 @@
 <section class="latest-albums-area section-padding-100">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-heading style-2">
-                    <p>See what’s new</p>
-                    <h2>Discover Sounder Community</h2>
-                </div>
-            </div>
-        </div>
+        <x-row-heading>
+            <p>See what’s new</p>
+            <h2>Discover Sounder Community</h2>
+        </x-row-heading>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-9">
                 <div class="ablums-text text-center mb-70">
