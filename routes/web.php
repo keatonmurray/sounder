@@ -15,4 +15,4 @@ use App\Http\Controllers\FrontController;
 */
 
 Route::get('/', [FrontController::class, 'index']); 
-Route::get('/show/{id}', [FrontController::class, 'show']);
+Route::get('/albums/{id}', [FrontController::class, 'show']);

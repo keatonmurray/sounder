@@ -11,7 +11,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-9">
                 <div class="ablums-text text-center mb-70">
-                    <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante. Donec in velit non elit pulvinar pellentesque et non eros.</p>
+                    <p>Organic gastropub affogato narwhal biodiesel four loko. Slow-carb bespoke hexagon ugh fit letterpress. Mollit glossier intelligentsia, kombucha PBR&B skateboard bitters adaptogen everyday carry tonx scenester wolf minim stumptown poke. Lumbersexual cillum raw denim duis, quis pop-up crucifix.</p>
                 </div>
             </div>
         </div>
