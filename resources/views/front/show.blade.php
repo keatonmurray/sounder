@@ -12,10 +12,10 @@
                 <div class="featured-artist-content">
                     <!-- Section Heading -->
                     <div class="section-heading white text-left mb-30">
-                        <p>See what’s new</p>
+                        <p>{{$results->artist_name}}</p>
                         <h2>{{$results->album_title}}</h2>
                     </div>
-                    <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante. Donec in velit non elit pulvinar pellentesque et non eros.</p>
+                    <p>{{$results->album_description}}</p>
                     <div class="song-play-area">
                         <div class="song-name">
                             <p>01. Main Hit Song</p>

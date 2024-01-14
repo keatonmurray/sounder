@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('music', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('artist_name');
             $table->string('album_title');
+            $table->longText('album_description');
             $table->timestamps();
         });
     }
