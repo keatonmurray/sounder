@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Music;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
     public function index() 
     {
-        return view('front.index');
-    }
-
-    public function show()
-    {
-        return view('front.show');
+        $results = Music::all();
+        return view('front.index')->with('results', $results);
     }
 }

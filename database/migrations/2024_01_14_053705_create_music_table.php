@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('music', function (Blueprint $table) {
             $table->increments('id');
             $table->string('album_title');
-            $table->string('album_cover');
             $table->timestamps();
         });
     }
