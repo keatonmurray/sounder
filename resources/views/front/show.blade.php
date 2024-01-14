@@ -13,7 +13,7 @@
                     <!-- Section Heading -->
                     <div class="section-heading white text-left mb-30">
                         <p>See what’s new</p>
-                        <h2>Buy What’s New</h2>
+                        <h2>{{$results->album_title}}</h2>
                     </div>
                     <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante. Donec in velit non elit pulvinar pellentesque et non eros.</p>
                     <div class="song-play-area">
