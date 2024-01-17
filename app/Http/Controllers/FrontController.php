@@ -28,7 +28,7 @@ class FrontController extends Controller
         return view('front.show')->with('results', $results);
     }
 
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         /**
          * Validate form values
@@ -36,10 +36,13 @@ class FrontController extends Controller
          */
 
          $validate = $request->validate([
-            'name' => 'required',
-            'title' => 'required',
-            'description' => 'required'
+            'artist_name' => 'required',
+            'album_title' => 'required',
+            'album_description' => 'required'
          ]);
+
+         Music::create($validate);
+         return redirect('/');
 
     }
 }
