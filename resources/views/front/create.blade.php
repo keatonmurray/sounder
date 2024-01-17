@@ -15,7 +15,7 @@
                       </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Album Description</label>
-                        <input type="text" class="form-control" id="description">
+                        <textarea name="description" id="desctiption" class="form-control" cols="30" rows="8"></textarea>
                       </div>
                     <button type="submit" class="btn btn-primary">Upload Music</button>
                     <a href="/" class="btn btn-dark">Cancel</a>
