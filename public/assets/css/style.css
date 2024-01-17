@@ -17,7 +17,8 @@
 
 body {
   font-family: "Archivo Narrow", sans-serif;
-  font-size: 14px; }
+  font-size: 14px; 
+  background-color: #000000; }
 
 h1,
 h2,
@@ -126,6 +127,11 @@ img {
   height: 800px !important; }
 
 /* :: 3.3.0 Section Padding */
+
+.section-padding-70 {
+  padding-top: 70px;
+  padding-bottom: 70px; }
+  
 .section-padding-100 {
   padding-top: 100px;
   padding-bottom: 100px; }

@@ -15,4 +15,5 @@ use App\Http\Controllers\FrontController;
 */
 
 Route::get('/', [FrontController::class, 'index']); 
+Route::get('/upload-music', [FrontController::class, 'create']);
 Route::get('/albums/{id}', [FrontController::class, 'show']);

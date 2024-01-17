@@ -1,4 +1,4 @@
-<section class="latest-albums-area section-padding-100">
+<section class="latest-albums-area section-padding-100 bg-white">
     <div class="container">
         <x-row-heading>
             <p>See what’s new</p>
