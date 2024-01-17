@@ -7,11 +7,11 @@
                 <form class="py-4" action="/store" method="POST">
                     <div class="mb-3">
                       <label for="artistName" class="form-label">Artist Name</label>
-                      <input type="text" class="form-control" id="artistName">
+                      <input type="text" name="name" class="form-control" id="artistName">
                     </div>
                     <div class="mb-3">
                         <label for="albumTitle" class="form-label">Album Title</label>
-                        <input type="text" class="form-control" id="albumTitle">
+                        <input type="text" name="title" class="form-control" id="albumTitle">
                       </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Album Description</label>
