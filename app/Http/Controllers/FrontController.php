@@ -5,12 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Music;
 use Illuminate\Http\Request;
 
+/**
+ * TODO: Make a create method to display form for saving data into DB
+ */
+
 class FrontController extends Controller
 {
     public function index() 
     {
         $results = Music::all();
         return view('front.index')->with('results', $results);
+    }
+
+    public function create()
+    {
+        return view('front.create');
     }
 
     public function show(string $id)
