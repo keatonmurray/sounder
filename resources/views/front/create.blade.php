@@ -17,8 +17,8 @@
                         <label for="description" class="form-label">Album Description</label>
                         <textarea name="description" id="desctiption" class="form-control" cols="30" rows="8"></textarea>
                       </div>
-                    <button type="submit" class="btn btn-primary">Upload Music</button>
-                    <a href="/" class="btn btn-dark">Cancel</a>
+                      <button type="submit" data-animation="fadeInUp" data-delay="500ms" href="/" class="btn oneMusic-btn-sm-dark">Upload Music <i class="fa fa-angle-double-right"></i></button>
+                      <a href="/" type="button" data-animation="fadeInUp" data-delay="500ms" href="/" class="btn oneMusic-btn-sm-light">Cancel</a>
                 </form>
             </div>
         </div>

@@ -342,6 +342,43 @@ img {
   line-height: 47px;
   font-weight: 700;
   text-transform: capitalize; }
+
+  .oneMusic-btn-sm-dark {
+    background-color: #000;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    min-width: 120px;
+    height: 49px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0;
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 47px;
+    font-weight: 700;
+    text-transform: capitalize; }
+
+    .oneMusic-btn-sm-light {
+      background-color: #ffffff;
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      min-width: 120px;
+      height: 49px;
+      color: #000;
+      border: 1px solid #000;
+      border-radius: 0;
+      padding: 0 30px;
+      font-size: 16px;
+      line-height: 47px;
+      font-weight: 700;
+      text-transform: capitalize; }
+
   .oneMusic-btn i {
     margin-left: 5px; }
   .oneMusic-btn:hover, .oneMusic-btn:focus {
@@ -349,6 +386,11 @@ img {
     font-weight: 700;
     background-color: #000000;
     color: #fff; }
+    .oneMusic-btn-sm-light:hover, .oneMusic-btn-sm-light:focus {
+      font-size: 16px;
+      font-weight: 700;
+      background-color: #000000;
+      color: #fff; }
   .oneMusic-btn.btn-2 {
     background-color: #000000;
     color: #fff; }

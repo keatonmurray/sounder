@@ -27,4 +27,19 @@ class FrontController extends Controller
         $results = Music::find($id);
         return view('front.show')->with('results', $results);
     }
+
+    public function store(Request $request): RedirectResponse
+    {
+        /**
+         * Validate form values
+         * Save form values
+         */
+
+         $validate = $request->validate([
+            'name' => 'required',
+            'title' => 'required',
+            'description' => 'required'
+         ]);
+
+    }
 }
