@@ -35,10 +35,15 @@ class FrontController extends Controller
             'artist_name' => 'required',
             'album_title' => 'required',
             'album_description' => 'required',
+            'audio' => 'required'
          ]);
 
          if($request->hasFile('album_cover')) {
             $validate['album_cover'] = $request->file('album_cover')->store('album_covers', 'public');
+        }
+
+        if($request->hasFile('audio')) {
+            $validate['audio'] = $request->file('audio')->store('audios', 'public');
         }
         
          Music::Create($validate);
