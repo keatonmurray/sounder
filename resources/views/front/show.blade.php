@@ -6,7 +6,7 @@
             <div class="col-12 col-md-5 col-lg-4">
                <div class="container text-center">
                     <div class="featured-artist-thumb">
-                        <img src="{{asset('storage/' . $results->album_cover)}}" alt="">
+                        <img src="{{asset('storage/' . $results->album_cover)}}" alt="" style="height: 315px; width: 400px;">
                     </div>
                     <div class="d-flex mt-3">
                         <a href="" class="btn btn-light w-50 mr-2 ml-2" type="button">Purchase details</a>
