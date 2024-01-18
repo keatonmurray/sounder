@@ -23,17 +23,17 @@
                     </div>
                 </div>
               </div>
-              <div class="col-lg-4 p-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+              <div class="col-lg-4 p-4 offset-lg-1 p-0 overflow-hidden">
                 <div class="container">
                   <div class="files">
                     <h3 class="heading">Upload Files</h3>
-                    <!--<div class="border-dashed">
-                      <p class="text-center">Upload .mp3, .wav, or .flac files</p>
-                      <input type="file" multiple="">
+                    <!--<div class="border-dashed my-2 text-center">
+                      <p class="text-center">Multiple select .mp3 or .wav files</p>
+                      <input type="file" multiple>
                     </div>-->
                     <div class="border-dashed my-2 text-center">
                       <p>Choose an album cover</p>
-                      <input type="file" multiple="">
+                      <input type="file" multiple>
                     </div>
                   </div>
                 </div>
