@@ -39,8 +39,14 @@ class FrontController extends Controller
          $validate = $request->validate([
             'artist_name' => 'required',
             'album_title' => 'required',
-            'album_description' => 'required'
+            'album_description' => 'required',
+            'album_cover' => 'required'
          ]);
+
+         if($request->hasFile('album_cover')) {
+            $formFields['album_cover'] = $request->file('album_cover')->store('album_covers', 'public');
+        }
+
 
          Music::create($validate);
          return redirect('/');
