@@ -347,10 +347,8 @@ img {
     background-color: #000;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    min-width: 120px;
+    width: 100%;
+    display: block;
     height: 49px;
     color: #fff;
     border: 1px solid #fff;
@@ -359,6 +357,7 @@ img {
     font-size: 16px;
     line-height: 47px;
     font-weight: 700;
+    margin-top:-10px;
     text-transform: capitalize; }
 
     .oneMusic-btn-sm-light {
@@ -397,6 +396,13 @@ img {
     .oneMusic-btn.btn-2:hover, .oneMusic-btn.btn-2:focus {
       background-color: #fff;
       color: #232323; }
+
+.files .border-dashed{
+  width: 100%;
+  padding: 50px;
+  border-style: dashed;
+  border-width: 1px;
+  }
 
 /* :: 4.0 Header Area CSS */
 .header-area {

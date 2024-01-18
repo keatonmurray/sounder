@@ -6,7 +6,8 @@ use App\Models\Music;
 use Illuminate\Http\Request;
 
 /**
- * TODO: Make a create method to display form for saving data into DB
+ * TODO: Make a create method to display form for saving data into DB - DONE
+ * TODO: Limit number of results that gets fetched from DB to display into index page
  */
 
 class FrontController extends Controller
@@ -31,8 +32,8 @@ class FrontController extends Controller
     public function store(Request $request)
     {
         /**
-         * Validate form values
-         * Save form values
+         * Validate form values - DONE
+         * Save form values - DONE
          */
 
          $validate = $request->validate([
