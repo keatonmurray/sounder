@@ -7,7 +7,7 @@
             @foreach($results as $music)
             <x-hero-slide>
                 <!-- Slide Img -->
-                <div class="slide-img bg-img" style="background-image: url({{asset('assets/img/bg-img/bg-1.jpg')}});"></div>
+                <div class="slide-img bg-img" style="background-image: url('{{asset('storage/' . $music->album_cover)}}');"></div>
                 <!-- Slide Content -->
                 <div class="container">
                     <div class="row">
