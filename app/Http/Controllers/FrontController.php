@@ -14,7 +14,7 @@ class FrontController extends Controller
 {
     public function index() 
     {
-        $results = Music::all();
+        $results = Music::inRandomOrder()->get();
         return view('front.index')->with('results', $results);
     }
 
@@ -31,11 +31,6 @@ class FrontController extends Controller
 
     public function store(Request $request)
     {
-        /**
-         * Validate form values - DONE
-         * Save form values - DONE
-         */
-
          $validate = $request->validate([
             'artist_name' => 'required',
             'album_title' => 'required',
