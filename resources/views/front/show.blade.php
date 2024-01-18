@@ -4,9 +4,15 @@
     <div class="container my-4">
         <div class="row align-items-end">
             <div class="col-12 col-md-5 col-lg-4">
-                <div class="featured-artist-thumb">
-                    <img src="{{asset('assets/img/bg-img/fa.jpg')}}" alt="">
-                </div>
+               <div class="container text-center">
+                    <div class="featured-artist-thumb">
+                        <img src="{{asset('storage/' . $results->album_cover)}}" alt="">
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="" class="btn btn-light w-50 mr-2 ml-2" type="button">Purchase details</a>
+                        <a href="" class="btn btn-light w-50 mr-2" type="button">Add to wishlist</a>
+                    </div>
+               </div>
             </div>
             <div class="col-12 col-md-7 col-lg-8">
                 <div class="featured-artist-content">
@@ -19,12 +25,6 @@
                     <div class="song-play-area">
                         <div class="song-name">
                             <p>01. Main Hit Song</p>
-                        </div>
-                        <audio preload="auto" controls>
-                            <source src="audio/dummy-audio.mp3">
-                        </audio>
-                        <div class="song-name">
-                            <p>02. Second Hit Song</p>
                         </div>
                         <audio preload="auto" controls>
                             <source src="audio/dummy-audio.mp3">
