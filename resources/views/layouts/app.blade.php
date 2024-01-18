@@ -5,6 +5,7 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <title>{{config('app.name')}}</title>
         <link rel="icon" href="{{asset('assets/img/core-img/favicon.ico')}}">
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
