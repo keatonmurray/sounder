@@ -31,8 +31,8 @@
                       <p class="text-center">Upload .mp3, .wav, or .flac files</p>
                       <input type="file" multiple="">
                     </div>-->
-                    <div class="border-dashed mt-4">
-                      <p class="text-center">Choose an album cover</p>
+                    <div class="border-dashed my-2 text-center">
+                      <p>Choose an album cover</p>
                       <input type="file" multiple="">
                     </div>
                   </div>
