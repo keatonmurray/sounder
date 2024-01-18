@@ -27,11 +27,11 @@
                 <div class="container">
                   <div class="files">
                     <h3 class="heading">Upload Files</h3>
-                    <!--<div class="border-dashed my-2 text-center">
+                    <div class="border-dashed my-3 text-center">
                       <p class="text-center">Multiple select .mp3 or .wav files</p>
-                      <input type="file" multiple>
-                    </div>-->
-                    <div class="border-dashed my-2 text-center">
+                      <input type="file" name="audio" id="audio" multiple>
+                    </div>
+                    <div class="border-dashed my-3 text-center">
                       <p>Choose an album cover</p>
                       <input type="file" name="album_cover" id="album_cover" multiple>
                     </div>
