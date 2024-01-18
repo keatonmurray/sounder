@@ -33,7 +33,7 @@
                     </div>-->
                     <div class="border-dashed my-2 text-center">
                       <p>Choose an album cover</p>
-                      <input type="file" multiple>
+                      <input type="file" name="album_cover" id="album_cover" multiple>
                     </div>
                   </div>
                 </div>
