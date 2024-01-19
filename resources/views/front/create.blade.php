@@ -4,7 +4,7 @@
       <br>
       <form action="/store" method="POST" enctype="multipart/form-data">
         <div class="container my-5" style="height: auto;">
-          <div class="row px-4 py-4 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+          <div class="row px-4 py-4 pe-lg-0 pt-lg-5 align-items-center rounded-3">
             <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
               <div class="hero section-padding-30">
                 <h2 class="heading">Album Description</h2>

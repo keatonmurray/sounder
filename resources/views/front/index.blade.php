@@ -26,5 +26,5 @@
     </section>
     @include('front.partials.albums')
     @include('front.partials.buy')
-    @include('front.partials.featured-artist')
+    @include('front.partials.miscellaneous')
 @endsection
