@@ -22,7 +22,6 @@
             </div>
             <div class="col-12 col-md-7 col-lg-8">
                 <div class="featured-artist-content">
-                    <!-- Section Heading -->
                     <div class="section-heading white text-left mb-30">
                         <p>{{$results->artist_name}}</p>
                         <h2>{{$results->album_title}}</h2>
@@ -43,4 +42,7 @@
         </div>
     </div>
 </section>
+<div class="bg-white" style="height: auto;">
+    @include('front.partials.buy')       
+</div>
 @endsection

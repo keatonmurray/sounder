@@ -48,8 +48,7 @@ class FrontController extends Controller
             $validate['audio'] = $request->file('audio')->store('audios', 'public');
         }
         
-         Music::Create($validate);
+         Music::create($validate);
          return redirect('/');
-
     }
 }

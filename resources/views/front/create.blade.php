@@ -39,7 +39,7 @@
                 </div>
               </div>
               <div class="container">
-                <button type="submit" data-animation="fadeInUp" data-delay="500ms" href="/" class="btn oneMusic-btn-sm-dark mt-4">Upload Music <i class="fa fa-angle-double-right"></i></button>
+                <button type="submit" data-animation="fadeInUp" data-delay="500ms" href="/" class="btn oneMusic-btn-sm-dark mt-4">Upload to Sounder <i class="fa fa-angle-double-right"></i></button>
               </div>
             </div>
         </div>

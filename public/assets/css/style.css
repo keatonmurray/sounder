@@ -819,7 +819,7 @@ img {
   position: relative;
   z-index: 1;
   background: repeating-radial-gradient(#585858, 20%, #333333); 
-  height: auto; }
+  height: 100vh; }
 
 .featured-artist-thumb img {
   height: 315px; 
