@@ -817,7 +817,13 @@ img {
 /* :: 9.0 Album Catagory Area CSS */
 .featured-artist-area {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  background: repeating-radial-gradient(#585858, 20%, #333333); 
+  height: auto; }
+
+.featured-artist-thumb img {
+  height: 315px; 
+  width: 400px; }
 
 .featured-artist-content {
   position: relative;
@@ -827,6 +833,10 @@ img {
       margin-top: 50px; } }
   .featured-artist-content p {
     color: #fff; }
+  .featured-artist-content .song-play-area {
+    background: transparent; 
+    border-style:none; 
+    border-width: 0; }
 
 .browse-by-catagories {
   position: relative;

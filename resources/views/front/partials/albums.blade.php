@@ -17,8 +17,10 @@
                     @if(count($results) > 0)
                         @foreach($results as $music)
                             <div class="single-album">
-                                <img src="{{asset('storage/' . $music->album_cover)}}" alt="">
-                                <div class="album-info">
+                                <a href="/albums/{{$music->id}}">
+                                    <img src="{{asset('storage/' . $music->album_cover)}}" alt="">
+                                </a>
+                                    <div class="album-info">
                                     <a href="/albums/{{$music->id}}">
                                         <h5>{{$music->album_title}}</h5>
                                     </a>

@@ -9,6 +9,7 @@
         <title>{{config('app.name')}}</title>
         <link rel="icon" href="{{asset('assets/img/core-img/favicon.ico')}}">
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+        <script src="https://kit.fontawesome.com/5dfbc71075.js" crossorigin="anonymous"></script>
     </head>
     <body>
         @yield('content')
