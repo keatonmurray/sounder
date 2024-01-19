@@ -43,6 +43,6 @@
     </div>
 </section>
 <div class="bg-white" style="height: auto;">
-    @include('front.partials.buy')       
+    @include('front.partials.merch')       
 </div>
 @endsection
