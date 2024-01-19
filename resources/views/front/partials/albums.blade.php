@@ -1,16 +1,19 @@
 <section class="latest-albums-area section-padding-100 bg-white">
     <div class="container">
         <x-row-heading>
-            <p>See what’s new</p>
-            <h2>Discover Sounder Community</h2>
+            <p>Discover Sounder Community</p>
+            <h2>See What's New</h2>
         </x-row-heading>
-        <div class="row justify-content-center">
+        <!--<div class="row justify-content-center">
             <div class="col-12 col-lg-9">
-                <div class="ablums-text text-center mb-70">
-                    <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante. Donec in velit non elit pulvinar pellentesque et non eros.</p>
+                <div class="ablums-text text-center">
+                    <p>Just like you, we are an independent streaming service working to provide a 
+                        free platform for independent musicians to connect, share music, and sell it.
+                        Designed to make more out of your music, we only take an 8% cut off of your every sale.
+                    </p>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="row">
             <div class="col-12">
                 <div class="albums-slideshow owl-carousel">

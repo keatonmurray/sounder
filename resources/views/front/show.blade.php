@@ -9,11 +9,11 @@
                         <img src="{{asset('storage/' . $results->album_cover)}}">
                     </div>
                     <div class="d-flex mt-3">
-                        <a href="" class="btn btn-light w-50 mr-2 ml-2" type="button">
+                        <a href="" class="btn btn-light w-50 mr-2 ml-2" type="button" style="background: transparent; color: #fff;">
                             <i class="fa-solid fa-cart-shopping"></i>
                               Buy for $1.99
                         </a>
-                        <a href="" class="btn btn-light w-50 mr-2" type="button">
+                        <a href="" class="btn btn-light w-50 mr-2" type="button" style="background: transparent; color: #fff;>
                             <i class="fa-solid fa-plus"></i>
                               Add to wishlist
                         </a>
@@ -31,7 +31,7 @@
                             <p>{{$results->album_title}}</p>
                         </div>
                         <audio preload="auto" controls>
-                            <source src="{{asset('storage/' . $results->audio)}}">
+                            <source src="{{asset('storage/' . $results->audio)}}" type="audio/mp3">
                         </audio>
                     </div>
                     <div class="container mt-4">
@@ -41,8 +41,5 @@
             </div>
         </div>
     </div>
-</section>
-<div class="bg-white" style="height: auto;">
-    @include('front.partials.merch')       
-</div>
+</section>    
 @endsection

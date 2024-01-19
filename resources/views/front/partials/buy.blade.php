@@ -1,8 +1,8 @@
 <section class="oneMusic-buy-now-area has-fluid bg-gray section-padding-100">
     <div class="container-fluid">
         <x-row-heading>
-            <p>See what’s new</p>
-            <h2>Buy What’s New</h2>
+            <p>Artist Merch</p>
+            <h2>Support Directly</h2>
         </x-row-heading>
         <div class="row">
 
