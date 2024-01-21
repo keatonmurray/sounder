@@ -11,7 +11,7 @@
                         <div class="d-flex mt-3">
                             <a href="" class="btn btn-light w-50 mr-2 ml-2" type="button" style="background: transparent; color: #fff;">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                Buy for $1.99
+                                Buy for ${{$results->price}}
                             </a>
                             <a href="" class="btn btn-light w-50 mr-2" type="button" style="background: transparent; color: #fff;">
                                 <i class="fa-solid fa-plus"></i>
