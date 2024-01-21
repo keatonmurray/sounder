@@ -37,6 +37,7 @@ class FrontController extends Controller
             'artist_name' => 'required',
             'album_title' => 'required',
             'album_description' => 'required',
+            'price' => 'required',
             'audio' => 'required'
          ]);
 
