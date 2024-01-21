@@ -20,6 +20,10 @@
                         <label for="description" class="form-label">Album Description</label>
                         <textarea name="album_description" id="description" class="form-control" cols="20" rows="3"></textarea>
                     </div>
+                    <div class="mb-3">
+                      <label for="price" class="form-label">Digital Album Price in USD</label>
+                      <input type="text" name="price" class="form-control" id="price">
+                  </div>
                 </div>
               </div>
               <div class="col-lg-4 p-4 offset-lg-1 p-0 overflow-hidden">
