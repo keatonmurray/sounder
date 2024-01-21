@@ -18,6 +18,7 @@ return new class extends Migration
             $table->longText('album_description');
             $table->string('album_cover');
             $table->string('audio');
+            $table->integer('price');
             $table->timestamps();
         });
     }
