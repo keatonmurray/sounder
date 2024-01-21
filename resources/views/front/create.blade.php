@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
     <section class="upload-music-area bg-white mt-100">
-      <br>
       <form action="/store" method="POST" enctype="multipart/form-data">
         <div class="container my-5" style="height: auto;">
           <div class="row px-4 py-4 pe-lg-0 pt-lg-5 align-items-center rounded-3">
