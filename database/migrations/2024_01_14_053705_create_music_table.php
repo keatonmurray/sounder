@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('album_cover');
             $table->string('audio');
             $table->integer('price');
+            $table->string('bg_img');
             $table->timestamps();
         });
     }
