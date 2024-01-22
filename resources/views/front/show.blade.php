@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
+    <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute" style="background-image: url('{{asset('storage/' . $results->bg_img)}}');">
         <div class="container my-4">  
             <div class="row align-items-end">
                 <div class="col-12 col-md-5 col-lg-4">

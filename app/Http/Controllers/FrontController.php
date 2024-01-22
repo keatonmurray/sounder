@@ -41,12 +41,16 @@ class FrontController extends Controller
             'audio' => 'required'
          ]);
 
-         if($request->hasFile('album_cover')) {
+        if($request->hasFile('album_cover')) {
             $validate['album_cover'] = $request->file('album_cover')->store('album_covers', 'public');
         }
 
         if($request->hasFile('audio')) {
             $validate['audio'] = $request->file('audio')->store('audios', 'public');
+        }
+
+        if($request->hasFile('bg_img')) {
+            $validate['bg_img'] = $request->file('bg_img')->store('bg_images', 'public');
         }
         
          Music::create($validate);
