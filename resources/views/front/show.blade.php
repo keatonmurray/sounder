@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute" style="background-image: url('{{asset('storage/' . $results->album_cover)}}');">
+    <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
         <div class="container my-4">  
             <div class="row align-items-end">
                 <div class="col-12 col-md-5 col-lg-4">
@@ -9,11 +9,11 @@
                             <img src="{{asset('storage/' . $results->album_cover)}}">
                         </div>
                         <div class="d-flex mt-3">
-                            <a href="" class="btn btn-light w-50 mr-2 ml-2" type="button" style="background: transparent; color: #fff;">
+                            <a href="" class="show-btn btn btn-light w-50 mr-2 ml-2" type="button">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 Buy for ${{$results->price}}
                             </a>
-                            <a href="" class="btn btn-light w-50 mr-2" type="button" style="background: transparent; color: #fff;">
+                            <a href="" class="show-btn btn btn-light w-50 mr-2" type="button">
                                 <i class="fa-solid fa-plus"></i>
                                 Add to wishlist
                             </a>
@@ -34,9 +34,11 @@
                                 <source src="{{asset('storage/' . $results->audio)}}" type="audio/mp3">
                             </audio>
                         </div>
-                        <div class="container btn btn-light float-left" style="background: transparent; color: #fff;">
-                            <i class="fa-solid fa-plus"></i>
-                            Follow {{$results->artist_name}}
+                        <div class="container">
+                            <button class="show-btn btn btn-light float-left col-lg-4 d-block">
+                                <i class="fa-solid fa-plus"></i>
+                                Follow {{$results->artist_name}}
+                            </button>
                         </div> <br><br><br>
                         <div class="container mt-4">
                             <p>{{$results->album_description}}</p>
@@ -61,6 +63,12 @@
                     </div>
                 </div>
             </div>
+            <div class="discographies mt-30 col-12 col-md-12 col-lg-8">
+                <div class="song-play-area">
+                    <h4 class="text-white mb-4">Merch</h4>
+                </div>
+            </div>
+        </div>
         </div>
     </section>    
 @endsection

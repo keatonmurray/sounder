@@ -23,7 +23,7 @@
                     <div class="mb-3">
                       <label for="price" class="form-label">Digital Album Price in USD</label>
                       <input type="text" name="price" class="form-control" id="price">
-                  </div>
+                    </div>
                 </div>
               </div>
               <div class="col-lg-4 p-4 offset-lg-1 p-0 overflow-hidden">
@@ -37,6 +37,10 @@
                     <div class="border-dashed my-3 text-center">
                       <p>Choose an album cover</p>
                       <input type="file" name="album_cover" id="album_cover" multiple>
+                    </div>
+                    <div class="border-dashed my-3 text-center">
+                      <p>Choose a background image</p>
+                      <input type="file" name="bg-img" id="bg-img" multiple>
                     </div>
                   </div>
                 </div>

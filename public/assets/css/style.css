@@ -402,6 +402,9 @@ img {
     .oneMusic-btn.btn-2:hover, .oneMusic-btn.btn-2:focus {
       background-color: #fff;
       color: #232323; }
+    .show-btn {
+      background: #fff; 
+      color: #000000; }
 
 .files .border-dashed{
   width: 100%;
@@ -824,7 +827,7 @@ img {
 .featured-artist-area {
   position: relative;
   z-index: 1;
-  background: repeating-radial-gradient(#8d8d8d, 20%, #1d1d1d);
+  background: repeating-radial-gradient(#353535, 20%, #1d1d1d);
   height: auto; }
 
   
