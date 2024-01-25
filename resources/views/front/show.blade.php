@@ -2,7 +2,7 @@
 @section('content')
     <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
         <div class="bg-img text-center">
-            <!-- img tag here -->
+            
         </div>
         <div class="container my-4">  
             <div class="row align-items-end">
@@ -77,9 +77,8 @@
                             </div>
                             <div class="album-info">
                                 <a href="#">
-                                    <h5 class="text-white">Garage Band</h5>
+                                    <h5 class="text-white text-center">Garage Band</h5>
                                 </a>
-                                <p class="text-white">Radio Station</p>
                             </div>
                         </div>
                     </div>
