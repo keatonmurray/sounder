@@ -15,4 +15,8 @@ class Music extends Model
     
     protected $guarded = [];
 
+    protected $casts = [
+        'audios' => 'array'
+    ];
+
 }

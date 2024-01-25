@@ -36,20 +36,28 @@ class FrontController extends Controller
             'album_title' => 'required',
             'album_description' => 'required',
             'price' => 'required',
-            'audio' => 'required'
+            'audios' => 'required|array'
          ]);
+
+        $audios = [];
+         
+        foreach($validate['audios'] as $audio) {
+            $path = $audio->getClientOriginalName();
+            $audio_path =  $audio->storeAs('audios', $path, 'public');
+
+            array_push($audios, $audio_path);
+        }
 
         if($request->hasFile('album_cover')) {
             $validate['album_cover'] = $request->file('album_cover')->store('album_covers', 'public');
         }
-
-        if($request->hasFile('audio')) {
-            $validate['audio'] = $request->file('audio')->store('audios', 'public');
-        }
+        
 
         if($request->hasFile('bg_img')) {
             $validate['bg_img'] = $request->file('bg_img')->store('bg_images', 'public');
         }
+
+        $validate['audios'] = $audios;
         
          Music::create($validate);
          return redirect('/');

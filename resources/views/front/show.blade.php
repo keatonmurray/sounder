@@ -34,7 +34,7 @@
                                 <p>{{$results->album_title}}</p>
                             </div>
                             <audio preload="auto" controls>
-                                <source src="{{asset('storage/' . $results->audio)}}" type="audio/mp3">
+                                <source src="{{asset('storage/' . $results->audios[0])}}" type="audio/mp3">
                             </audio>
                         </div>
                         <div class="container">
@@ -51,18 +51,14 @@
                 <div class="discographies mt-30 col-12 col-md-12 col-lg-8">
                     <div class="song-play-area">
                         <h4 class="text-white mb-4">All Songs</h4>
-                        <div class="song-name">
-                            <p>{{$results->album_title}}</p>
-                        </div>
-                        <audio preload="auto" controls>
-                            <source src="{{asset('storage/' . $results->audio)}}" type="audio/mp3">
-                        </audio>
-                        <div class="song-name">
-                            <p>{{$results->album_title}}</p>
-                        </div>
-                        <audio preload="auto" controls>
-                            <source src="{{asset('storage/' . $results->audio)}}" type="audio/mp3">
-                        </audio>
+                        @foreach($results->audios as $result)
+                            <div class="song-name">
+                                <p>{{$result}}</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="{{asset('storage/' . $result)}}" type="audio/mp3">
+                            </audio>
+                        @endforeach
                     </div>
                 </div>
             </div>
