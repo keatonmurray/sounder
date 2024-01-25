@@ -25,10 +25,16 @@
                       <input type="text" name="price" class="form-control" id="price">
                     </div>
                     <h2 class="heading">Merch Upload</h2>
-                    <div class="border-dashed my-3 text-center">
-                      <p class="text-center">Upload .png images</p>
-                      <input type="file" name="merch" id="merch">
-                    </div>     
+                    <div class="files">
+                      <div class="border-dashed my-3 text-center">
+                        <p class="text-center">Upload .png images</p>
+                        <input type="file" name="merch" id="merch">
+                      </div>     
+                    </div>
+                    <div class="mb-3">
+                      <label for="merch" class="form-label">Merch Price in USD</label>
+                      <input type="text" name="merch" class="form-control" id="merch">
+                    </div>
                 </div>
               </div>
               <div class="col-lg-4 p-4 offset-lg-1 p-0 overflow-hidden">
