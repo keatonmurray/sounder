@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 /**
  * TODO: Make validation rules for adding album covers with a minimum 1600x1600px and not exceeding 2000x2000px
- * TODO: Make the file upload input fields capable of storing multiple files in the table from store method
  */
 
 class FrontController extends Controller

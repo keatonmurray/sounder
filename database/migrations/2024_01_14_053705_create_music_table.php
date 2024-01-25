@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('audios');
             $table->integer('price');
             $table->string('bg_img');
+            $table->string('merch');
             $table->timestamps();
         });
     }
