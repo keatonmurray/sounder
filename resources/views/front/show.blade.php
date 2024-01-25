@@ -69,6 +69,7 @@
             <div class="discographies mt-30 col-12 col-md-12 col-lg-8">
                 <div class="song-play-area">
                     <h4 class="text-white mb-4">Buy Merch</h4>
+                    <!-- Create merch page -->
                 </div>
             </div>
         </div>

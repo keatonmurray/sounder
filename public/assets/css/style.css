@@ -829,7 +829,7 @@ img {
 .featured-artist-area {
   position: relative;
   z-index: 1;
-  background: repeating-radial-gradient(#353535, 10%, #202020);
+  background: repeating-radial-gradient(#1f1f1f, 10%, #2e2c2c);
   width: 100%;
   height: auto; }
 
