@@ -62,10 +62,27 @@
                     </div>
                 </div>
             </div>
-            <div class="discographies mt-30 col-12 col-md-12 col-lg-8">
+            <div class="discographies mt-30">
+                <!-- Single Album Area -->
                 <div class="song-play-area">
                     <h4 class="text-white mb-4">Buy Merch</h4>
-                    <!-- Create merch page -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
+                            <div class="album-thumb">
+                                <img src="{{asset('storage/' . $results->merch)}}" alt="">
+                                <!-- Album Price -->
+                                <div class="album-price">
+                                    <p>$0.90</p>
+                                </div>
+                            </div>
+                            <div class="album-info">
+                                <a href="#">
+                                    <h5 class="text-white">Garage Band</h5>
+                                </a>
+                                <p class="text-white">Radio Station</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
