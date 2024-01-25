@@ -48,6 +48,10 @@ class FrontController extends Controller
             array_push($audios, $audio_path);
         }
 
+        if($request->hasFile('merch')) {
+            $validate['merch'] = $request->file('merch')->store('merches', 'public');
+        }
+
         if($request->hasFile('album_cover')) {
             $validate['album_cover'] = $request->file('album_cover')->store('album_covers', 'public');
         }
