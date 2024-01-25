@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('price');
             $table->string('bg_img');
             $table->string('merch');
+            $table->string('merch_name');
             $table->timestamps();
         });
     }
