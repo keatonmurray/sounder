@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('merch_price');
             $table->integer('digital_track_price');
             $table->string('highlight_track');
+            $table->string('merch_description');
             $table->timestamps();
         });
     }

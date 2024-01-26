@@ -57,7 +57,8 @@ class FrontController extends Controller
         }
 
         if($request->hasFile('highlight_track')) {
-            $validate['highlight_track'] = $request->file('highlight_track')->store('highlight_tracks', 'public');
+            $path = $validate['highlight_track']->getClientOriginalName();
+            $validate['highlight_track'] = $request->file('highlight_track')->storeAs('highlight_tracks', $path, 'public');
         }
 
         if($request->hasFile('album_cover')) {
