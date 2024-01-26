@@ -2,7 +2,7 @@
 @section('content')
     <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
         <div class="bg-img text-center">
-            <!-- img tag here -->
+            <img src="{{asset('storage/' . $results->album_cover)}}" alt="">
         </div>
         <div class="container my-4">  
             <div class="row align-items-end">
@@ -65,14 +65,12 @@
                 </div>
             </div>
             <div class="discographies mt-30">
-                <!-- Single Album Area -->
                 <div class="song-play-area">
                     <h4 class="text-white mb-4">Buy Merch</h4>
                     <div class="col-12 col-sm-12 col-md-4 col-lg-2">
                         <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
                             <div class="album-thumb">
-                                <img src="{{asset('storage/' . $results->merch)}}" alt="">
-                                <!-- Album Price -->
+                                <img src="{{asset('storage/' . $results->merch)}}">
                                 <div class="album-price">
                                     <p>${{$results->merch_price}}</p>
                                 </div>
