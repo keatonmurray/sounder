@@ -31,7 +31,7 @@
                         </div>
                         <div class="song-play-area">
                             <div class="song-name">
-                                <p>{{$results->audios[0]}}</p>
+                                <p>{{$results->highlight_track}}</p>
                             </div>
                             <audio preload="auto" controls>
                                 <source src="{{asset('storage/' . $results->audios[0])}}" type="audio/mp3">

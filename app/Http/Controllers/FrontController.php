@@ -56,13 +56,12 @@ class FrontController extends Controller
             $validate['merch'] = $request->file('merch')->store('merches', 'public');
         }
 
+        if($request->hasFile('highlight_track')) {
+            $validate['highlight_track'] = $request->file('highlight_track')->store('highlight_tracks', 'public');
+        }
+
         if($request->hasFile('album_cover')) {
             $validate['album_cover'] = $request->file('album_cover')->store('album_covers', 'public');
-        }
-        
-
-        if($request->hasFile('bg_img')) {
-            $validate['bg_img'] = $request->file('bg_img')->store('bg_images', 'public');
         }
 
         $validate['audios'] = $audios;

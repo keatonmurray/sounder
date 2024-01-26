@@ -19,11 +19,11 @@ return new class extends Migration
             $table->string('album_cover');
             $table->string('audios');
             $table->integer('price');
-            $table->string('bg_img');
             $table->string('merch');
             $table->string('merch_name');
             $table->integer('merch_price');
             $table->integer('digital_track_price');
+            $table->string('highlight_track');
             $table->timestamps();
         });
     }
