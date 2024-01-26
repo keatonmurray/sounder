@@ -24,8 +24,12 @@
     <input type="text" name="merch_name" class="form-control" id="merch_name">
   </div>
   <div class="mb-3">
-    <label for="merch" class="form-label">Merch Price in USD</label>
-    <input type="text" name="merch_price" class="form-control" id="merch">
+    <label for="merch_price" class="form-label">Merch Price in USD</label>
+    <input type="text" name="merch_price" class="form-control" id="merch_price">
+  </div>
+  <div class="mb-3">
+    <label for="merch_description" class="form-label">Merch Description</label>
+    <input type="text" name="merch_description" class="form-control" id="merch_description">
   </div>
   <div class="files">
     <div class="border-dashed my-3 text-center">
