@@ -840,15 +840,13 @@ img {
   background-size: cover;
   width: 100%;
   top: 0;
-  bottom:0;
+  bottom: 0;
   height: auto; }
 
 .featured-artist-area .bg-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  object-position: 50%, 50%; }
-
+  object-fit: cover; }
   
 .featured-artist-thumb img {
   height: 315px; 

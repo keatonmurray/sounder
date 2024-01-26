@@ -2,7 +2,7 @@
 @section('content')
     <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
         <div class="bg-img text-center">
-            
+            <!-- img tag here -->
         </div>
         <div class="container my-4">  
             <div class="row align-items-end">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="song-play-area">
                             <div class="song-name">
-                                <p>{{$results->album_title}}</p>
+                                <p>{{$results->audios[0]}}</p>
                             </div>
                             <audio preload="auto" controls>
                                 <source src="{{asset('storage/' . $results->audios[0])}}" type="audio/mp3">
@@ -53,6 +53,7 @@
                         <h4 class="text-white mb-4">All Songs</h4>
                         @foreach($results->audios as $result)
                             <div class="song-name">
+                                <button class="btn btn-light btn-sm ml-30 float-right">Buy for $1</button>
                                 <p>{{$result}}</p>
                             </div>
                             <audio preload="auto" controls>
@@ -66,7 +67,7 @@
                 <!-- Single Album Area -->
                 <div class="song-play-area">
                     <h4 class="text-white mb-4">Buy Merch</h4>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2">
                         <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
                             <div class="album-thumb">
                                 <img src="{{asset('storage/' . $results->merch)}}" alt="">
@@ -77,14 +78,13 @@
                             </div>
                             <div class="album-info">
                                 <a href="#">
-                                    <h5 class="text-white text-center">Garage Band</h5>
+                                    <h5 class="text-white text-center">{{$results->merch_name}}</h5>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>    
 @endsection
