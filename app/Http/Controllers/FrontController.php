@@ -41,6 +41,7 @@ class FrontController extends Controller
             'merch_price' => 'required',
             'digital_track_price' => 'required',
             'highlight_track' => 'required',
+            'merch_description' => 'required'
          ]);
 
         $audios = [];
