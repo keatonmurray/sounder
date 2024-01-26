@@ -59,6 +59,7 @@
                             <audio preload="auto" controls>
                                 <source src="{{asset('storage/' . $result)}}" type="audio/mp3">
                             </audio>
+                            <br>
                         @endforeach
                     </div>
                 </div>
