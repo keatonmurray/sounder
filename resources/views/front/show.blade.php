@@ -31,7 +31,7 @@
                         </div>
                         <div class="song-play-area">
                             <div class="song-name">
-                                <p>{{$results->highlight_track}}</p>
+                                <p class="text-white">{{Str::between($results->highlight_track, '/', '.')}}</p>
                             </div>
                             <audio preload="auto" controls>
                                 <source src="{{asset('storage/' . $results->audios[0])}}" type="audio/mp3">
@@ -54,7 +54,7 @@
                         @foreach($results->audios as $result)
                             <div class="song-name">
                                 <button class="btn btn-light btn-sm ml-30 float-right">Buy for ${{$results->digital_track_price}}</button>
-                                <p>{{$result}}</p>
+                                <p class="text-white">{{Str::between($result, '/', '.')}}</p>
                             </div>
                             <audio preload="auto" controls>
                                 <source src="{{asset('storage/' . $result)}}" type="audio/mp3">
