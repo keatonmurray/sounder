@@ -53,7 +53,7 @@
                         <h4 class="text-white mb-4">All Songs</h4>
                         @foreach($results->audios as $result)
                             <div class="song-name">
-                                <button class="btn btn-light btn-sm ml-30 float-right">Buy for $1</button>
+                                <button class="btn btn-light btn-sm ml-30 float-right">Buy for ${{$results->digital_track_price}}</button>
                                 <p>{{$result}}</p>
                             </div>
                             <audio preload="auto" controls>
@@ -73,7 +73,7 @@
                                 <img src="{{asset('storage/' . $results->merch)}}" alt="">
                                 <!-- Album Price -->
                                 <div class="album-price">
-                                    <p>$0.90</p>
+                                    <p>${{$results->merch_price}}</p>
                                 </div>
                             </div>
                             <div class="album-info">
