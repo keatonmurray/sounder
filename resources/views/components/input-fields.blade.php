@@ -14,6 +14,10 @@
     <label for="price" class="form-label">Digital Album Price in USD</label>
     <input type="text" name="price" class="form-control" id="price">
   </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Single Track Price in USD</label>
+    <input type="text" name="digital_track_price" class="form-control" id="digital_track_price">
+  </div>
   <h2 class="heading">Upload Merch</h2>
   <div class="mb-3">
     <label for="merch_name" class="form-label">Name of Merch</label>
@@ -21,7 +25,7 @@
   </div>
   <div class="mb-3">
     <label for="merch" class="form-label">Merch Price in USD</label>
-    <input type="text" name="merch" class="form-control" id="merch">
+    <input type="text" name="merch_price" class="form-control" id="merch">
   </div>
   <div class="files">
     <div class="border-dashed my-3 text-center">

@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('bg_img');
             $table->string('merch');
             $table->string('merch_name');
+            $table->integer('merch_price');
+            $table->integer('digital_track_price');
             $table->timestamps();
         });
     }
