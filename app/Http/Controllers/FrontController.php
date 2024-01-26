@@ -37,7 +37,9 @@ class FrontController extends Controller
             'price' => 'required',
             'audios' => 'required|array',
             'merch' => 'required',
-            'merch_name' => 'required'
+            'merch_name' => 'required',
+            'merch_price' => 'required',
+            'digital_track_price' => 'required'
          ]);
 
         $audios = [];
