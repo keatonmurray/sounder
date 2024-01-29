@@ -14,7 +14,7 @@
                     <div class="album-thumb">
                         <img src="{{asset('storage/' . $result->merch)}}" alt="">
                     </div>
-                    <div class="album-info">
+                    <div class="album-info text-center">
                         <a href="#">
                             <h5>{{$result->merch_name}}</h5>
                         </a>
