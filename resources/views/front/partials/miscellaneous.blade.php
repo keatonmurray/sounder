@@ -25,7 +25,9 @@
                                 </div>
                             </div>
                             <audio preload="auto" controls>
-                                <source src="audio/dummy-audio.mp3">
+                                @foreach($result->audios as $audio)
+                                    <source src="{{asset('storage/' . $audio)}}">
+                                @endforeach
                             </audio>
                         </div>
                     @endforeach
@@ -50,7 +52,9 @@
                                 </div>
                             </div>
                             <audio preload="auto" controls>
-                                <source src="audio/dummy-audio.mp3">
+                                @foreach($result->audios as $audio)
+                                    <source src="{{asset('storage/' . $audio)}}">
+                                @endforeach
                             </audio>
                         </div>
                     @endforeach
@@ -74,7 +78,9 @@
                                 </div>
                             </div>
                             <audio preload="auto" controls>
-                                <source src="audio/dummy-audio.mp3">
+                                @foreach($result->audios as $audio)
+                                    <source src="{{asset('storage/' . $audio)}}">
+                                @endforeach
                             </audio>
                         </div>
                     @endforeach

@@ -13,7 +13,7 @@ class FrontController extends Controller
 {
     public function index() 
     {
-        $results = Music::inRandomOrder()->get();
+        $results = Music::inRandomOrder()->limit(12)->get();
         return view('front.index')->with('results', $results);
     }
 
