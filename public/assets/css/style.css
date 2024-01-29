@@ -826,6 +826,10 @@ img {
 
 /* :: 9.0 Album Catagory Area CSS */
 
+.dropdown a {
+  border-width: 0;
+}
+
 .featured-artist-area {
   position: relative;
   z-index: 1;

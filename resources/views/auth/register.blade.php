@@ -10,7 +10,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
                     <div class="login-content">
-                        <h3>{{ __('Create an account') }}</h3>
+                        <h3>{{ __('Signup for Sounder') }}</h3>
                         <!-- Login Form -->
                         <div class="login-form">
                             <form action="{{ route('register') }}" method="POST">

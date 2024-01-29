@@ -13,11 +13,12 @@
             @endif
             @else
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                    
                     {{ Auth::user()->name }}
-                </button>
+                </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="text-dark dropdown-item" href="{{ route('logout') }}"
+                    <a class="text-dark dropdown-item" href="">Profile Settings</a>
+                    <a class="text-dark dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
