@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Music;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $results = Music::all();
-        return view('home')->with('results', $results);
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+        return view('home')->with('music', $user->music);
     }
 }
