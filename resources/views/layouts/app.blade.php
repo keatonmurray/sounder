@@ -22,6 +22,8 @@
 </head>
 <body>
     @yield('content')
+    <!-- Preloader -->
+    @include('includes.preloader')
     <x-header>
         <x-nav/>
     </x-header>

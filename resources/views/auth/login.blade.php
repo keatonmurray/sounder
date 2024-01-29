@@ -11,7 +11,6 @@
                 <div class="col-12 col-lg-8">
                     <div class="login-content">
                         <h3>{{ __('Login to your account') }}</h3>
-                        <!-- Login Form -->
                         <div class="login-form">
                             <form  action="{{ route('login') }}" method="POST">
                                 @csrf

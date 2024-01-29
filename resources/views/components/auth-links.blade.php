@@ -1,4 +1,3 @@
-<!-- Login/Register -->
 <div class="login-register-btn mr-50">
     <div class="d-flex">
         @guest
