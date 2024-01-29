@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
 <!-- TODO: Make a seach bar -->
-    <!-- Preloader -->
-    @include('includes.preloader')
     <section class="hero-area">
         <x-hero>
             @foreach($results as $music)

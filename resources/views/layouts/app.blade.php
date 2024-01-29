@@ -18,7 +18,7 @@
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/5dfbc71075.js" crossorigin="anonymous"></script>
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    
 </head>
 <body>
     @yield('content')
