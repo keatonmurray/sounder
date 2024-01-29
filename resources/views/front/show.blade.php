@@ -5,7 +5,8 @@
             <img src="{{asset('storage/' . $results->album_cover)}}" alt="">
         </div>
         <div class="container my-4">  
-            <form action="" method="POST">
+            <form action="/addToWishlist/{{$results->id}}" method="POST">
+                @csrf
                 <div class="row align-items-end">
                     <div class="col-12 col-md-5 col-lg-4">
                         <div class="container text-center">
