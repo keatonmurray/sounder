@@ -19,4 +19,8 @@ class Music extends Model
         'audios' => 'array'
     ];
 
+    protected static $marks = [
+        Favorite::class,
+    ];
+
 }
