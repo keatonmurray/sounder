@@ -21,11 +21,12 @@ Route::get('/', [FrontController::class, 'index']);
 Route::get('/upload-music', [FrontController::class, 'create']);
 Route::get('/albums/{id}', [FrontController::class, 'show']);
 Route::post('/store', [FrontController::class, 'store']);
-Route::post('/artist/login', [ArtistLoginController::class, 'login']);
-Route::get('/artist-login', [ArtistController::class, 'loginForm']);
+
 Route::get('/artist', [ArtistController::class, 'index']);
+Route::get('/artist-login', [ArtistController::class, 'loginForm']);
 Route::get('/artist-register', [ArtistController::class, 'registerForm']);
 Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

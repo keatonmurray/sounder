@@ -21,7 +21,7 @@ class Albums extends Model
         'audios' => 'array'
     ];
 
-    public function artist(): BelongsTo
+    public function artists(): BelongsTo
     {
         return $this->belongsTo(Artist::class);
     }

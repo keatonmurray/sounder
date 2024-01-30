@@ -3,7 +3,7 @@
 @section('content')
     <x-breadcrumb>
         <p>See what’s new</p>
-        <h2>New Account</h2>
+        <h2>Fan Account</h2>
     </x-breadcrumb>
     <section class="login-area section-padding-100 bg-white">
         <div class="container">

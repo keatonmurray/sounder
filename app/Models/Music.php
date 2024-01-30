@@ -21,4 +21,8 @@ class Music extends Model
         'audios' => 'array'
     ];
 
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }

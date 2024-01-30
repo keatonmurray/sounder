@@ -19,6 +19,9 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $guard = 'fans';
+
     protected $fillable = [
         'name',
         'email',

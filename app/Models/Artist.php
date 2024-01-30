@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Artist extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -19,6 +19,9 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $guard = 'artists';
+    
     protected $fillable = [
         'name',
         'email',
