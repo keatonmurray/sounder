@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Models\Music;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ArtistController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -27,6 +27,6 @@ class HomeController extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('fan.index')->with('music', $user->music);
+        return view('artist.index')->with('music', $user->music);
     }
 }

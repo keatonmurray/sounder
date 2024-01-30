@@ -1,7 +1,7 @@
 <!-- Nav Start -->
 <div class="classynav">
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/home">Home</a></li>
         <li><a href="albums-store.html">Albums</a></li>
         <li><a href="#">Pages</a>
             <ul class="dropdown">
