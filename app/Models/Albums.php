@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\User;
+use App\Models\Artist;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * Complete search bar functionality
  */
 
-class Music extends Model
+class Albums extends Model
 {
     use HasFactory;
     
@@ -21,4 +21,8 @@ class Music extends Model
         'audios' => 'array'
     ];
 
+    public function artist(): BelongsTo
+    {
+        return $this->belongsTo(Artist::class);
+    }
 }
