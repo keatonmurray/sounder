@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Music;
+use App\Models\Albums;
 use Illuminate\Http\Request;
-
-/**
- * TODO: Make validation rules for adding album covers with a minimum 1600x1600px and not exceeding 2000x2000px
- */
 
 class FrontController extends Controller
 {
@@ -21,7 +17,7 @@ class FrontController extends Controller
 
     public function index() 
     {
-        $results = Music::inRandomOrder()->limit(12)->get();
+        $results = Albums::inRandomOrder()->limit(12)->get();
         return view('front.index')->with('results', $results);
     }
 
@@ -32,7 +28,7 @@ class FrontController extends Controller
 
     public function show(string $id)
     {
-        $results = Music::find($id);
+        $results = Albums::find($id);
         return view('front.show')->with('results', $results);
     }
 
@@ -76,7 +72,7 @@ class FrontController extends Controller
 
         $validate['audios'] = $audios;
         
-         Music::create($validate);
+         Albums::create($validate);
          return redirect('/');
     }
 }

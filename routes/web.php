@@ -19,7 +19,7 @@ use App\Http\Controllers\Auth\ArtistRegisterController;
 */
 
 Route::get('/', [FrontController::class, 'index']); 
-//Route::get('/upload-music', [FrontController::class, 'create']); //should be pulled from th Artist Controller because it is the controller responsible for Artist functionalities
+Route::get('/upload-music', [FrontController::class, 'create']); //should be pulled from th Artist Controller because it is the controller responsible for Artist functionalities
 Route::get('/albums/{id}', [FrontController::class, 'show']);
 Route::post('/store', [FrontController::class, 'store']);
 
