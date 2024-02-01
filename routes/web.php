@@ -7,7 +7,6 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Auth\ArtistLoginController;
 use App\Http\Controllers\Auth\ArtistRegisterController;
 
 /*
@@ -38,7 +37,6 @@ Route::get('/artist-login', [FormsController::class, 'artistLoginForm']);
 Route::get('/artist-account-signup', [FormsController::class, 'artistSignupForm']);
 Route::get('/artist', [ArtistController::class, 'index']);
 Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
-Route::post('/artist/login', [ArtistLoginController::class, 'login']);
 
 /**
  * FAN ACCOUNT ROUTES
@@ -47,5 +45,11 @@ Route::post('/artist/login', [ArtistLoginController::class, 'login']);
 Route::get('/fan-login', [FormsController::class, 'fanLoginForm']);
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
+
+/**
+ * LOGIN ROUTE
+ */
+
+Route::post('/login', [ArtistLoginController::class, 'login']);
 
 Auth::routes();

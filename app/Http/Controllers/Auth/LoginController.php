@@ -34,9 +34,27 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct(Request $request)
+    public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
 
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+        
+        if (auth()->guard('web')->attempt($credentials)) {
+            return redirect('/dashboard');
+        } 
+
+        if (auth()->guard('artists')->attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect('/artist');
+        } 
+
+        return back()->with('error', 'There was an error');
     }
 }
