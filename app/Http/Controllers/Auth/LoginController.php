@@ -47,6 +47,7 @@ class LoginController extends Controller
         ]);
         
         if (auth()->guard('web')->attempt($credentials)) {
+            $request->session()->regenerate();
             return redirect('/dashboard');
         } 
 
@@ -55,6 +56,8 @@ class LoginController extends Controller
             return redirect('/artist');
         } 
 
-        return back()->with('error', 'There was an error');
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
     }
 }

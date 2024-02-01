@@ -42,7 +42,7 @@ Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
  * FAN ACCOUNT ROUTES
  */
 
-Route::get('/fan-login', [FormsController::class, 'fanLoginForm']);
+Route::get('/login', [FormsController::class, 'fanLoginForm']);
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
 

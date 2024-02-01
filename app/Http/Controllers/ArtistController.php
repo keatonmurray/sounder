@@ -16,17 +16,14 @@ class ArtistController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['auth:artists']);
+        $this->middleware('auth:artists');
     }
 
 
     public function index()
     {
-        /*
-        $user_id = Auth::guard('artists')->user()->id;
+        $user_id = auth()->user()->id;
         $user = Artist::find($user_id);
-        return view('artist.index')->with('music', $user->artists);
-        */
-        return view('artist.index');
+        return view('artist.index')->with('artists', $user->artists);
     }
 }
