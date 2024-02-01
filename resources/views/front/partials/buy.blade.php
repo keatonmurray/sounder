@@ -5,9 +5,6 @@
             <h2>Support Directly</h2>
         </x-row-heading>
         <div class="row">
-
-            
-            <!-- Single Album Area -->
             @foreach($results as $result)
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="200ms">
