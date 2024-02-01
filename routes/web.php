@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ArtistLoginController;
 use App\Http\Controllers\Auth\ArtistRegisterController;
 
@@ -18,17 +20,31 @@ use App\Http\Controllers\Auth\ArtistRegisterController;
 |
 */
 
+/**
+ * CORE FUNCTIONALITIES
+ */
+
 Route::get('/', [FrontController::class, 'index']); 
-Route::get('/upload-music', [FrontController::class, 'create']); //should be pulled from th Artist Controller because it is the controller responsible for Artist functionalities
+Route::get('/upload-music', [FrontController::class, 'create']);
 Route::get('/albums/{id}', [FrontController::class, 'show']);
 Route::post('/store', [FrontController::class, 'store']);
 
+/**
+ * ARTIST ACCOUNT ROUTES 
+ */
 
-Route::get('/artist-login', [ArtistController::class, 'loginForm']);
-Route::get('/artist-register', [ArtistController::class, 'registerForm']);
-Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
+Route::get('/artist-login', [ArtistController::class, 'artistLoginForm']);
+Route::get('/artist-account-signup', [ArtistController::class, 'artistSignupForm']);
+//Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
+
+
+/**
+ * FAN ACCOUNT ROUTES
+ */
+Route::get('fan-login', [LoginController::class, 'fanLoginForm']);
+Route::get('fan-account-signup', [RegisterController::class, 'fanSignupForm']);
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/dashboard', [HomeController::class, 'index']);
 Route::get('/artist', [ArtistController::class, 'index']); //modify route name to make it clearner

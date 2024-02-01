@@ -36,7 +36,7 @@
                                     <p class="text-white">{{Str::between($results->highlight_track, '/', '.')}}</p>
                                 </div>
                                 <audio preload="auto" controls>
-                                    <source src="{{asset('storage/' . $results->audios[0])}}" type="audio/mp3">
+                                    <source src="{{asset('storage/' . $results->highlight_track)}}" type="audio/mp3">
                                 </audio>
                             </div>
                             <div class="container">
