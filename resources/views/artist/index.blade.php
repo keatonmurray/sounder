@@ -59,7 +59,7 @@
             </div>
         </div>
         @else
-        <p class="text-center">You have not purchased anything yet</p>
+        <p class="text-center">You have not posted any music yet</p>
         @endif
         <br><br><br>
     </div>

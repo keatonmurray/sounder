@@ -22,8 +22,8 @@ class ArtistController extends Controller
 
     public function index()
     {
-        $user_id = auth()->user()->id;
+        $user_id = Auth::guard('artists')->user()->id;
         $user = Artist::find($user_id);
-        return view('artist.index')->with('artists', $user->artists);
+        return view('artist.index')->with('artists', $user->albums);
     }
 }
