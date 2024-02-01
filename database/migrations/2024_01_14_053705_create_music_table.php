@@ -15,16 +15,6 @@ return new class extends Migration
             $table->increments('id');
             $table->string('artist_name');
             $table->string('album_title');
-            $table->longText('album_description');
-            $table->string('album_cover');
-            $table->string('audios');
-            $table->integer('price');
-            $table->string('merch');
-            $table->string('merch_name');
-            $table->integer('merch_price');
-            $table->integer('digital_track_price');
-            $table->string('highlight_track');
-            $table->string('merch_description');
             $table->timestamps();
         });
     }
