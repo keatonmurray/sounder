@@ -4,7 +4,7 @@
     <div class="text-center mb-2">
         <img src="{{asset('assets/img/bg-img/chase.jpg')}}" class="rounded-circle" style="height: 100px; width: 100px;" >
     </div>
-    <h5>Keaton</h5>
+    <h5></h5>
     <div class="d-flex justify-content-around justify-content-lg">
         <div class="row">
             <div class="card" style="border-width: 0;">

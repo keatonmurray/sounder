@@ -9,6 +9,17 @@ use Illuminate\Support\Facades\Auth;
 class ArtistController extends Controller
 {
 
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware(['auth:artists']);
+    }
+
+
     public function index()
     {
         /*
