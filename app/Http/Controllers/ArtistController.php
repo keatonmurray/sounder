@@ -18,14 +18,4 @@ class ArtistController extends Controller
         */
         return view('artist.index');
     }
-
-    public function artistLoginForm()
-    {
-        return view('artist.auth.login');
-    }
-
-    public function artistSignupForm()
-    {
-        return view('artist.auth.register');
-    }
 }

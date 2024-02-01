@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FormsController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\Auth\LoginController;
@@ -33,18 +34,16 @@ Route::post('/store', [FrontController::class, 'store']);
  * ARTIST ACCOUNT ROUTES 
  */
 
-Route::get('/artist-login', [ArtistController::class, 'artistLoginForm']);
-Route::get('/artist-account-signup', [ArtistController::class, 'artistSignupForm']);
-//Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
-
+Route::get('/artist-login', [FormsController::class, 'artistLoginForm']);
+Route::get('/artist-account-signup', [FormsController::class, 'artistSignupForm']);
+Route::get('/artist', [ArtistController::class, 'index']);
 
 /**
  * FAN ACCOUNT ROUTES
  */
-Route::get('fan-login', [LoginController::class, 'fanLoginForm']);
-Route::get('fan-account-signup', [RegisterController::class, 'fanSignupForm']);
+
+Route::get('fan-login', [FormsController::class, 'fanLoginForm']);
+Route::get('fan-account-signup', [FormsController::class, 'fanSignupForm']);
+Route::get('/dashboard', [HomeController::class, 'index']);
 
 Auth::routes();
-
-Route::get('/dashboard', [HomeController::class, 'index']);
-Route::get('/artist', [ArtistController::class, 'index']); //modify route name to make it clearner
