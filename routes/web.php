@@ -51,6 +51,6 @@ Route::get('/dashboard', [HomeController::class, 'index']);
  */
 
 Route::post('/login', [ArtistLoginController::class, 'login']);
-Route::get('/registration', [FormsController::class, 'registerLinks']);
+Route::get('//create-an-account', [FormsController::class, 'registerLinks']);
 
 Auth::routes();

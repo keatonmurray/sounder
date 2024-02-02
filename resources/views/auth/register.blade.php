@@ -49,9 +49,11 @@
                                         <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
                                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                     </div>
-                                    <br>
                                 </div>
-                                <br>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">I agree to the <a href="">Terms and Conditions</a> to use this service</label>
+                                </div>
                                 <div class="mt-0">
                                     <button type="submit" class="btn oneMusic-btn mt-30"> {{ __('Register') }}</button>
                                 </div>
