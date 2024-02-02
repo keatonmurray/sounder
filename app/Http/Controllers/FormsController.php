@@ -25,4 +25,9 @@ class FormsController extends Controller
     {
         return view('auth.register');
     }
+
+    public function registerLinks()
+    {
+        return view('auth.registration');
+    }
 }

@@ -47,9 +47,10 @@ Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
 
 /**
- * MULTI-LOGIN ROUTE
+ * AUTH ROUTES
  */
 
 Route::post('/login', [ArtistLoginController::class, 'login']);
+Route::get('/registration', [FormsController::class, 'registerLinks']);
 
 Auth::routes();
