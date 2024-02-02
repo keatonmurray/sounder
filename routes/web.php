@@ -25,7 +25,7 @@ use App\Http\Controllers\Auth\ArtistRegisterController;
  */
 
 Route::get('/', [FrontController::class, 'index']); 
-Route::get('/upload-music', [FrontController::class, 'create']);
+Route::get('/upload-music', [FrontController::class, 'create'])->middleware('auth:artists');
 Route::get('/albums/{id}', [FrontController::class, 'show']);
 Route::post('/store', [FrontController::class, 'store']);
 
@@ -47,7 +47,7 @@ Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
 
 /**
- * LOGIN ROUTE
+ * MULTI-LOGIN ROUTE
  */
 
 Route::post('/login', [ArtistLoginController::class, 'login']);
