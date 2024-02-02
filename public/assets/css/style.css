@@ -371,36 +371,29 @@ img {
     background-color: #000;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
-    width: 100%;
-    display: block;
+    width: 50%;
     height: 49px;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 0;
-    padding: 0 30px;
     font-size: 16px;
     line-height: 47px;
     font-weight: 700;
-    margin-top:-10px;
     text-transform: capitalize; }
 
-    .oneMusic-btn-sm-light {
-      background-color: #ffffff;
-      -webkit-transition-duration: 500ms;
-      transition-duration: 500ms;
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-      min-width: 120px;
-      height: 49px;
-      color: #000;
-      border: 1px solid #000;
-      border-radius: 0;
-      padding: 0 30px;
-      font-size: 16px;
-      line-height: 47px;
-      font-weight: 700;
-      text-transform: capitalize; }
+  .oneMusic-btn-sm-light {
+    background-color: #ffffff;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    width: 50%;
+    height: 49px;
+    color: #000000;
+    border: 1px solid #fff;
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 47px;
+    font-weight: 700;
+    text-transform: capitalize; }
 
   .oneMusic-btn i {
     margin-left: 5px; }
@@ -850,7 +843,7 @@ img {
 .featured-artist-area {
   position: relative;
   z-index: 1;
-  background: repeating-radial-gradient(#1f1f1f, 10%, #2e2c2c);
+  background: repeating-radial-gradient(#1f1f1f, 10%, #252525);
   width: 100%;
   height: auto; }
 

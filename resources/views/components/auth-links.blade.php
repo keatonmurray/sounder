@@ -8,7 +8,7 @@
             @endif
             @if (Route::has('register'))
                 <li class="nav-item list-unstyled">
-                    <a class="nav-link" href="/create-an-account">{{ __('Register') }}</a>
+                    <a class="nav-link" href="/create-an-account">{{ __('Create an account') }}</a>
                 </li>
             @endif
             @else

@@ -2,7 +2,6 @@
 @section('content')
     <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
         <div class="bg-img text-center">
-            <img src="{{asset('storage/' . $results->album_cover)}}" alt="">
         </div>
         <div class="container my-4">  
             <form action="/addToWishlist/{{$results->id}}" method="POST">
@@ -14,11 +13,11 @@
                                 <img src="{{asset('storage/' . $results->album_cover)}}">
                             </div>
                             <div class="d-flex mt-3">
-                                <a href="" class="show-btn btn btn-light w-50 mr-2 ml-2" type="button">
+                                <a href="" class="oneMusic-btn-sm-light mr-2 ml-2" type="button">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Buy for ${{$results->price}}
                                 </a>
-                                <button href="" class="show-btn btn btn-light w-50 mr-2" type="submit">
+                                <button href="" class="oneMusic-btn-sm-light mr-2" type="submit">
                                     <i class="fa-solid fa-plus"></i>
                                     Add to wishlist
                                 </button>
@@ -40,7 +39,7 @@
                                 </audio>
                             </div>
                             <div class="container">
-                                <button class="show-btn btn btn-light float-left col-lg-4 d-block">
+                                <button class="oneMusic-btn-sm-light mr-2 float-left col-lg-4 w-100 d-block">
                                     <i class="fa-solid fa-plus"></i>
                                     Follow {{$results->artist_name}}
                                 </button>
