@@ -350,6 +350,44 @@ img {
   font-weight: 700;
   text-transform: capitalize; }
 
+  .file-upload {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  .file-upload  + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.file-upload + label {
+  cursor: pointer; /* "hand" cursor */
+}
+
+  .oneMusic-btn-dark {
+    background-color: #000000;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    min-width: 212px;
+    height: 49px;
+    color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 0;
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 47px;
+    font-weight: 700;
+    text-transform: capitalize; }
+
   .card .card-body a {
                 
     background-color: #000;
@@ -417,12 +455,14 @@ img {
       background: #fff; 
       color: #000000; }
 
+.files {
+  padding: 10px;
+}
+
 .files .border-dashed{
   width: 100%;
-  padding: 50px;
-  border-style: dashed;
-  border-width: 1px;
-  }
+  padding: 20px;
+}
 
 /* :: 4.0 Header Area CSS */
 .header-area {
