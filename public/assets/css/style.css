@@ -134,6 +134,10 @@ img {
 .height-800 {
   height: 800px !important; }
 
+.nav h4 {
+  cursor: pointer;
+}
+
 /* :: 3.3.0 Section Padding */
 
 .section-padding-70 {

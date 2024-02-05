@@ -28,8 +28,8 @@
         </div>
         <br><br>
     </section>
-    <section class="album-catagory section-padding-100-0 bg-white" style="height: 100vh; margin-top: -50px;">
-        <div class="container">
+    <section class="album-catagory section-padding-100-0 bg-white mb-3" style="height: auto; margin-top: -50px;">
+        <div class="container mt-30">
             <nav>
                 <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
                     <h4 class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Albums</h4>
