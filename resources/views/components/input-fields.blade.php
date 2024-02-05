@@ -18,13 +18,13 @@
 border: 1px solid #d8d8d8; box-shadow: 0 2px 70px 0 rgba(0, 0, 0, 0.15);">
   <div class="row">
     <div class="col-md-5 mb-4">
-      <h3 class="heading">File Upload</h3>
+      <h3 class="heading text-center">File Upload</h3>
       <div class="files">
         <div class="border-dashed text-center">
           <div class="text-center mb-4 mx-2">
             <h6>Album Cover</h6>
             <div class="thumbnail mt-3 mb-2">
-              <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 100px; width: 100px;">
+              <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
             </div>
             <p>Album cover must not exceed 1500x1500px</p>
             <input type="file" name="file" id="file" class="file-upload">
