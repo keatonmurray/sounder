@@ -375,6 +375,11 @@ img {
   cursor: pointer; /* "hand" cursor */
 }
 
+.checkboxes .form-check .checkbox {
+  height: 60px;
+  width: 60px;
+}
+
   .oneMusic-btn-dark {
     background-color: #000000;
     -webkit-transition-duration: 500ms;
@@ -472,6 +477,17 @@ img {
   background: #ffffff;
 }
 
+.audio-upload-area {
+
+  width: auto;
+  height: auto;
+}
+
+.border-style {
+  height: auto;
+  justify-content: center;
+  background: #ffffff;
+}
 /* :: 4.0 Header Area CSS */
 .header-area {
   position: absolute;

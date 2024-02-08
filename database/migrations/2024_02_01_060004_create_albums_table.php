@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('artist_name');
             $table->string('album_title');
             $table->longText('album_description');
+            $table->string('tags');
             $table->string('album_cover');
             $table->string('audios');
             $table->integer('price');
