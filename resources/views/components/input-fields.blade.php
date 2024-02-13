@@ -1,20 +1,3 @@
-<script>
-  $(document).ready(function() {
-    var readURL = function(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-          $('.avatar').attr('src', e.target.result);  
-        }
-        reader.readAsDataURL(input.files[0]);
-      }
-    }
-    $(".file-upload").on('change', function(){
-      readURL(this);
-    });
-  });
-</script>
-
 <div class="container px-3 py-5" style="background-color: #f5f9fa;
 border: 1px solid #d8d8d8; box-shadow: 0 2px 70px 0 rgba(0, 0, 0, 0.15);">
   <div class="row">
@@ -121,11 +104,12 @@ border: 1px solid #d8d8d8; box-shadow: 0 2px 70px 0 rgba(0, 0, 0, 0.15);">
         </div>
         <div class="mb-3">
           <label for="" class="form-label">Would you like to make this album playable for free?</label>
-          <input type="text" class="form-control" placeholder="Set a play limit using numbers between 0-10">
+          <input type="text" class="form-control" placeholder="The maximum play limit is 10 consecutive plays">
           <p class="text-muted">A purchase will be required once your max play limit is reached</p>
         </div>
     </div>
   </div>
+</div>
 </div>
 
 <div class="container">
