@@ -471,22 +471,17 @@ img {
 
 }
 
-.files .border-dashed{
-  width: 100%;
-  padding: 20px;
-  background: #ffffff;
-}
-
 .audio-upload-area {
 
   width: auto;
   height: auto;
 }
 
-.border-style {
+.border {
   height: auto;
   justify-content: center;
   background: #ffffff;
+  padding: 20px;
 }
 /* :: 4.0 Header Area CSS */
 .header-area {

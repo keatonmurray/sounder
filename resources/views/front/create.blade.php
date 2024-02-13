@@ -6,7 +6,11 @@
         <div class="container my-5" style="height: auto;">
               <div class="hero section-padding-30">
                   @csrf
-                    <x-input-fields/>
+                  <x-dark-nav>
+                    <x-form.row>
+                      <x-form.file-upload/>
+                    </x-form.row>
+                  </x-dark-nav>
                 </div>
           </div>
       </form>

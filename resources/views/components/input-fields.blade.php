@@ -1,25 +1,21 @@
-<div class="container px-3 py-5" style="background-color: #f5f9fa;
-border: 1px solid #d8d8d8; box-shadow: 0 2px 70px 0 rgba(0, 0, 0, 0.15);">
-  <div class="row">
-    <div class="col-md-5 mb-4">
-      <h3 class="heading text-center">File Upload</h3>
-      <div class="files">
-        <div class="border-dashed text-center">
-          <div class="text-center mb-4 mx-2">
-            <h6>Album Cover</h6>
-            <div class="thumbnail mt-3 mb-2">
-              <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
-            </div>
-            <p>Album cover must not exceed 1500x1500px</p>
-            <input type="file" name="file" id="file" class="file-upload">
-            <label for="file" class="btn btn-dark d-block">Choose a file</label>
-          </div>
+<x-dark-nav>
+  <x-form.row>
+    <x-form.column type="col-md-5 mb-4">
+      <x-heading/>
+      <x-form.border>
+        <div class="text-center mb-4 mx-2">
+          <h6>Album Cover</h6>
+          <x-form.thumbnail type="mt-3 mb-2">
+            <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
+          </x-form.thumbnail>
+          <p>Album cover must not exceed 1500x1500px</p>
+          <input type="file" name="file" id="file" class="file-upload">
+          <label for="file" class="btn btn-dark d-block">Choose a file</label>
         </div>
-      </div>
-    </div>
-    <div class="col-md-7">
+      </x-form.border> 
+    </x-form.column>
+    <x-form.column type="col-md-7">
       <h3 class="heading">Album Details</h3>
-      <div>
         <br>
         <div class="mb-3">
           <label for="albumTitle" class="form-label">Artist Name</label>
@@ -29,7 +25,6 @@ border: 1px solid #d8d8d8; box-shadow: 0 2px 70px 0 rgba(0, 0, 0, 0.15);">
         <div class="mb-3">
             <label for="albumTitle" class="form-label">Album Title</label>
             <input type="text" name="album_title" class="form-control" id="albumTitle" placeholder="Enter an album title">
-        </div>
         </div>
         <div class="mb-3">
           <label for="description" class="form-label">Album Description</label>
@@ -55,9 +50,7 @@ border: 1px solid #d8d8d8; box-shadow: 0 2px 70px 0 rgba(0, 0, 0, 0.15);">
             <input type="text" name="album_title" class="form-control ml-2" id="albumTitle" placeholder="Enter tags here (ie., #rap, #deathmetal, #pop)">
           </div>
         </div>
-      </div>
-    </div>
-  </div>  
+      </x-form.column> 
 <div class="container px-3 py-5 mt-30" style="background-color: #f5f9fa;
 border: 1px solid #d8d8d8; box-shadow: 0 2px 70px 0 rgba(0, 0, 0, 0.15);">
   <div class="audio-upload-area">
@@ -66,15 +59,15 @@ border: 1px solid #d8d8d8; box-shadow: 0 2px 70px 0 rgba(0, 0, 0, 0.15);">
         <h3 class="heading text-center">Audio Upload</h3>
         <br>
         <div class="container">
-          <div class="border-style px-4 py-4">
+          <x-form.border>
             <h6 class="mb-4">Audio Files</h6>
-            <div class="thumbnail mt-3 mb-4">
+            <x-form.thumbnail type="mt-3 mb-4">
               <img src="{{asset('assets/img/bg-img/file-audio-solid.svg')}}" alt="" style="height: 100px; width: 100px;">
-            </div>
+            </x-form.thumbnail>
             <p class="text-muted">Multiple select MP3, WAV, or FLACC files</p>
             <input type="file" class="file-upload" name="audio[]" id="audio" multiple>
             <label for="audio" class="btn btn-dark d-block d-block">Choose a file</label>
-          </div>
+          </x-form.border>
         </div>
       </div>
       <div class="col-md-7">
@@ -107,10 +100,10 @@ border: 1px solid #d8d8d8; box-shadow: 0 2px 70px 0 rgba(0, 0, 0, 0.15);">
           <input type="text" class="form-control" placeholder="The maximum play limit is 10 consecutive plays">
           <p class="text-muted">A purchase will be required once your max play limit is reached</p>
         </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
+  </x-form.row>
+</x-dark-nav>
 
 <div class="container">
   <button type="submit" data-animation="fadeInUp" data-delay="500ms" href="/" class="btn oneMusic-btn-dark mt-4 d-block w-100">Upload to Sounder <i class="fa fa-angle-double-right"></i></button>
