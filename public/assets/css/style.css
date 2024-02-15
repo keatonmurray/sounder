@@ -482,6 +482,7 @@ img {
   justify-content: center;
   background: #ffffff;
   padding: 20px;
+  width: 100%;
 }
 /* :: 4.0 Header Area CSS */
 .header-area {
