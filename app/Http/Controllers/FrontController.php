@@ -32,14 +32,24 @@ class FrontController extends Controller
             'artist_name' => 'required',
             'album_title' => 'required',
             'album_description' => 'required',
-            'price' => 'required',
+            'digital_audio_price' => 'required',
+            'single_track_price' => 'required',
+            'ship_from' => 'required',
+            'ship_to' => 'required',
+            'city' => 'required',
+            'zip_code' => 'required',
+            'shipping_cost' => 'required',
+            'shipping_currency' => 'required',
+            'vat_country' => 'required',
+            'vat_estimate' => 'required',
+            'vat_currency' => 'required',
             'audios' => 'required|array',
-            'merch' => 'required',
             'merch_name' => 'required',
             'merch_price' => 'required',
-            'digital_track_price' => 'required',
-            'highlight_track' => 'required',
-            'merch_description' => 'required'
+            'merch_first_upload' => 'required',
+            'merch_second_upload' => 'required',
+            'merch_third_upload' => 'required',
+            'merch_fourth_upload' => 'required'
          ]);
 
         $audios = [];
@@ -51,13 +61,20 @@ class FrontController extends Controller
             array_push($audios, $audio_path);
         }
 
-        if($request->hasFile('merch')) {
-            $validate['merch'] = $request->file('merch')->store('merches', 'public');
+        if($request->hasFile('merch_first_upload')) {
+            $validate['merch_first_upload'] = $request->file('merch_first_upload')->store('merches', 'public');
         }
 
-        if($request->hasFile('highlight_track')) {
-            $path = $validate['highlight_track']->getClientOriginalName();
-            $validate['highlight_track'] = $request->file('highlight_track')->storeAs('highlight_tracks', $path, 'public');
+        if($request->hasFile('merch_second_upload')) {
+            $validate['merch_second_upload'] = $request->file('merch_second_upload')->store('merches', 'public');
+        }
+
+        if($request->hasFile('merch_third_upload')) {
+            $validate['merch_third_upload'] = $request->file('merch_third_upload')->store('merches', 'public');
+        }
+
+        if($request->hasFile('merch_fourth_upload')) {
+            $validate['merch_fourth_upload'] = $request->file('merch_fourth_upload')->store('merches', 'public');
         }
 
         if($request->hasFile('album_cover')) {
@@ -66,7 +83,8 @@ class FrontController extends Controller
 
         $validate['audios'] = $audios;
         
-         Albums::create($validate);
-         return redirect('/');
+        Albums::create($validate);
+        return redirect('/');
+
     }
 }

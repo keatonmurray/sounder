@@ -355,7 +355,7 @@ img {
   font-weight: 700;
   text-transform: capitalize; }
 
-  .file-upload {
+  .file-upload, .audio, .merch_first_upload, .merch_second_upload, .merch_third_upload, .merch_fourth_upload {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -363,17 +363,14 @@ img {
     position: absolute;
     z-index: -1;
   }
-  .file-upload  + label {
+  .file-upload  + label, .audio  + label, .merch-first-upload + label, .merch-second-upload + label, .merch-third-upload + label, .merch-fourth-upload + label {
     font-size: 1.25em;
     font-weight: 700;
     color: white;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: inline-block;
-}
-
-.file-upload + label {
-  cursor: pointer; /* "hand" cursor */
-}
+    cursor: pointer;
+  }
 
 .checkboxes .form-check .checkbox {
   height: 60px;

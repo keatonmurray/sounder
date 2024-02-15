@@ -14,7 +14,7 @@
   <div class="mb-3">
     <label for="genre" class="form-label">Genre</label>
     <div class="dropdown show d-flex">
-      <select class="custom-select d-block w-50" required style="cursor: pointer;">
+      <select class="custom-select d-block w-50" name="genre" required style="cursor: pointer;">
         <option value="Select Genre">Select Genre</option>
         <option>Pop</option>
         <option>Metal</option>
@@ -28,6 +28,6 @@
         <option>Classical</option>
         <option>Others</option>
       </select>
-      <input type="text" name="album_title" class="form-control ml-2" id="albumTitle" placeholder="Enter tags here (ie., #rap, #deathmetal, #pop)">
+      <input type="text" name="tags" class="form-control ml-2" id="albumTitle" placeholder="Enter tags here (ie., #rap, #deathmetal, #pop)">
     </div>
   </div>

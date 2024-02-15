@@ -18,7 +18,7 @@
                             <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
                           </x-form.thumbnail>
                           <p>Album cover must not exceed 1500x1500px</p>
-                          <input type="file" name="file" id="file" class="file-upload">
+                          <input type="file" name="album_cover" id="file" class="file-upload">
                           <label for="file" class="btn btn-dark d-block">Choose a file</label>
                       </div>
                   </x-form.border><br/>
@@ -48,8 +48,8 @@
                               <img src="{{asset('assets/img/bg-img/file-audio-solid.svg')}}" class="" alt="" style="height: 150px; width: 200px;">
                             </x-form.thumbnail>
                             <p>Multiple select MP3, WAV, or FLAC files</p>
-                            <input type="file" name="file" id="file" class="file-upload">
-                            <label for="file" class="btn btn-dark d-block">Choose a file</label>
+                            <input type="file" name="audios[]" id="audio" class="audio" multiple>
+                            <label for="audio" class="btn btn-dark d-block">Choose a file</label>
                           </div>
                     </x-form.border> <br/>
                 </x-form.column>
@@ -74,10 +74,10 @@
                 <x-form.border>
                   <div class="text-center mb-4 mx-2">
                     <x-form.thumbnail type="mt-3 mb-2">
-                        <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="" alt="" style="height: 180px; width: 180px;">
+                        <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="merch_first" alt="" style="height: 180px; width: 180px;">
                     </x-form.thumbnail>
-                    <input type="file" name="file" id="file" class="file-upload">
-                    <label for="file" class="btn btn-dark d-block">Choose a file</label>
+                    <input type="file" name="merch_first_upload" id="merchFirstUpload" class="merch_first_upload">
+                    <label for="merchFirstUpload" class="btn btn-dark d-block">Choose a file</label>
                   </div>  
                 </x-form.border><br/>
               </x-form.column>
@@ -86,10 +86,10 @@
                 <x-form.border>
                   <div class="text-center mb-4 mx-2">
                     <x-form.thumbnail type="mt-3 mb-2">
-                      <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="" alt="" style="height: 180px; width: 180px;">
+                      <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="merch_second" alt="" style="height: 180px; width: 180px;">
                     </x-form.thumbnail>
-                    <input type="file" name="file" id="file" class="file-upload">
-                    <label for="file" class="btn btn-dark d-block">Choose a file</label>
+                    <input type="file" name="merch_second_upload" id="merchSecondUpload" class="merch_second_upload">
+                    <label for="merchSecondUpload" class="btn btn-dark d-block">Choose a file</label>
                   </div>  
                 </x-form.border><br/>
 
@@ -98,10 +98,10 @@
                 <x-form.border>
                   <div class="text-center mb-4 mx-2">
                     <x-form.thumbnail type="mt-3 mb-2">
-                      <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="" alt="" style="height: 180px; width: 180px;">
+                      <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="merch_third" alt="" style="height: 180px; width: 180px;">
                     </x-form.thumbnail>
-                    <input type="file" name="file" id="file" class="file-upload">
-                    <label for="file" class="btn btn-dark d-block">Choose a file</label>
+                    <input type="file" name="merch_third_upload" id="merchThirdUpload" class="merch_third_upload">
+                    <label for="merchThirdUpload" class="btn btn-dark d-block">Choose a file</label>
                   </div>  
                 </x-form.border><br/>
 
@@ -110,10 +110,10 @@
                 <x-form.border>
                   <div class="text-center mb-4 mx-2">
                     <x-form.thumbnail type="mt-3 mb-2">
-                      <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="" alt="" style="height: 180px; width: 180px;">
+                      <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="merch_fourth" alt="" style="height: 180px; width: 180px;">
                     </x-form.thumbnail>
-                    <input type="file" name="file" id="file" class="file-upload">
-                    <label for="file" class="btn btn-dark d-block">Choose a file</label>
+                    <input type="file" name="merch_fourth_upload" id="merchFourthUpload" class="merch_fourth_upload">
+                    <label for="merchFourthUpload" class="btn btn-dark d-block">Choose a file</label>
                   </div>  
                 </x-form.border><br/>
               </x-form.column>
@@ -138,6 +138,9 @@
             </x-form.row>
             
           </x-form.body>
+        </div>
+        <div class="text-center mt-30">
+          <button class="btn oneMusic-btn-dark d-block w-100" type="submit">Upload to Sounder</button>
         </div>
       </div>
     </form>
