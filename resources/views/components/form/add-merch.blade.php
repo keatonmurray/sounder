@@ -15,7 +15,7 @@
             <x-form.border>
               <div class="text-center mb-4 mx-2">
                 <x-form.thumbnail type="mt-3 mb-2">
-                    <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="merch_first" alt="" style="height: 180px; width: 180px;">
+                  <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_first" alt="" style="height: 180px; width: 180px;">
                 </x-form.thumbnail>
                 <input type="file" name="merch_first_upload" id="merchFirstUpload" class="merch_first_upload">
                 <label for="merchFirstUpload" class="btn btn-dark d-block">Choose a file</label>
@@ -27,7 +27,7 @@
             <x-form.border>
               <div class="text-center mb-4 mx-2">
                 <x-form.thumbnail type="mt-3 mb-2">
-                  <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="merch_second" alt="" style="height: 180px; width: 180px;">
+                 <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_second" alt="" style="height: 180px; width: 180px;">
                 </x-form.thumbnail>
                 <input type="file" name="merch_second_upload" id="merchSecondUpload" class="merch_second_upload">
                 <label for="merchSecondUpload" class="btn btn-dark d-block">Choose a file</label>
@@ -39,7 +39,7 @@
             <x-form.border>
               <div class="text-center mb-4 mx-2">
                 <x-form.thumbnail type="mt-3 mb-2">
-                  <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="merch_third" alt="" style="height: 180px; width: 180px;">
+                 <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_third" alt="" style="height: 180px; width: 180px;">
                 </x-form.thumbnail>
                 <input type="file" name="merch_third_upload" id="merchThirdUpload" class="merch_third_upload">
                 <label for="merchThirdUpload" class="btn btn-dark d-block">Choose a file</label>
@@ -51,7 +51,7 @@
             <x-form.border>
               <div class="text-center mb-4 mx-2">
                 <x-form.thumbnail type="mt-3 mb-2">
-                  <img src="{{asset('assets/img/bg-img/plus-solid.svg')}}" class="merch_fourth" alt="" style="height: 180px; width: 180px;">
+                 <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_fourth" alt="" style="height: 180px; width: 180px;">
                 </x-form.thumbnail>
                 <input type="file" name="merch_fourth_upload" id="merchFourthUpload" class="merch_fourth_upload">
                 <label for="merchFourthUpload" class="btn btn-dark d-block">Choose a file</label>
