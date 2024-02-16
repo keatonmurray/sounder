@@ -1,6 +1,9 @@
+@extends('layouts.app')
+@section('content')
 <div class="head py-5 bg-dark"><br></div>
 <section class="upload-music-area bg-white">
-  <form action="/store" method="POST" enctype="multipart/form-data">
+  <form action="/save-merch" method="POST" enctype="multipart/form-data">
+    @csrf
     <div class="container my-5" style="height: auto;">
     
       <x-form.body>
@@ -73,6 +76,10 @@
       
         </x-form.row>
       </x-form.body>
+      <div class="text-center mt-30">
+        <button class="btn oneMusic-btn-dark d-block w-100" type="submit">Add Merch</button>
+      </div>
     </div>
   </form>
 </section>
+@endsection

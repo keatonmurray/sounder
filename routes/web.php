@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormsController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\MerchController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -45,6 +46,13 @@ Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
 Route::get('/login', [FormsController::class, 'fanLoginForm']);
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
+
+/**
+ * MERCH ROUTES
+ */
+
+ Route::get('/add-merch', [MerchController::class, 'addMerch']);
+ Route::post('/save-merch', [MerchController::class, 'saveMerch']);
 
 /**
  * AUTH ROUTES
