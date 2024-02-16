@@ -52,4 +52,10 @@ class MerchController extends Controller
         Merch::create($validate);
         return back()->with('Success!');
     }
+
+    public function showMerch(string $id)
+    {
+        $merch = Merch::find($id);
+        return view('front.show')->with('results', $merch);
+    }
 }
