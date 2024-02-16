@@ -1,5 +1,5 @@
-<div class="mb-3">
-    <label for="country" class="form-label">Ships from</label>
+  <div class="mb-3">
+    <label for="ship_from" class="form-label">Ships from</label>
     <div class="dropdown show d-flex">
       <select name="ship_from" class="custom-select d-block w-50" required style="cursor: pointer;">
         <x-form.countries/>
@@ -25,8 +25,8 @@
       <select name="vat_country" class="custom-select d-block w-50" required style="cursor: pointer;">
         <x-form.countries/>
       </select>
-      <input type="text" name="album_title" class="form-control ml-2" id="vat_estimate" placeholder="Enter VAT estimate">
-      <input type="text" name="album_title" class="form-control ml-2" id="vat_currency" placeholder="Enter currency">
+      <input type="text" name="vat_estimate" class="form-control ml-2" id="vatEstimate" placeholder="Enter VAT estimate">
+      <input type="text" name="vat_currency" class="form-control ml-2" id="vatCurrency" placeholder="Enter currency">
     </div>
     <p class="text-muted ml-1">VAT amount entered will be added to the total price</p>
   </div>

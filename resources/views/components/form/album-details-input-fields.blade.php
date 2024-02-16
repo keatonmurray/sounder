@@ -28,6 +28,6 @@
         <option>Classical</option>
         <option>Others</option>
       </select>
-      <input type="text" name="tags" class="form-control ml-2" id="albumTitle" placeholder="Enter tags here (ie., #rap, #deathmetal, #pop)">
+      <input type="text" name="tags" class="form-control ml-2" id="tags" placeholder="Enter tags here (ie., #rap, #deathmetal, #pop)">
     </div>
   </div>

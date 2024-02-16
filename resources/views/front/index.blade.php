@@ -25,6 +25,6 @@
     </section>
     @include('front.partials.albums')
     @include('front.partials.buy')
-    @include('front.partials.miscellaneous')
+    
     @include('front.partials.contact')
 @endsection

@@ -32,8 +32,14 @@ class FrontController extends Controller
             'artist_name' => 'required',
             'album_title' => 'required',
             'album_description' => 'required',
+            'genre' => 'required',
+            'tags' => 'required',
+            'album_cover' => 'required',
             'digital_audio_price' => 'required',
             'single_track_price' => 'required',
+            'play_limit' => 'required',
+            'audios' => 'required|array', 
+            /*
             'ship_from' => 'required',
             'ship_to' => 'required',
             'city' => 'required',
@@ -43,13 +49,14 @@ class FrontController extends Controller
             'vat_country' => 'required',
             'vat_estimate' => 'required',
             'vat_currency' => 'required',
-            'audios' => 'required|array',
             'merch_name' => 'required',
             'merch_price' => 'required',
+            'merch_description' => 'required',
             'merch_first_upload' => 'required',
             'merch_second_upload' => 'required',
             'merch_third_upload' => 'required',
-            'merch_fourth_upload' => 'required'
+            'merch_fourth_upload' => 'required',
+            */
          ]);
 
         $audios = [];
@@ -60,6 +67,7 @@ class FrontController extends Controller
 
             array_push($audios, $audio_path);
         }
+        /*
 
         if($request->hasFile('merch_first_upload')) {
             $validate['merch_first_upload'] = $request->file('merch_first_upload')->store('merches', 'public');
@@ -76,7 +84,8 @@ class FrontController extends Controller
         if($request->hasFile('merch_fourth_upload')) {
             $validate['merch_fourth_upload'] = $request->file('merch_fourth_upload')->store('merches', 'public');
         }
-
+        
+        */
         if($request->hasFile('album_cover')) {
             $validate['album_cover'] = $request->file('album_cover')->store('album_covers', 'public');
         }

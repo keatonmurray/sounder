@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('digital_audio_price');
             $table->integer('single_track_price');
             $table->integer('play_limit');
+            /*
             $table->string('merch_first_upload');
             $table->string('merch_second_upload');
             $table->string('merch_third_upload');
@@ -31,16 +32,15 @@ return new class extends Migration
             $table->integer('merch_price');
             $table->longText('merch_description');
             $table->string('ship_from');
+            $table->string('ship_to');
             $table->string('city');
             $table->string('zip_code');
-            $table->string('ship_to');
             $table->integer('shipping_cost');
             $table->string('shipping_currency');
             $table->string('vat_country');
             $table->integer('vat_estimate');
             $table->string('vat_currency');
-
-
+            */
             $table->timestamps();
         });
     }
