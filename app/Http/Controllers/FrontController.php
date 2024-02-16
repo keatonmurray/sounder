@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Merch;
 use App\Models\Albums;
 use Illuminate\Http\Request;
 
@@ -22,8 +23,11 @@ class FrontController extends Controller
 
     public function show(string $id)
     {
-        $results = Albums::find($id);
-        return view('front.show')->with('results', $results);
+        $results = [
+            'results' => Albums::find($id),
+            'merch' => Merch::find($id)
+        ];
+        return view('front.show')->with($results);
     }
 
     public function store(Request $request)

@@ -64,28 +64,26 @@
                         </div>
                     </div>
                 </div>
-                <!--
                 <div class="discographies mt-30">
                     <div class="song-play-area">
                         <h4 class="text-white mb-4">Buy Merch</h4>
                         <div class="col-12 col-sm-12 col-md-4 col-lg-2">
                             <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
                                 <div class="album-thumb">
-                                    <img src="{{asset('storage/' . $results->merch)}}">
+                                    <img src="{{asset('storage/' . $merch->merch_first_upload)}}">
                                     <div class="album-price">
-                                        <p>${{$results->merch_price}}</p>
+                                        <p>${{$merch->merch_price}}</p>
                                     </div>
                                 </div>
                                 <div class="album-info">
                                     <a href="#">
-                                        <h5 class="text-white text-center">{{$results->merch_name}}</h5>
+                                        <h5 class="text-white text-center">{{$merch->merch_name}}</h5>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                -->
             </form>
         </div>
     </section>    
