@@ -5,11 +5,11 @@
             <h2>Support Directly</h2>
         </x-row-heading>
         <div class="row">
-            @foreach($results as $result)
+            @foreach($merches as $result)
             <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="single-album-area wow fadeInUp" data-wow-delay="200ms">
                     <div class="album-thumb">
-                        <img src="{{asset('storage/' . $result->merch)}}" alt="">
+                        <img src="{{asset('storage/' . $result->merch_first_upload)}}" alt="">
                     </div>
                     <div class="album-info text-center">
                         <a href="#">

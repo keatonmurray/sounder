@@ -24,6 +24,10 @@ class ArtistController extends Controller
     {
         $user_id = Auth::guard('artists')->user()->id;
         $user = Artist::find($user_id);
-        return view('artist.index')->with('artists', $user->albums);
+        $results = [
+            'artists' => $user->albums,
+            'merches' => $user->merches
+        ];
+        return view('artist.index')->with($results);
     }
 }
