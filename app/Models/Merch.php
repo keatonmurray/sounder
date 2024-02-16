@@ -12,10 +12,8 @@ class Merch extends Model
 
     protected $guarded = [];
 
-    protected $casts = [
-        'audios' => 'array'
-    ];
-
+    protected $table = 'merches';
+    
     public function artists(): BelongsTo
     {
         return $this->belongsTo(Artist::class);
