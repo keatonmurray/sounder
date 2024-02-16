@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Merch;
 use App\Models\Albums;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -48,7 +49,13 @@ class Artist extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function albums() {
+    public function albums() 
+    {
         return $this->hasMany(Albums::class, 'id');
+    }
+
+    public function merch()
+    {
+        return $this->hasMany(Merch::class, 'id');
     }
 }
