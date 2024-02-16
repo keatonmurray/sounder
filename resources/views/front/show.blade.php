@@ -1,8 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
-        <div class="bg-img text-center">
-        </div>
+        <div class="bg-img text-center"></div>
         <div class="container my-4">  
             <form action="/addToWishlist/{{$results->id}}" method="POST">
                 @csrf
@@ -15,7 +14,7 @@
                             <div class="d-flex mt-3">
                                 <a href="" class="oneMusic-btn-sm-light mr-2 ml-2" type="button">
                                     <i class="fa-solid fa-cart-shopping"></i>
-                                    Buy for ${{$results->price}}
+                                    Buy for ${{$results->digital_audio_price}}
                                 </a>
                                 <button href="" class="oneMusic-btn-sm-light mr-2" type="submit">
                                     <i class="fa-solid fa-plus"></i>
@@ -32,10 +31,10 @@
                             </div>
                             <div class="song-play-area">
                                 <div class="song-name">
-                                    <p class="text-white">{{Str::between($results->highlight_track, '/', '.')}}</p>
+                                    <p class="text-white">{{Str::between($results->audios[0], '/', '.')}}</p>
                                 </div>
                                 <audio preload="auto" controls>
-                                    <source src="{{asset('storage/' . $results->highlight_track)}}" type="audio/mp3">
+                                    <source src="{{asset('storage/' . $results->audios[0])}}" type="audio/mp3">
                                 </audio>
                             </div>
                             <div class="container">
@@ -54,7 +53,7 @@
                             <h4 class="text-white mb-4">All Songs</h4>
                             @foreach($results->audios as $result)
                                 <div class="song-name">
-                                    <button class="btn btn-light btn-sm ml-30 float-right">Buy for ${{$results->digital_track_price}}</button>
+                                    <button class="btn btn-light btn-sm ml-30 float-right">Buy for ${{$results->single_track_price}}</button>
                                     <p class="text-white">{{Str::between($result, '/', '.')}}</p>
                                 </div>
                                 <audio preload="auto" controls>
@@ -65,6 +64,7 @@
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="discographies mt-30">
                     <div class="song-play-area">
                         <h4 class="text-white mb-4">Buy Merch</h4>
@@ -85,6 +85,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </form>
         </div>
     </section>    
