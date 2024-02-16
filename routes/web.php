@@ -51,7 +51,7 @@ Route::get('/dashboard', [HomeController::class, 'index']);
  * MERCH ROUTES
  */
 
- Route::get('/add-merch', [MerchController::class, 'addMerch']);
+ Route::get('/add-merch', [FormsController::class, 'addMerchForm'])->middleware('auth:artists');
  Route::post('/save-merch', [MerchController::class, 'saveMerch']);
 
 /**
@@ -59,6 +59,6 @@ Route::get('/dashboard', [HomeController::class, 'index']);
  */
 
 Route::post('/login', [ArtistLoginController::class, 'login']);
-Route::get('//create-an-account', [FormsController::class, 'registerLinks']);
+Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
 
 Auth::routes();

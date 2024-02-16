@@ -64,6 +64,7 @@
                         </div>
                     </div>
                 </div>
+                @if($merch)
                 <div class="discographies mt-30">
                     <div class="song-play-area">
                         <h4 class="text-white mb-4">Buy Merch</h4>
@@ -82,7 +83,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>   
+                @endif
                 </div>
             </form>
         </div>

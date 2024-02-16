@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
-    
 
     public function index() 
     {
@@ -65,6 +64,5 @@ class FrontController extends Controller
         
         Albums::create($validate);
         return redirect('/');
-
     }
 }
