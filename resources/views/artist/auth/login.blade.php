@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <x-breadcrumb>
         <p>See what’s new</p>

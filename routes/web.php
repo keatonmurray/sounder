@@ -21,41 +21,17 @@ use App\Http\Controllers\Auth\ArtistRegisterController;
 |
 */
 
-/**
- * CORE FUNCTIONALITIES
- */
-
 Route::get('/', [FrontController::class, 'index']); 
 Route::get('/upload-music', [FrontController::class, 'create'])->middleware('auth:artists');
 Route::get('/albums/{id}', [FrontController::class, 'show']);
 Route::post('/store', [FrontController::class, 'store']);
-
-/**
- * ARTIST ACCOUNT ROUTES 
- */
-
 Route::get('/artist-account-signup', [FormsController::class, 'artistSignupForm']);
 Route::get('/artist', [ArtistController::class, 'index']);
 Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
-
-/**
- * FAN ACCOUNT ROUTES
- */
-
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
-
-/**
- * MERCH ROUTES
- */
-
- Route::get('/add-merch', [FormsController::class, 'addMerchForm'])->middleware('auth:artists');
- Route::post('/save-merch', [MerchController::class, 'saveMerch']);
-
-/**
- * AUTH ROUTES
- */
-
+Route::get('/add-merch', [FormsController::class, 'addMerchForm'])->middleware('auth:artists');
+Route::post('/save-merch', [MerchController::class, 'saveMerch']);
 Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
 
