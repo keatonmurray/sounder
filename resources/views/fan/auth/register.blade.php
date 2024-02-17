@@ -2,8 +2,8 @@
 
 @section('content')
     <x-breadcrumb>
-        <p>See what’s new</p>
-        <h2>Fan Account</h2>
+        <p>Create an account</p>
+        <h2>Fan</h2>
     </x-breadcrumb>
     <section class="login-area section-padding-100 bg-white">
         <div class="container">

@@ -18,17 +18,17 @@ class FormsController extends Controller
 
     public function fanLoginForm()
     {
-        return view('auth.login');
+        return view('fan.auth.login');
     }
 
     public function fanSignupForm()
     {
-        return view('auth.register');
+        return view('fan.auth.register');
     }
 
     public function registerLinks()
     {
-        return view('auth.registration');
+        return view('fan.auth.registration');
     }
 
     public function addMerchForm() 

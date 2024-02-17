@@ -34,7 +34,6 @@ Route::post('/store', [FrontController::class, 'store']);
  * ARTIST ACCOUNT ROUTES 
  */
 
-Route::get('/artist-login', [FormsController::class, 'artistLoginForm']);
 Route::get('/artist-account-signup', [FormsController::class, 'artistSignupForm']);
 Route::get('/artist', [ArtistController::class, 'index']);
 Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
@@ -43,7 +42,6 @@ Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
  * FAN ACCOUNT ROUTES
  */
 
-Route::get('/login', [FormsController::class, 'fanLoginForm']);
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
 
