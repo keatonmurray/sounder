@@ -27,6 +27,6 @@ class HomeController extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('fan.index')->with('music', $user->music);
+        return view('fan.index')->with('music', $user->collections);
     }
 }
