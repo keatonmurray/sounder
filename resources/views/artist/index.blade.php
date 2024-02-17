@@ -15,13 +15,7 @@
                 </div>
                 <div class="d-flex justify-content-center">
                     <div class="row">
-                        @include('artist.partials.discog')
-                    </div>
-                    <div class="row">
-                        @include('artist.partials.followers')
-                    </div>
-                    <div class="row">
-                        @include('artist.partials.following')
+                        @include('artist.partials.follow-count')
                     </div>
                 </div>
             </div>
@@ -45,12 +39,14 @@
                     @include('artist.partials.merch')
                 </div>
                 <div class="tab-pane fade" id="nav-tours" role="tabpanel" aria-labelledby="nav-tours-tab">
-                    
+                    <!--tours section here-->
                 </div>
             </div>
-        <!--<div class="load-more-btn text-center">
+            <!--
+            <div class="load-more-btn text-center">
                 <a href="#" class="btn oneMusic-btn">Load More <i class="fa fa-angle-double-right"></i></a>
-            </div>-->
+            </div>
+            -->
         </div>
     </section>
 @endsection
