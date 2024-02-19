@@ -1,10 +1,10 @@
-<div class="mt-30">
+<div class="mt-30" style="height: auto;">
     <br>
-    @if(count($artists) > 0)
-        @foreach($artists as $result)
-            <div class="row oneMusic-albums">
-                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t g u">
-                    <div class="single-album">
+    <div class="row">
+        @if(count($artists) > 0)
+            @foreach($artists as $result)
+                <div class="col-12 col-md-3 col-md-3 col-lg-3">
+                    <div class="single-album px-2">
                         <a href="/albums/{{$result->id}}">
                             <img src="{{asset('storage/' . $result->album_cover)}}" alt="">
                         </a>
@@ -16,9 +16,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
-        @else
-        <p class="text-center">You have not posted any music yet</p>
-    @endif
+            @endforeach
+        @endif
+    </div>
 </div>
