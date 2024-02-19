@@ -63,6 +63,6 @@ class FrontController extends Controller
         $validate['audios'] = $audios;
         
         Albums::create($validate);
-        return redirect('/');
+        return redirect('/artist');
     }
 }

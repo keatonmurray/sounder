@@ -19,6 +19,11 @@ class ArtistController extends Controller
         $this->middleware('auth:artists');
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
 
     public function index()
     {

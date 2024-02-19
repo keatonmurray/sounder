@@ -51,7 +51,7 @@ class Artist extends Authenticatable
 
     public function albums() 
     {
-        return $this->hasMany(Albums::class, 'id');
+        return $this->hasMany(Albums::class, 'artist_name', 'name');
     }
 
     public function merches()
