@@ -489,6 +489,9 @@ img {
   top: 20px;
   left: 0;
   z-index: 1000; }
+  #nav-home-tab, #nav-tours-tab, #nav-merch-tab {
+    color: #000000;
+  }
   .header-area .oneMusic-main-menu {
     position: relative;
     width: 100%;
