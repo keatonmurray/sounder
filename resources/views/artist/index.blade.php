@@ -22,7 +22,7 @@
         </div>
         <br><br>
     </section>
-    <section class="album-catagory section-padding-100-0 bg-white mb-3" style="height: auto; margin-top: -50px;">
+    <section class="album-catagory section-padding-100-0 bg-white mb-3" style="height: 100vh; margin-top: -50px;">
         <div class="container mt-30 mb-5">
             <nav>
                 <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">

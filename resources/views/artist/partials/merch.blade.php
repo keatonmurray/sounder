@@ -19,4 +19,7 @@
             @endforeach
         @endif
     </div>
+    @if(count($merches) == 0) 
+        <p class="text-muted text-center">You have not posted any music yet</p>
+    @endif
 </div>

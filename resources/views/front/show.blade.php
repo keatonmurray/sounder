@@ -1,7 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
-        <div class="bg-img text-center"></div>
+        <div class="bg-img text-center">
+            <!-- background img here -->
+        </div>
         <div class="container my-4">  
             <form action="/addToWishlist/{{$results->id}}" method="POST">
                 @csrf
