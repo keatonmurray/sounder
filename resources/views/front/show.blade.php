@@ -70,7 +70,7 @@
                 <div class="discographies mt-30">
                     <div class="song-play-area">
                         <h4 class="text-white mb-4">Buy Merch</h4>
-                        <div class="col-12 col-sm-12 col-md-4 col-lg-2">
+                        <div class="col-12 col-md-3 col-md-3 col-lg-3">
                             <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
                                 <div class="album-thumb">
                                     <img src="{{asset('storage/' . $merch->merch_first_upload)}}">
