@@ -13,15 +13,15 @@
                             <div class="featured-artist-thumb">
                                 <img src="{{asset('storage/' . $results->album_cover)}}">
                             </div>
-                            <div class="d-flex mt-3">
-                                <a href="" class="oneMusic-btn-sm-light mr-2 ml-2" type="button">
-                                    <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="" class="btn btn-light mr-2" type="button">
+                                    <fa class="solid fa-plus"></fa>
                                     Buy for ${{$results->digital_audio_price}}
                                 </a>
-                                <button href="" class="oneMusic-btn-sm-light mr-2" type="submit">
-                                    <i class="fa-solid fa-plus"></i>
+                                <a href="" class="btn btn-light ml-2 w-100" type="submit">
+                                    <fa class="solid fa-plus"></fa>
                                     Add to wishlist
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
