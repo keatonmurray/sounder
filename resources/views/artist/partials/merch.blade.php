@@ -3,7 +3,7 @@
     <div class="row oneMusic-albums">
         @if(count($merches) > 0)
             @foreach($merches as $result)
-                <div class="col-12 col-md-3 col-md-3 col-lg-3">
+                <div class="col-6 col-md-3 col-md-3 col-lg-3">
                     <div class="single-album">
                         <a href="/albums/{{$result->id}}">
                             <img src="{{asset('storage/' . $result->merch_first_upload)}}" alt="">

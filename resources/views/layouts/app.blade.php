@@ -23,6 +23,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{asset('assets/js/file-upload.js')}}"></script>
 </head>
+
 <body>
     @yield('content')
     <!-- Preloader -->
@@ -42,4 +43,5 @@
     <!-- Active js -->
     <script src="{{asset('assets/js/active.js')}}"></script>
 </body>
+
 </html>

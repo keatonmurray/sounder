@@ -22,6 +22,7 @@ class Artist extends Authenticatable
      */
 
     protected $guard = 'artists';
+    protected $primaryKey = 'id';
     
     protected $fillable = [
         'name',

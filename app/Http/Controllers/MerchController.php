@@ -46,6 +46,6 @@ class MerchController extends Controller
         }
 
         Merch::create($validate);
-        return back()->with('Success!');
+        return redirect('/artist');
     }
 }

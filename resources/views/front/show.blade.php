@@ -5,7 +5,7 @@
             <!-- background img here -->
         </div>
         <div class="container my-4">  
-            <form action="/addToWishlist/{{$results->id}}" method="POST">
+            <form action="" method="POST">
                 @csrf
                 <div class="row align-items-end">
                     <div class="col-12 col-md-5 col-lg-4">
