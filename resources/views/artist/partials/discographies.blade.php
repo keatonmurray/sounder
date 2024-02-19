@@ -10,9 +10,9 @@
                         </a>
                         <div class="album-info">
                             <a href="/albums/{{$result->id}}">
-                                <h5>{{$result->artist_name}}</h5>
+                                <h5>{{$result->album_title}}</h5>
                             </a>
-                            <p>{{$result->album_title}}</p>
+                            <p>{{$result->album_name}}</p>
                         </div>
                     </div>
                 </div>

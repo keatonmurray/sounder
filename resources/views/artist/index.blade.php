@@ -1,18 +1,17 @@
 @extends('layouts.app')
 @section('content')
     <section class="jumbotron-fluid text-center border-0 bg-white">
-        <div class="head px-5 py-4 bg-absolute bg-overlay">
+        <div class="head px-5 py-4 bg-absolute bg-overlay" style="background-image: url('{{asset('assets/img/bg-img/sanguisugabogg.jpg')}}')">
             <br><br><br><br>
             <div class="text-center mb-2 mt-2">
-                <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="rounded-circle" style="height: 150px; width: 150px;" >
+                <img src="{{asset('assets/img/bg-img/cover.jpg')}}" class="rounded-circle" style="height: 200px; width: 200px;" >
             </div>
-            <br><br>
+            <div class="mt-4 text-uppercase">
+                <h4 style="font-size: 35px; line-height: 20px; font-weight: 500px; color: #ffffff;">{{ Auth::user()->name }}</h4>
+            </div>
         </div>
         <div class="container-fluid px-5">
             <div class="hero section-padding-30">
-                <div class="mt-4">
-                    <h4 style="font-size: 30px; font-weight: 400px;">{{ Auth::user()->name }}</h4>
-                </div>
                 <div class="d-flex w-100 justify-content-center">
                     <div class="row">
                         @include('artist.partials.follow-count')
@@ -22,7 +21,7 @@
         </div>
         <br><br>
     </section>
-    <section class="album-catagory section-padding-100-0 bg-white mb-3" style="height: 100vh; margin-top: -50px;">
+    <section class="album-catagory section-padding-100-0 bg-white mb-3" style="height: auto; margin-top: -50px; padding-bottom: 400px;">
         <div class="container mt-30 mb-5">
             <nav>
                 <div class="nav nav-tabs nav-fill d-flex w-100 justify-content-center" id="nav-tab" role="tablist">
@@ -42,11 +41,6 @@
                     <!--tours section here-->
                 </div>
             </div>
-            <!--
-            <div class="load-more-btn text-center">
-                <a href="#" class="btn oneMusic-btn">Load More <i class="fa fa-angle-double-right"></i></a>
-            </div>
-            -->
         </div>
     </section>
 @endsection
