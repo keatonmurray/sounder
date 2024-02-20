@@ -903,6 +903,25 @@ img {
   width: 100%;
   height: auto; }
 
+  #artistDashboardArea .card {
+    border-radius: 30px;
+  }
+
+  #artistDashboardArea .small-btn {
+    background: black;
+    color: white;
+    font-weight: 600;
+  }
+
+  #artistDashboardArea .lead-heading {
+    font-weight: 700;
+    line-height: 12px;
+  }
+
+  #artistDashboardArea .lead {
+    line-height: 1px;
+  }
+
 .featured-artist-area .bg-img {
   position: absolute;
   z-index: -1;
