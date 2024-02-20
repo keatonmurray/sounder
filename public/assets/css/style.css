@@ -118,6 +118,10 @@ img {
 .mr-50 {
   margin-right: 50px !important; }
 
+.py-50 {
+  padding-top: 50px !important; 
+  padding-bottom: 50px !important;}
+
 /* :: 3.2.0 Height */
 .height-400 {
   height: 400px !important; }
@@ -902,6 +906,11 @@ img {
   background: repeating-radial-gradient(#1f1f1f, 10%, #252525);
   width: 100%;
   height: auto; }
+
+  #artistDashboardArea .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   #artistDashboardArea .card {
     border-radius: 30px;

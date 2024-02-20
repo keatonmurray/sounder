@@ -2,16 +2,14 @@
 @section('content')
 <div class="head py-5 bg-dark"><br></div>
     <section id="artistDashboardArea" class="py-4" style="height: auto; background: #f5f9fa;">
-        <div class="container" style="padding-top: 30px;">
+        <div class="container">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-6 col-sm-10">
                     <h2 class="lead-heading">Dashboard</h2>
                 </div>
-                <div class="col-sm-1">
-                    <a href="/upload-music" class="btn small-btn">Add Music</a>
-                </div>
-                <div class="col-sm-1">
-                    <a href="/add-merch" class="btn small-btn">Add Merch</a>
+                <div class="col-6 col-sm-2 d-flex" style="margin-top: -10px;">
+                    <a href="/upload-music" class="btn small-btn mr-1">Add Music</a>
+                    <a href="/add-merch" class="btn small-btn ml-1">Add Merch</a>
                 </div>
             </div>
             <div class="row mt-30">
@@ -49,7 +47,7 @@
                     <div class="col-lg-6">
                         <div class="card border">
                             <div class="card-body">
-                                <h5>Streams per month</h5>
+                                <h5 class="text-capitalize">Streams per month</h5>
                                 <hr>
                                 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
                             </div>
@@ -59,7 +57,7 @@
                     <div class="col-lg-6">
                         <div class="card border">
                             <div class="card-body">
-                                <h5>Total revenue</h5>
+                                <h5 class="text-capitalize">Total revenue</h5>
                                 <hr>
                                 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
                             </div>
