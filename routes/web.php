@@ -34,5 +34,6 @@ Route::get('/add-merch', [FormsController::class, 'addMerchForm'])->middleware('
 Route::post('/save-merch', [MerchController::class, 'saveMerch']);
 Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
+Route::get('/artist-dashboard', [ArtistController::class, 'artistDashboard']);
 
 Auth::routes();
