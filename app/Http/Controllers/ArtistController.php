@@ -35,4 +35,9 @@ class ArtistController extends Controller
         ];
         return view('artist.index')->with($results);
     }
+    
+    public function artistDashboard()
+    {
+        return view('artist.profile.dashboard');
+    }
 }
