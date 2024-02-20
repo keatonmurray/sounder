@@ -2,9 +2,10 @@
 <div class="classynav">
     <ul>
         <li><a href="/home">Community</a></li>
-        <li><a href="/upload-music">Add Music</a></li>
+        <li><a href="/upload-music">Post Music</a></li>
         <li><a href="/add-merch">Sell Merch</a></li>
-        <li><a href="event.html">Explore Events</a></li>
+        <li><a href="">Explore Events</a></li>
+        <li><a href="/">FAQ's</a></li>
     </ul>
 
     <!-- Login/Register & Cart Button -->

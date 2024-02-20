@@ -6,8 +6,8 @@
             <div class="text-center mb-2 mt-2">
                 <img src="{{asset('assets/img/bg-img/cover.jpg')}}" class="rounded-circle" style="height: 200px; width: 200px;" >
             </div>
-            <div class="mt-4 text-uppercase">
-                <h4 style="font-size: 35px; line-height: 20px; font-weight: 500px; color: #ffffff;">{{ Auth::user()->name }}</h4>
+            <div class="artist-name-heading mt-4 text-uppercase" style="white-space: nowrap; display: block;">
+                <h4 style="font-size: 50px; line-height: 40px; font-weight: 700; color: #ffffff;">{{ Auth::user()->name }}</h4>
             </div>
         </div>
         <div class="container-fluid px-5">

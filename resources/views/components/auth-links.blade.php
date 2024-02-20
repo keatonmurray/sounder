@@ -18,6 +18,8 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="text-dark dropdown-item" href="">Profile Settings</a>
+                    <a class="text-dark dropdown-item" href="">Account Settings</a>
+                    <a class="text-dark dropdown-item" href="">Privacy and Security</a>
                     <a class="text-dark dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
