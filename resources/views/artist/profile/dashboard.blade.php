@@ -43,6 +43,7 @@
             </div>
             <div class="mt-50">
                 <h2>Overview</h2>
+                <br>
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="card border">
@@ -68,25 +69,90 @@
             </div>
             <div class="mt-50 mb-50">
                 <h2>Music Posted</h2>
+                <br>
                <div class="row">
                     <div class="col-12">
                         <div class="card border">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <h5>Music</h5>
-                                        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <h5>Merch</h5>
-                                        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                                        <h4>Music</h4>
+                                        <table class="table">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">
+                                                    <h6>#</h6>
+                                                </th>
+                                                <th scope="col">
+                                                    <h6>Album Title</h6>
+                                                </th>
+                                                <th scope="col">
+                                                    <h6>Status</h6>
+                                                </th>
+                                                <th scope="col">
+                                                    <h6>Action</h6>
+                                                </th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">1</th>
+                                                <td>Phantasmgore</td>
+                                                <td>Active</td>
+                                                <td class="d-flex">
+                                                    
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Pornographic Seizure</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h4>Merch</h4>
+                                            <table class="table">
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">
+                                                        <h6>SKU #</h6>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <h6>Merch Name</h6>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <h6>Status</h6>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <h6>Action</h6>
+                                                    </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Phantasmgore</td>
+                                                    <td>Active</td>
+                                                    <td class="d-flex">
+                                                        
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Jacob</td>
+                                                    <td>Pornographic Seizure</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-               </div>
+                </div>
             </div>
-        </div>
     </section>
 @endsection
