@@ -478,6 +478,11 @@ img {
   height: auto;
 }
 
+.upload-music-area #merchBtn {
+  background: #000;
+  font-weight: bold;
+}
+
 .border {
   height: auto;
   justify-content: center;

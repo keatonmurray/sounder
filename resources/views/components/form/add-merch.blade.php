@@ -18,7 +18,7 @@
                   <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_first" alt="" style="height: 180px; width: 180px;">
                 </x-form.thumbnail>
                 <input type="file" name="merch_first_upload" id="merchFirstUpload" class="merch_first_upload">
-                <label for="merchFirstUpload" class="btn btn-dark d-block">Choose a file</label>
+                <label for="merchFirstUpload" id="merchBtn" class="btn btn-dark d-block">Choose a file</label>
               </div>  
             </x-form.border><br/>
           </x-form.column>
@@ -30,7 +30,7 @@
                  <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_second" alt="" style="height: 180px; width: 180px;">
                 </x-form.thumbnail>
                 <input type="file" name="merch_second_upload" id="merchSecondUpload" class="merch_second_upload">
-                <label for="merchSecondUpload" class="btn btn-dark d-block">Choose a file</label>
+                <label for="merchSecondUpload" id="merchBtn" class="btn btn-dark d-block">Choose a file</label>
               </div>  
             </x-form.border><br/>
           </x-form.column>
@@ -42,7 +42,7 @@
                  <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_third" alt="" style="height: 180px; width: 180px;">
                 </x-form.thumbnail>
                 <input type="file" name="merch_third_upload" id="merchThirdUpload" class="merch_third_upload">
-                <label for="merchThirdUpload" class="btn btn-dark d-block">Choose a file</label>
+                <label for="merchThirdUpload" id="merchBtn" class="btn btn-dark d-block">Choose a file</label>
               </div>  
             </x-form.border><br/>
 
@@ -54,7 +54,7 @@
                  <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_fourth" alt="" style="height: 180px; width: 180px;">
                 </x-form.thumbnail>
                 <input type="file" name="merch_fourth_upload" id="merchFourthUpload" class="merch_fourth_upload">
-                <label for="merchFourthUpload" class="btn btn-dark d-block">Choose a file</label>
+                <label for="merchFourthUpload" id="merchBtn" class="btn btn-dark d-block">Choose a file</label>
               </div>  
             </x-form.border><br/>
           </x-form.column>
