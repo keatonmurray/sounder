@@ -11,6 +11,7 @@ class MerchController extends Controller
     public function saveMerch(Request $request)
     {
         $validate = $request->validate([
+            'artistName' => 'required',
             'ship_from' => 'required',
             'ship_to' => 'required',
             'city' => 'required',
