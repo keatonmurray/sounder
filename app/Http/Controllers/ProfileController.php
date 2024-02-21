@@ -8,6 +8,6 @@ class ProfileController extends Controller
 {
     public function updateProfile()
     {
-        //store method
+        echo "Profile updated!";
     }
 }

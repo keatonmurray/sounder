@@ -6,6 +6,7 @@ use App\Http\Controllers\FormsController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\MerchController;
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ArtistRegisterController;
@@ -36,5 +37,6 @@ Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
 Route::get('/artist-dashboard', [ArtistController::class, 'artistDashboard']);
 Route::get('/profile-settings', [ArtistController::Class, 'artistProfileSettings'])->middleware('auth:artists');;
+Route::post('/update-profile', [ProfileController::class, 'updateProfile']);
 
 Auth::routes();
