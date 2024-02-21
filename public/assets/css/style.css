@@ -931,6 +931,21 @@ img {
     line-height: 1px;
   }
 
+  #artistDashboardArea .table td,  #artistDashboardArea .table th {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  #artistDashboardArea .table-heading-title {
+    font-weight: 600;
+    line-height: 65px;
+  }
+
+  #artistDashboardArea #action-btn {
+    background: #000;
+    font-weight: bold
+  }
+
 .featured-artist-area .bg-img {
   position: absolute;
   z-index: -1;

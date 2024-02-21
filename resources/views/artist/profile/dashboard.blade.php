@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
 <div class="head py-5 bg-dark"><br></div>
-    <section id="artistDashboardArea" class="py-4" style="height: auto; background: #f5f9fa;">
+    <section id="artistDashboardArea" class="py-2" style="height: auto; background: #f5f9fa;">
         <div class="container">
-            <div class="row">
+            <div class="row mr-5">
                 <div class="col-6 col-sm-10">
                     <h2 class="lead-heading">Dashboard</h2>
                 </div>
@@ -58,7 +58,7 @@
                     <div class="col-lg-6">
                         <div class="card border">
                             <div class="card-body">
-                                <h5 class="text-capitalize">Total revenue</h5>
+                                <h5 class="text-capitalize">Revenue statistics</h5>
                                 <hr>
                                 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
                             </div>
@@ -76,76 +76,77 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <h4>Music</h4>
-                                        <table class="table">
+                                        <h2 class="table-heading-title">Music</h2>
+                                        <table class="table table-bordered">
                                             <thead>
                                               <tr>
                                                 <th scope="col">
-                                                    <h6>#</h6>
+                                                    <h5>Album Title</h5>
                                                 </th>
                                                 <th scope="col">
-                                                    <h6>Album Title</h6>
+                                                    <h5>Status</h5>
                                                 </th>
                                                 <th scope="col">
-                                                    <h6>Status</h6>
-                                                </th>
-                                                <th scope="col">
-                                                    <h6>Action</h6>
+                                                    <h5>Action</h5>
                                                 </th>
                                               </tr>
                                             </thead>
                                             <tbody>
                                               <tr>
-                                                <th scope="row">1</th>
                                                 <td>Phantasmgore</td>
                                                 <td>Active</td>
                                                 <td class="d-flex">
-                                                    
+                                                    <button id="action-btn" class="btn btn-sm btn-dark mr-1">Edit</button>
+                                                    <button id="action-btn" class="btn btn-sm btn-dark ml-1">Delete</button>
                                                 </td>
                                               </tr>
                                               <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
                                                 <td>Pornographic Seizure</td>
+                                                <td>Active</td>
+                                                <td class="d-flex">
+                                                    <button id="action-btn" class="btn btn-sm btn-dark mr-1">Edit</button>
+                                                    <button id="action-btn" class="btn btn-sm btn-dark ml-1">Delete</button>
+                                                </td>
                                               </tr>
                                             </tbody>
                                           </table>
                                         </div>
                                         <div class="col-sm-6">
-                                            <h4>Merch</h4>
-                                            <table class="table">
+                                            <h2 class="table-heading-title">Merch</h2>
+                                            <table class="table table-bordered">
                                                 <thead>
                                                   <tr>
                                                     <th scope="col">
-                                                        <h6>SKU #</h6>
+                                                        <h5>Merch Name</h5>
                                                     </th>
                                                     <th scope="col">
-                                                        <h6>Merch Name</h6>
+                                                        <h5>Status</h5>
                                                     </th>
                                                     <th scope="col">
-                                                        <h6>Status</h6>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <h6>Action</h6>
+                                                        <h5>Action</h5>
                                                     </th>
                                                   </tr>
                                                 </thead>
                                                 <tbody>
                                                   <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Phantasmgore</td>
+                                                    <td>Phantasmgore EP 12" Vinyl</td>
                                                     <td>Active</td>
                                                     <td class="d-flex">
-                                                        
+                                                        <button id="action-btn" class="btn btn-sm btn-dark mr-1">Edit</button>
+                                                        <button id="action-btn" class="btn btn-sm btn-dark ml-1">Delete</button>
                                                     </td>
                                                   </tr>
                                                   <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Pornographic Seizure</td>
+                                                    <td>Pornographic Seizure CD 2020</td>
+                                                    <td>Active</td>
+                                                    <td class="d-flex">
+                                                        <button id="action-btn" class="btn btn-sm btn-dark mr-1">Edit</button>
+                                                        <button id="action-btn" class="btn btn-sm btn-dark ml-1">Delete</button>
+                                                    </td>
                                                   </tr>
                                                 </tbody>
                                               </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
