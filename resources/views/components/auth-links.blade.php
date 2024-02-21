@@ -19,7 +19,7 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="text-dark dropdown-item" href="/artist">Your Profile</a>
                     <a class="text-dark dropdown-item" href="/artist-dashboard">Dashboard</a>
-                    <a class="text-dark dropdown-item" href="">Profile Settings</a>
+                    <a class="text-dark dropdown-item" href="/profile-settings">Profile Settings</a>
                     <a class="text-dark dropdown-item" href="">Account Settings</a>
                     <a class="text-dark dropdown-item" href="">Privacy and Security</a>
                     <a class="text-dark dropdown-item" href="{{ route('logout') }}"
