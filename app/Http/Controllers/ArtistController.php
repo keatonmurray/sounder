@@ -40,4 +40,9 @@ class ArtistController extends Controller
     {
         return view('artist.profile.dashboard');
     }
+
+    public function artistProfileSettings()
+    {
+        return view('artist.profile.profile-settings');
+    }
 }

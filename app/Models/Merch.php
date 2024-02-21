@@ -13,6 +13,7 @@ class Merch extends Model
     protected $guarded = [];
 
     protected $table = 'merches';
+    protected $primaryKey = 'id';
     
     public function artists(): BelongsTo
     {
