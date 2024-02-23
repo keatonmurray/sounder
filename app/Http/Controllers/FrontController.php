@@ -64,4 +64,9 @@ class FrontController extends Controller
         Albums::create($validate);
         return redirect('/artist');
     }
+
+    public function edit()
+    {
+        return view('front.edit');
+    }
 }

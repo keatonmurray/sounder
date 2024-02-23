@@ -33,7 +33,7 @@ class ArtistController extends Controller
             'artists' => $user->albums,
             'merches' => $user->merches
         ];
-        return view('artist.index')->with($results);
+        return view('artist.profile.dashboard')->with($results);
     }
     
     public function artistDashboard()
@@ -44,5 +44,15 @@ class ArtistController extends Controller
     public function artistProfileSettings()
     {
         return view('artist.profile.profile-settings');
+    }
+
+    public function updateProfile(Request $request, Artist $id)
+    {
+        $validate = $request->validate([
+            'name' => 'required',
+        ]);
+
+        $id->update($validate);
+        return redirect('/artist');
     }
 }

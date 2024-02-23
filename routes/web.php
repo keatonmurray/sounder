@@ -37,6 +37,6 @@ Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
 Route::get('/artist-dashboard', [ArtistController::class, 'artistDashboard']);
 Route::get('/profile-settings', [ArtistController::Class, 'artistProfileSettings'])->middleware('auth:artists');;
-Route::post('/update-profile', [ProfileController::class, 'updateProfile']);
+Route::post('/update-profile', [ArtistController::class, 'updateProfile']);
 
 Auth::routes();

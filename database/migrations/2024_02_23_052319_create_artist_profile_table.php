@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('profile_picture');
             $table->string('album_cover');
-            $table->string('profile_name');
+            $table->string('artist_name');
             $table->timestamps();
         });
     }

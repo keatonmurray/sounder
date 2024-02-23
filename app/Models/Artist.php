@@ -63,6 +63,6 @@ class Artist extends Authenticatable
 
     public function profile()
     {
-        return $this->hasMany(Profile::class, 'artistName', 'name');
+        return $this->hasMany(Profile::class, 'profile_name', 'name');
     }
 }

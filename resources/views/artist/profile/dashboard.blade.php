@@ -96,18 +96,22 @@
                                         </thead>
                                         <tbody>
                                           <tr> 
-                                            <td>Moments Between Dreams</td>
-                                            <td>Live</td>
-                                            <td>
-                                                <div class="d-flex">
-                                                    <button class="btn btn-sm mr-1" id="action-btn">
-                                                        Edit
-                                                    </button>
-                                                    <button class="btn btn-sm ml-1" id="action-btn">
-                                                        Delete
-                                                    </button>
-                                                </div>
-                                            </td>
+                                            @if(count($artists) > 0)
+                                                @foreach($artists as $result)
+                                                    <td>{{$result->album_title}}</td>
+                                                    <td>Live</td>
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <button class="btn btn-sm mr-1" id="action-btn">
+                                                                Edit
+                                                            </button>
+                                                            <button class="btn btn-sm ml-1" id="action-btn">
+                                                                Delete
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                @endforeach
+                                            @endif
                                           </tr>
                                         </tbody>
                                     </table>

@@ -38,8 +38,8 @@
                         <div class="col-12 mt-30">
                             <x-form.heading heading="Account Settings"/>
                             <div class="mb-3">
-                                <label for="profile_name" class="form-label">Account Name</label>
-                                <input type="text" name="profile_name" class="form-control" id="profile_name" placeholder="Enter a new artist name">
+                                <label for="name" class="form-label">Account Name</label>
+                                <input type="text" name="name" class="form-control" id="profile_name" placeholder="Enter a new artist name">
                             </div>
                         </div>
                     </div>
