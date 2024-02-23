@@ -359,7 +359,14 @@ img {
   font-weight: 700;
   text-transform: capitalize; }
 
-  .file-upload, .audio, .merch_first_upload, .merch_second_upload, .merch_third_upload, .merch_fourth_upload {
+  .file-upload, 
+  .audio, 
+  .merch_first_upload, 
+  .merch_second_upload, 
+  .merch_third_upload, 
+  .merch_fourth_upload,
+  .profile-pic-upload,
+  .cover-photo-upload {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -367,7 +374,14 @@ img {
     position: absolute;
     z-index: -1;
   }
-  .file-upload  + label, .audio  + label, .merch-first-upload + label, .merch-second-upload + label, .merch-third-upload + label, .merch-fourth-upload + label {
+  .file-upload + label, 
+  .audio  + label, 
+  .merch-first-upload + label, 
+  .merch-second-upload + label, 
+  .merch-third-upload + label, 
+  .merch-fourth-upload + label,
+  .profile-pic-upload + label,
+  .cover-photo-upload + label {
     font-size: 1.25em;
     font-weight: 700;
     color: white;

@@ -6,7 +6,7 @@
             <x-form.body>
                 <x-form.heading heading="Profile Settings"/>
                 <br>
-                <form action="/update-profile" method="POST">
+                <form action="/update-profile" method="POST" enctype="multipart/form-data>
                     @csrf
                     <div class="row">
                         <div class="col-12 col-sm-6">
@@ -14,11 +14,11 @@
                                 <div class="text-center mb-4 mx-2">
                                   <h6>Profile Picture</h6>
                                     <x-form.thumbnail type="mt-3 mb-2">
-                                      <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
+                                      <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="profile-pic" alt="" style="height: 200px; width: 200px;">
                                     </x-form.thumbnail>
                                     <p>Profile photo must not exceed 600x600 pixels</p>
-                                    <input type="file" name="album_cover" id="file" class="file-upload">
-                                    <label for="file" class="btn btn-dark d-block">Choose a file</label>
+                                    <input type="file" name="profile_picture" id="profilePic" class="profile-pic-upload">
+                                    <label for="profilePic" class="btn btn-dark d-block">Choose a file</label>
                                 </div>
                             </x-form.border><br/>
                         </div>
@@ -27,11 +27,11 @@
                                 <div class="text-center mb-4 mx-2">
                                   <h6>Cover Photo</h6>
                                     <x-form.thumbnail type="mt-3 mb-2">
-                                      <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
+                                      <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="cover-photo" alt="" style="height: 200px; width: 200px;">
                                     </x-form.thumbnail>
                                     <p>Cover photo must not exceed 1200x1200 pixels</p>
-                                    <input type="file" name="album_cover" id="file" class="file-upload">
-                                    <label for="file" class="btn btn-dark d-block">Choose a file</label>
+                                    <input type="file" name="album_cover" id="coverPhoto" class="cover-photo-upload">
+                                    <label for="coverPhoto" class="btn btn-dark d-block">Choose a file</label>
                                 </div>
                             </x-form.border><br/>
                         </div>
