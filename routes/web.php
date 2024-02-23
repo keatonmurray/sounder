@@ -27,7 +27,7 @@ Route::get('/upload-music', [FrontController::class, 'create'])->middleware('aut
 Route::get('/albums/{id}', [FrontController::class, 'show']);
 Route::post('/store', [FrontController::class, 'store']);
 Route::get('/artist-account-signup', [FormsController::class, 'artistSignupForm']);
-Route::get('/artist', [ArtistController::class, 'index']);
+Route::get('/artist-dashboard', [ArtistController::class, 'index']);
 Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
@@ -35,7 +35,7 @@ Route::get('/add-merch', [FormsController::class, 'addMerchForm'])->middleware('
 Route::post('/save-merch', [MerchController::class, 'saveMerch']);
 Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
-Route::get('/artist-dashboard', [ArtistController::class, 'artistDashboard']);
+Route::get('/artist-profile', [ArtistController::class, 'artistProfile']);
 Route::get('/profile-settings', [ArtistController::Class, 'artistProfileSettings'])->middleware('auth:artists');;
 Route::post('/update-profile', [ArtistController::class, 'updateProfile']);
 Route::get('/edit/{id}',[ FrontController::class, 'edit']);

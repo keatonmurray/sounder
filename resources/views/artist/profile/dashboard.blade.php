@@ -95,9 +95,9 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr> 
                                             @if(count($artists) > 0)
                                                 @foreach($artists as $result)
+                                                <tr> 
                                                     <td>{{$result->album_title}}</td>
                                                     <td>Live</td>
                                                     <td>
@@ -112,9 +112,9 @@
                                                             </form>
                                                         </div>
                                                     </td>
+                                                </tr>
                                                 @endforeach
                                             @endif
-                                          </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -135,13 +135,22 @@
                                                 <h5>Merch Name</h5>
                                             </th>
                                             <th scope="col">
-                                                <h5>Type</h5>
+                                                <h5>Price</h5>
+                                            </th>
+                                            <th scope="col">
+                                                <h5>Shipping From</h5>
+                                            </th>
+                                            <th scope="col">
+                                                <h5>Ships To</h5>
+                                            </th>
+                                            <th scope="col">
+                                                <h5>Shipping Cost</h5>
+                                            </th>
+                                            <th scope="col">
+                                                <h5>VAT Amount</h5>
                                             </th>
                                             <th scope="col">
                                                 <h5>Status</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>Quantity</h5>
                                             </th>
                                             <th scope="col">
                                                 <h5>Action</h5>
@@ -149,22 +158,31 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr> 
-                                            <td>Moments Between Dreams EP 12" Vinyl</td>
-                                            <td>Vinyl</td>
-                                            <td>Live</td>
-                                            <td>56</td>
-                                            <td>
-                                                <div class="d-flex">
-                                                    <button class="btn btn-sm mr-1" id="action-btn">
-                                                        Edit
-                                                    </button>
-                                                    <button class="btn btn-sm ml-1" id="action-btn">
-                                                        Delete
-                                                    </button>
-                                                </div>
-                                            </td>
-                                          </tr>
+                                            @if(count($merches) > 0)
+                                                @foreach($merches as $result)
+                                                <tr> 
+                                                    <td>{{$result->merch_name}}</td>
+                                                    <td>{{$result->merch_price}}</td>
+                                                    <td>{{$result->ship_from}}</td>
+                                                    <td>{{$result->ship_to}}</td>
+                                                    <td>{{$result->shipping_cost}} {{$result->shipping_currency}}</td>
+                                                    <td>{{$result->vat_estimate}} {{$result->vat_currency}}</td>
+                                                    <td>Active</td>
+                                                    <td>
+                                                        <form action="" method="POST">
+                                                            <div class="d-flex">
+                                                                <a href="" class="btn mr-1" id="action-btn" type="button">
+                                                                    Edit
+                                                                </a>
+                                                                <button class="btn ml-1" id="action-btn" type="submit">
+                                                                    Delete
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            @endif
                                         </tbody>
                                     </table>
                                 </div>

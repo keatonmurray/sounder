@@ -53,7 +53,7 @@ class LoginController extends Controller
 
         if (auth()->guard('artists')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/artist');
+            return redirect('/artist-dashboard');
         } 
 
         return back()->withErrors([

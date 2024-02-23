@@ -36,9 +36,15 @@ class ArtistController extends Controller
         return view('artist.profile.dashboard')->with($results);
     }
     
-    public function artistDashboard()
-    {
-        return view('artist.profile.dashboard');
+    public function artistProfile()
+    {   
+        $user_id = Auth::guard('artists')->user()->id;
+        $user = Artist::find($user_id);
+        $results = [
+            'artists' => $user->albums,
+            'merches' => $user->merches
+        ];
+        return view('artist.index')->with($results);
     }
 
     public function artistProfileSettings()
