@@ -102,9 +102,9 @@
                                                     <td>Live</td>
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button class="btn btn-sm mr-1" id="action-btn">
+                                                            <a href="/edit/{{$result->id}} "class="btn btn-sm mr-1" id="action-btn">
                                                                 Edit
-                                                            </button>
+                                                            </a>
                                                             <button class="btn btn-sm ml-1" id="action-btn">
                                                                 Delete
                                                             </button>

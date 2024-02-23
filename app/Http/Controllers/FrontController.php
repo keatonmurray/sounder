@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Merch;
 use App\Models\Albums;
+use App\Models\Artist;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -65,7 +66,7 @@ class FrontController extends Controller
         return redirect('/artist');
     }
 
-    public function edit()
+    public function edit(Artist $id)
     {
         return view('front.edit');
     }
