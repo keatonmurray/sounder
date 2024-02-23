@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email')->unique();
-            $table->string('artist_name');
             $table->string('album_title');
             $table->longText('album_description');
             $table->string('genre');

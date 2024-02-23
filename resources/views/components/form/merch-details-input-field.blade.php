@@ -1,4 +1,4 @@
-<input type="email" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
+<input type="hidden" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
 <div class="mb-3">
     <label for="merchName" class="form-label">Merch Name</label>
     <input type="text" name="merch_name" class="form-control" id="merchName" placeholder="Enter a name for this merch">

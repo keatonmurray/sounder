@@ -1,9 +1,4 @@
-  <input type="email" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
-  <div class="mb-3">
-    <label for="albumTitle" class="form-label">Artist Name</label>
-    <input type="text" name="artist_name" class="form-control" id="artistName" placeholder="Enter an artist name">
-    <p class="text-muted">We'll set your account name by default if this field is left empty</p>
-  </div>
+  <input type="hidden" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
   <div class="mb-3">
       <label for="albumTitle" class="form-label">Album Title</label>
       <input type="text" name="album_title" class="form-control" id="albumTitle" placeholder="Enter an album title">

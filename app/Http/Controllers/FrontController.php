@@ -35,7 +35,7 @@ class FrontController extends Controller
     public function store(Request $request)
     {
          $validate = $request->validate([
-            'artist_name' => 'required',
+            'email' => 'required',
             'album_title' => 'required',
             'album_description' => 'required',
             'genre' => 'required',
@@ -63,7 +63,7 @@ class FrontController extends Controller
         $validate['audios'] = $audios;
         
         Albums::create($validate);
-        return redirect('/artist');
+        return redirect('/artist-profile');
     }
 
     public function edit(Artist $id)
