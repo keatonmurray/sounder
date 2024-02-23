@@ -36,10 +36,10 @@
                             </x-form.border><br/>
                         </div>
                         <div class="col-12 mt-30">
-                            <x-form.heading heading="Profile Information"/>
+                            <x-form.heading heading="Account Settings"/>
                             <div class="mb-3">
                                 <label for="profile_name" class="form-label">Account Name</label>
-                                <input type="text" name="profile_name" class="form-control" id="profile_name" placeholder="Enter an artist name">
+                                <input type="text" name="profile_name" class="form-control" id="profile_name" placeholder="Enter a new artist name">
                             </div>
                         </div>
                     </div>
