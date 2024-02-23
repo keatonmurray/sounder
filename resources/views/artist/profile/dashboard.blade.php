@@ -77,6 +77,7 @@
                  <div class="tab-pane fade" id="nav-add-music" role="tabpanel" aria-labelledby="nav-add-music-tab">
                     <div class="row">
                         <div class="col-12">
+                            <a href="/upload-music" class="btn btn-dark mb-4 float-right" id="action-btn">Add More</a>
                             <div class="card border">
                                 <div class="card-body">
                                     <table class="table table-bordered">
@@ -118,6 +119,7 @@
                  <div class="tab-pane fade" id="nav-add-merch" role="tabpanel" aria-labelledby="nav-add-merch-tab">
                     <div class="row">
                         <div class="col-12">
+                            <a href="/add-merch" class="btn btn-dark mb-4 float-right" id="action-btn">Add More</a>
                             <div class="card border">
                                 <div class="card-body">
                                     <table class="table table-bordered">
