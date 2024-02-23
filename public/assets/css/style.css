@@ -948,7 +948,8 @@ img {
 
   #artistDashboardArea #action-btn {
     background: #000;
-    font-weight: bold
+    font-weight: bold;
+    color: #fff;
   }
 
 .featured-artist-area .bg-img {

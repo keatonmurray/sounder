@@ -16,7 +16,7 @@
                                     <x-form.thumbnail type="mt-3 mb-2">
                                       <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
                                     </x-form.thumbnail>
-                                    <p>Profile photo mustt not exceed 600x600 pixels</p>
+                                    <p>Profile photo must not exceed 600x600 pixels</p>
                                     <input type="file" name="album_cover" id="file" class="file-upload">
                                     <label for="file" class="btn btn-dark d-block">Choose a file</label>
                                 </div>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="text-center mt-30">
                         <button class="btn oneMusic-btn-dark d-block w-100" type="submit">Update Profile</button>
-                      </div>
+                    </div>
                 </form>
             </x-form.body>
         </div>
