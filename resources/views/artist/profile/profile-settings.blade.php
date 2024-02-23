@@ -6,7 +6,7 @@
             <x-form.body>
                 <x-form.heading heading="Profile Settings"/>
                 <br>
-                <form action="/update-profile" method="POST" enctype="multipart/form-data>
+                <form action="/update-profile" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-12 col-sm-6">
