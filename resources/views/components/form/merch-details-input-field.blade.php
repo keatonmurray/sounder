@@ -1,8 +1,4 @@
-<div class="mb-3">
-    <label for="artistName" class="form-label">Artist Name</label>
-    <input type="text" name="artistName" class="form-control" id="artistName" placeholder="Enter an artist name">
-    <p class="text-muted">We'll set your account name by default if this field is left empty</p>
-  </div>
+<input type="email" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
 <div class="mb-3">
     <label for="merchName" class="form-label">Merch Name</label>
     <input type="text" name="merch_name" class="form-control" id="merchName" placeholder="Enter a name for this merch">

@@ -11,7 +11,7 @@ class MerchController extends Controller
     public function saveMerch(Request $request)
     {
         $validate = $request->validate([
-            'artistName' => 'required',
+            'email' => 'required',
             'ship_from' => 'required',
             'ship_to' => 'required',
             'city' => 'required',
@@ -47,6 +47,6 @@ class MerchController extends Controller
         }
 
         Merch::create($validate);
-        return redirect('/artist');
+        return redirect('/artist-profile');
     }
 }

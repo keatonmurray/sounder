@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('merches', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('artistName');
+            $table->string('email')->unique();
             $table->string('merch_first_upload');
             $table->string('merch_second_upload');
             $table->string('merch_third_upload');

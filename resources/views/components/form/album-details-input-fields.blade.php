@@ -1,3 +1,4 @@
+  <input type="email" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
   <div class="mb-3">
     <label for="albumTitle" class="form-label">Artist Name</label>
     <input type="text" name="artist_name" class="form-control" id="artistName" placeholder="Enter an artist name">
