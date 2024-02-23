@@ -102,12 +102,14 @@
                                                     <td>Live</td>
                                                     <td>
                                                         <div class="d-flex">
-                                                            <a href="/edit/{{$result->id}} "class="btn btn-sm mr-1" id="action-btn">
-                                                                Edit
-                                                            </a>
-                                                            <button class="btn btn-sm ml-1" id="action-btn">
-                                                                Delete
-                                                            </button>
+                                                            <form action="" method="POST">
+                                                                <a href="/edit/{{$result->id}}" class="btn btn-small mr-1" id="action-btn" type="button">
+                                                                    Edit
+                                                                </a>
+                                                                <button class="btn ml-1" id="action-btn" type="submit">
+                                                                    Delete
+                                                                </button>
+                                                            </form>
                                                         </div>
                                                     </td>
                                                 @endforeach
