@@ -102,7 +102,9 @@
                                                     <td>Live</td>
                                                     <td>
                                                         <div class="d-flex">
-                                                            <form action="" method="POST">
+                                                            <form action="/destroy/{{$result->id}}" method="POST">
+                                                                @csrf
+                                                                @method('DELETE')
                                                                 <a href="/edit/{{$result->id}}" class="btn btn-small mr-1" id="action-btn" type="button">
                                                                     Edit
                                                                 </a>
