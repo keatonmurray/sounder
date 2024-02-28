@@ -71,4 +71,38 @@ class FrontController extends Controller
         $results = Albums::find($id);
         return view('front.edit')->with('results', $results);
     }
+
+    public function update(Request $request, Albums $id) 
+    {
+        $validate = $request->validate([
+            'email' => 'required',
+            'album_title' => 'required',
+            'album_description' => 'required',
+            'genre' => 'required',
+            'tags' => 'required',
+            'album_cover' => 'required',
+            'digital_audio_price' => 'required',
+            'single_track_price' => 'required',
+            'play_limit' => 'required',
+            'audios' => 'required|array', 
+         ]);
+
+        $audios = [];
+         
+        foreach($validate['audios'] as $audio) {
+            $path = $audio->getClientOriginalName();
+            $audio_path =  $audio->storeAs('audios', $path, 'public');
+
+            array_push($audios, $audio_path);
+        }
+
+        if($request->hasFile('album_cover')) {
+            $validate['album_cover'] = $request->file('album_cover')->store('album_covers', 'public');
+        }
+
+        $validate['audios'] = $audios;
+        
+        $id->update($validate);
+        return redirect('/artist-profile');
+    }
 }
