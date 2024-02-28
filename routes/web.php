@@ -40,5 +40,6 @@ Route::get('/profile-settings', [ArtistController::Class, 'artistProfileSettings
 Route::post('/update-profile', [ArtistController::class, 'updateProfile']);
 Route::get('/edit/{id}',[FrontController::class, 'edit'])->middleware('auth:artists');
 Route::put('/update/{id}', [FrontController::class, 'update']);
+Route::delete('/destroy/{id}', [FrontController::class, 'destroy']);
 
 Auth::routes();
