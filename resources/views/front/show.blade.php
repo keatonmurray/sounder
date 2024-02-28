@@ -14,12 +14,12 @@
                                 <img src="{{asset('storage/' . $results->album_cover)}}">
                             </div>
                             <div class="d-flex justify-content-center mt-3">
-                                <a href="" class="btn btn-light mr-2" type="button">
-                                    <fa class="solid fa-plus"></fa>
+                                <a href="" class="btn btn-light mr-2 w-100 font-weight-bold" type="button">
+                                    <i class="fa-brands fa-paypal mr-1"></i>
                                     Buy for ${{$results->digital_audio_price}}
                                 </a>
-                                <a href="" class="btn btn-light ml-2 w-100" type="submit">
-                                    <fa class="solid fa-plus"></fa>
+                                <a href="" class="btn btn-light ml-2 w-100 font-weight-bold" type="submit">
+                                    <i class="fa-solid fa-heart mr-1"></i>
                                     Add to wishlist
                                 </a>
                             </div>
@@ -40,7 +40,7 @@
                                 </audio>
                             </div>
                             <div class="container">
-                                <button class="oneMusic-btn-sm-light mr-2 float-left col-lg-4 w-100 d-block">
+                                <button class="btn btn-light d-block w-100 font-weight-bold">
                                     <i class="fa-solid fa-plus"></i>
                                     Follow {{$results->artist_name}}
                                 </button>
@@ -55,7 +55,9 @@
                             <h4 class="text-white mb-4">All Songs</h4>
                             @foreach($results->audios as $result)
                                 <div class="song-name">
-                                    <button class="btn btn-light btn-sm ml-30 float-right">Buy for ${{$results->single_track_price}}</button>
+                                    <button class="btn btn-light btn-sm ml-30 float-right font-weight-bold">
+                                        <i class="fa-brands fa-paypal mr-1"></i>
+                                        Buy for ${{$results->single_track_price}}</button>
                                     <p class="text-white">{{Str::between($result, '/', '.')}}</p>
                                 </div>
                                 <audio preload="auto" controls>
