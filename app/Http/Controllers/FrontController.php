@@ -66,8 +66,9 @@ class FrontController extends Controller
         return redirect('/artist-profile');
     }
 
-    public function edit(Artist $id)
-    {
-        return view('front.edit');
+    public function edit($id)
+    {   
+        $results = Albums::find($id);
+        return view('front.edit')->with('results', $results);
     }
 }

@@ -15,7 +15,7 @@
                       <div class="text-center mb-4 mx-2">
                         <h6>Album Cover</h6>
                           <x-form.thumbnail type="mt-3 mb-2">
-                            <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
+                            <img src="{{$results->album_cover ? asset('storage/' . $results->album_cover) : asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
                           </x-form.thumbnail>
                           <p>Album cover must not exceed 1500x1500px</p>
                           <input type="file" name="album_cover" id="file" class="file-upload">
@@ -28,15 +28,13 @@
               <!-- ALBUM DETAILS INPUT FIELDS AREA START -->
               <x-form.column type="col-md-7">
                 <x-form.heading heading="Album Details"/>
-                <x-form.album-details-input-fields/>
+                  @include('components.form.edit-album-details')
               </x-form.column>
                <!-- ALBUM DETAILS INPUT FIELDS AREA START -->
             </x-form.row>
           </x-form.body>
 
           <br><br>
-
-          
 
           <x-form.body>
             <x-form.row>
@@ -57,7 +55,7 @@
                 </x-form.column>
                 <x-form.column type="col-md-7">
                   <x-form.heading heading="Music Downloading"/>
-                  <x-form.audio-details-input-fields/>
+                  @include('components.form.edit-audio-details')
                 </x-form.column>
               
               </x-form.row>
