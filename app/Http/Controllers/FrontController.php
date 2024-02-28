@@ -105,4 +105,9 @@ class FrontController extends Controller
         $id->update($validate);
         return redirect('/artist-profile');
     }
+
+    public function destroy()
+    {
+        
+    }
 }

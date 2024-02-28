@@ -1,4 +1,4 @@
-<input type="hidden" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
+<input type="hidden" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}" disabled>
 <div class="mb-3">
     <label for="albumTitle" class="form-label">Album Title</label>
     <input type="text" name="album_title" class="form-control" id="albumTitle" placeholder="Enter an album title" value="{{ old('album_title', $results->album_title) }}">

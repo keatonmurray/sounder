@@ -7,6 +7,7 @@
         <div class="hero section-padding-30">
           @csrf
           <x-form.body>
+            @include('front.partials.errors')
             <x-form.row>
               <!-- ALBUM COVER UPLOAD AREA START -->
               <x-form.column type="col-md-5 mb-4">

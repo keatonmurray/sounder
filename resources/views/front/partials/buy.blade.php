@@ -15,7 +15,6 @@
                         <a href="#">
                             <h5>{{$result->merch_name}}</h5>
                         </a>
-                        <p>{{$result->artist_name}}</p>
                     </div>
                 </div>
             </div>

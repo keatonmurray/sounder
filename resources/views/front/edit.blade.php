@@ -2,11 +2,13 @@
 @section('content')
   <div class="head py-5 bg-dark"><br></div>
   <section class="upload-music-area bg-white">
-    <form action="/update" method="POST" enctype="multipart/form-data">
+    <form action="/update/{{$results->id}}" method="POST" enctype="multipart/form-data">
       <div class="container my-5" style="height: auto;">
         <div class="hero section-padding-30">
           @csrf
+          @method('PUT')
           <x-form.body>
+            @include('front.partials.errors')
             <x-form.row>
               <!-- ALBUM COVER UPLOAD AREA START -->
               <x-form.column type="col-md-5 mb-4">
@@ -63,7 +65,7 @@
         </div>
 
         <div class="text-center mt-30">
-          <button class="btn oneMusic-btn-dark d-block w-100" type="submit">Upload to Sounder</button>
+          <button class="btn oneMusic-btn-dark d-block w-100" type="submit">Save Changes</button>
         </div>
 
       </div>
