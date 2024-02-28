@@ -1,7 +1,4 @@
 <div class="errors mx-4">
-    @error('email')
-    <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
     @error('album_title')
       <div class="alert alert-danger">{{ $message }}</div>
     @enderror

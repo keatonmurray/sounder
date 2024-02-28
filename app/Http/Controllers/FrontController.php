@@ -106,8 +106,11 @@ class FrontController extends Controller
         return redirect('/artist-profile');
     }
 
-    public function destroy()
+    public function destroy(string $id)
     {
-        
+        $album = Albums::find($id);
+        $album->delete();
+
+        return redirect('/artist-profile');
     }
 }
