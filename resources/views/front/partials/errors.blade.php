@@ -1,4 +1,7 @@
 <div class="errors mx-4">
+    @error('email')
+    <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
     @error('album_title')
       <div class="alert alert-danger">{{ $message }}</div>
     @enderror
@@ -20,7 +23,7 @@
     @error('single_track_price')
       <div class="alert alert-danger">{{ $message }}</div>
     @enderror
-    @error('audio')
+    @error('audios[]')
       <div class="alert alert-danger">{{ $message }}</div>
     @enderror
   </div>
