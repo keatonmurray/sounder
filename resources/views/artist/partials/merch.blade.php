@@ -20,6 +20,6 @@
         @endif
     </div>
     @if(count($merches) == 0) 
-        <p class="text-muted text-center">You have not posted any music yet</p>
+        <p class="text-muted text-center">All of the merches you post will show up on this page for your fans to see. If you are not seeing anything, you probably haven't added anything yet. Start by adding one!</p>
     @endif
 </div>

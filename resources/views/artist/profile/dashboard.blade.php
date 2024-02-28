@@ -5,7 +5,7 @@
         <div class="container">
             <h2 class="lead-heading mb-4">Dashboard</h2>
             <div class="row">
-                <div class="col-12 col-md-12 col-lg-12 col-sm-12">
+                <div class="col-12">
                     <nav class="mt-4 mb-4">
                         <div class="nav nav-tabs nav-fill justify-content-center" id="nav-tab" role="tablist">
                             <h4 class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="font-size: 25px; font-weight: 400;">Home</h4>
@@ -81,13 +81,11 @@
                             <div class="card border">
                                 <div class="card-body">
                                     <table class="table table-bordered">
+                                        <h3 class="mb-4 text-uppercase">All Music</h3>
                                         <thead>
                                           <tr>
                                             <th scope="col">
                                                 <h5>Album Title</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>Status</h5>
                                             </th>
                                             <th scope="col">
                                                 <h5>Action</h5>
@@ -98,17 +96,21 @@
                                             @if(count($artists) > 0)
                                                 @foreach($artists as $result)
                                                 <tr> 
-                                                    <td>{{$result->album_title}}</td>
-                                                    <td>Live</td>
                                                     <td>
-                                                        <div class="d-flex">
+                                                        <a href="/albums/{{$result->id}}"><img src="{{asset('storage/' . $result->album_cover)}}" style="height: 50px; width: 50px;" class="mr-2"></a>
+                                                        {{$result->album_title}}
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center py-2">
                                                             <form action="/destroy/{{$result->id}}" method="POST">
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <a href="/edit/{{$result->id}}" class="btn btn-small mr-1" id="action-btn" type="button">
+                                                                    <i class="fa-solid fa-pen-to-square"></i>
                                                                     Edit
                                                                 </a>
                                                                 <button class="btn ml-1" id="action-btn" type="submit">
+                                                                    <i class="fa-solid fa-trash"></i>
                                                                     Delete
                                                                 </button>
                                                             </form>
@@ -131,6 +133,7 @@
                             <div class="card border">
                                 <div class="card-body">
                                     <table class="table table-bordered">
+                                        <h3 class="mb-4 text-uppercase">All Merches</h3>
                                         <thead>
                                           <tr>
                                             <th scope="col">
