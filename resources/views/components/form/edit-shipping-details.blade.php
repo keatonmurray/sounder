@@ -2,6 +2,7 @@
     <label for="ship_from" class="form-label">Ships from</label>
     <div class="dropdown show d-flex">
       <select name="ship_from" class="custom-select d-block w-50" required style="cursor: pointer;">
+        {{$results->ship_from}}" {{ old('ship_from') == $results->ship_from ? 'selected' : '' }}>{{$results->ship_from}}
         @include('components.form.countries')
       </select>
       <input type="text" name="city" class="form-control ml-2" id="albumTitle" placeholder="Enter city" value="{{ old('city', $results->city) }}">
@@ -12,6 +13,7 @@
     <label for="" class="form-label">Ships to</label>
     <div class="dropdown show d-flex">
       <select name="ship_to" class="custom-select d-block w-50" required style="cursor: pointer;">
+        <option value="{{$results->ship_to}}" {{ old('ship_to') == $results->ship_to ? 'selected' : '' }}>{{$results->ship_to}}</option>
         @include('components.form.continents')
       </select>
       <input type="text" name="shipping_cost" class="form-control ml-2" id="albumTitle" placeholder="Enter shipping cost" value="{{ old('shipping_cost', $results->shipping_cost) }}">

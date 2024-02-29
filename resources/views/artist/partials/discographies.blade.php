@@ -6,7 +6,7 @@
                 <div class="col-6 col-md-3 col-lg-3">
                     <div class="single-album px-2">
                         <a href="/albums/{{$result->id}}">
-                            <img src="{{asset('storage/' . $result->album_cover)}}" alt="">
+                            <img src="{{asset('storage/' . $result->album_cover)}}">
                         </a>
                         <div class="album-info">
                             <a href="/albums/{{$result->id}}">

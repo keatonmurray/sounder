@@ -40,7 +40,7 @@ class FrontController extends Controller
             'album_description' => 'required',
             'genre' => 'required',
             'tags' => 'required',
-            'album_cover' => 'required',
+            'album_cover' => ['required', 'dimensions:max_width=1000,max_height=1000'],
             'digital_audio_price' => 'required',
             'single_track_price' => 'required',
             'play_limit' => 'required',

@@ -72,10 +72,10 @@ class MerchController extends Controller
             'merch_name' => 'required',
             'merch_price' => 'required',
             'merch_description' => 'required',
-            'merch_first_upload' => 'required',
-            'merch_second_upload' => 'required',
-            'merch_third_upload' => 'required',
-            'merch_fourth_upload' => 'required',
+            'merch_first_upload' => ['required', 'dimensions:max_width=1000,max_height=1000'],
+            'merch_second_upload' => ['required', 'dimensions:max_width=1000,max_height=1000'],
+            'merch_third_upload' => ['required', 'dimensions:max_width=1000,max_height=1000'],
+            'merch_fourth_upload' => ['required', 'dimensions:max_width=1000,max_height=1000'],
         ]);
 
         if($request->hasFile('merch_first_upload')) {

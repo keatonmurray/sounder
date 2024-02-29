@@ -18,7 +18,7 @@
                           <x-form.thumbnail type="mt-3 mb-2">
                             <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
                           </x-form.thumbnail>
-                          <p>Album cover must not exceed 1500x1500px</p>
+                          <p>Album cover must be 1000x1000px wide</p>
                           <input type="file" name="album_cover" id="file" class="file-upload">
                           <label for="file" class="btn btn-dark d-block">Choose a file</label>
                       </div>

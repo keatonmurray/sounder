@@ -4,9 +4,9 @@
         @if(count($merches) > 0)
             @foreach($merches as $result)
                 <div class="col-6 col-md-3 col-lg-3">
-                    <div class="single-album">
+                    <div class="single-album px-2">
                         <a href="/albums/{{$result->id}}">
-                            <img src="{{asset('storage/' . $result->merch_first_upload)}}" alt="">
+                            <img src="{{asset('storage/' . $result->merch_first_upload)}}">
                         </a>
                         <div class="album-info">
                             <p>${{$result->merch_price}}</p>

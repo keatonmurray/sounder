@@ -1,4 +1,3 @@
-<option value="{{$results->ship_from}}" {{ old('ship_from') == $results->ship_from ? 'selected' : '' }}>{{$results->ship_from}}</option>
         <option>Afghanistan</option>
         <option>Albania</option>
         <option>Algeria</option>

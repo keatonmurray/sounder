@@ -148,6 +148,9 @@
                                             <th scope="col">
                                                 <h5>Ships To</h5>
                                             </th>
+                                            <th scope="col">
+                                                <h5>Action</h5>
+                                            </th>
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -163,11 +166,13 @@
                                                     <td>{{$result->ship_to}}</td>
                                                     <td>
                                                         <form action="" method="POST">
-                                                            <div class="d-flex">
+                                                            <div class="d-flex justify-content-center py-2">
                                                                 <a href="/edit-merch/{{$result->id}}" class="btn mr-1" id="action-btn" type="button">
+                                                                    <i class="fa-solid fa-pen-to-square"></i>
                                                                     Edit
                                                                 </a>
                                                                 <button class="btn ml-1" id="action-btn" type="submit">
+                                                                    <i class="fa-solid fa-trash"></i>
                                                                     Delete
                                                                 </button>
                                                             </div>
