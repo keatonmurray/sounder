@@ -49,4 +49,9 @@ class MerchController extends Controller
         Merch::create($validate);
         return redirect('/artist-profile');
     }
+
+    public function editMerch()
+    {
+        return view('artist.profile.panel.edit');
+    }
 }
