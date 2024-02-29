@@ -148,31 +148,19 @@
                                             <th scope="col">
                                                 <h5>Ships To</h5>
                                             </th>
-                                            <th scope="col">
-                                                <h5>Shipping Cost</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>VAT Amount</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>Status</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>Action</h5>
-                                            </th>
                                           </tr>
                                         </thead>
                                         <tbody>
                                             @if(count($merches) > 0)
                                                 @foreach($merches as $result)
                                                 <tr> 
-                                                    <td>{{$result->merch_name}}</td>
+                                                    <td>
+                                                        <a href="/albums/{{$result->id}}"><img src="{{asset('storage/' . $result->merch_first_upload)}}" style="height: 50px; width: 50px;" class="mr-2"></a>
+                                                        {{$result->merch_name}}
+                                                    </td>
                                                     <td>{{$result->merch_price}}</td>
                                                     <td>{{$result->ship_from}}</td>
                                                     <td>{{$result->ship_to}}</td>
-                                                    <td>{{$result->shipping_cost}} {{$result->shipping_currency}}</td>
-                                                    <td>{{$result->vat_estimate}} {{$result->vat_currency}}</td>
-                                                    <td>Active</td>
                                                     <td>
                                                         <form action="" method="POST">
                                                             <div class="d-flex">
