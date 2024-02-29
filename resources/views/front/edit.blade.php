@@ -17,7 +17,7 @@
                       <div class="text-center mb-4 mx-2">
                         <h6>Album Cover</h6>
                           <x-form.thumbnail type="mt-3 mb-2">
-                            <img src="{{$results->album_cover ? asset('storage/' . $results->album_cover) : asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
+                            <img src="{{$results->album_cover ? asset('storage/' . $results->album_cover) : asset('assets/img/bg-img/gallery.svg')}}" class="avatar" style="height: 200px; width: 200px;">
                           </x-form.thumbnail>
                           <p>Album cover must not exceed 1500x1500px</p>
                           <input type="file" name="album_cover" id="file" class="file-upload">
