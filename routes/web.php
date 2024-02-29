@@ -41,6 +41,7 @@ Route::post('/update-profile', [ArtistController::class, 'updateProfile']);
 Route::get('/edit/{id}',[FrontController::class, 'edit'])->middleware('auth:artists');
 Route::get('/edit-merch/{id}', [MerchController::class, 'editMerch'])->middleware('auth:artists');
 Route::put('/update/{id}', [FrontController::class, 'update']);
+Route::put('/update-merch/{id}', [MerchController::class, 'updateMerch']);
 Route::delete('/destroy/{id}', [FrontController::class, 'destroy']);
 
 Auth::routes();
