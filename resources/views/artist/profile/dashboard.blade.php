@@ -164,7 +164,7 @@
                                                     <td>
                                                         <form action="" method="POST">
                                                             <div class="d-flex">
-                                                                <a href="" class="btn mr-1" id="action-btn" type="button">
+                                                                <a href="/edit-merch/{{$result->id}}" class="btn mr-1" id="action-btn" type="button">
                                                                     Edit
                                                                 </a>
                                                                 <button class="btn ml-1" id="action-btn" type="submit">

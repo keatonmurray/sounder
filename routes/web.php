@@ -39,6 +39,7 @@ Route::get('/artist-profile', [ArtistController::class, 'artistProfile']);
 Route::get('/profile-settings', [ArtistController::Class, 'artistProfileSettings'])->middleware('auth:artists');
 Route::post('/update-profile', [ArtistController::class, 'updateProfile']);
 Route::get('/edit/{id}',[FrontController::class, 'edit'])->middleware('auth:artists');
+Route::get('/edit-merch/{id}', [MerchController::class, 'editMerch'])->middleware('auth:artists');
 Route::put('/update/{id}', [FrontController::class, 'update']);
 Route::delete('/destroy/{id}', [FrontController::class, 'destroy']);
 

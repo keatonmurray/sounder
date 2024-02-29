@@ -9,58 +9,73 @@
           @method('PUT')
           <x-form.body>
             @include('front.partials.errors')
+            <x-form.heading heading="Edit Merch Details"/><br/>
             <x-form.row>
-              <!-- ALBUM COVER UPLOAD AREA START -->
-              <x-form.column type="col-md-5 mb-4">
-                <x-form.heading heading="File Upload"/>
-                  <x-form.border>
-                      <div class="text-center mb-4 mx-2">
-                        <h6>Album Cover</h6>
-                          <x-form.thumbnail type="mt-3 mb-2">
-                            <img src="{{$results->album_cover ? asset('storage/' . $results->album_cover) : asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
-                          </x-form.thumbnail>
-                          <p>Album cover must not exceed 1500x1500px</p>
-                          <input type="file" name="album_cover" id="file" class="file-upload">
-                          <label for="file" class="btn btn-dark d-block">Choose a file</label>
-                      </div>
-                  </x-form.border><br/>
-              </x-form.column>
-              <!-- ALBUM COVER UPLOAD AREA END -->
-
-              <!-- ALBUM DETAILS INPUT FIELDS AREA START -->
-              <x-form.column type="col-md-7">
-                <x-form.heading heading="Album Details"/>
-                  @include('components.form.edit-album-details')
-              </x-form.column>
-               <!-- ALBUM DETAILS INPUT FIELDS AREA START -->
-            </x-form.row>
-          </x-form.body>
-
-          <br><br>
-
-          <x-form.body>
-            <x-form.row>
-                <x-form.column type="col-md-5 mb-4">
-                  <x-form.heading heading="Upload Music"/>
+                <x-form.column type="col-md-3">
                     <x-form.border>
-                        <div class="text-center mb-4 mx-2">
-                            <h6>Audio Files</h6>
-                            <x-form.thumbnail type="mt-3 mb-2">
-                              <img src="{{asset('assets/img/bg-img/file-audio-solid.svg')}}" class="" alt="" style="height: 150px; width: 200px;">
-                            </x-form.thumbnail>
-                            <p>Multiple select MP3, WAV, or FLAC files</p>
-                            <input type="file" name="audios[]" id="audio" class="audio" multiple>
-                            <label for="audio" class="btn btn-dark d-block">Choose a file</label>
-                          </div>
-                    </x-form.border> <br/>
+                      <div class="text-center mb-4 mx-2">
+                        <x-form.thumbnail type="mt-3 mb-2">
+                          <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_first" alt="" style="height: 180px; width: 180px;">
+                        </x-form.thumbnail>
+                        <input type="file" name="merch_first_upload" id="merchFirstUpload" class="merch_first_upload">
+                        <label for="merchFirstUpload" id="merchBtn" class="btn btn-dark d-block">Choose a file</label>
+                      </div>  
+                    </x-form.border><br/>
+                  </x-form.column>
+        
+                  <x-form.column type="col-md-3">
+                    <x-form.border>
+                      <div class="text-center mb-4 mx-2">
+                        <x-form.thumbnail type="mt-3 mb-2">
+                         <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_second" alt="" style="height: 180px; width: 180px;">
+                        </x-form.thumbnail>
+                        <input type="file" name="merch_second_upload" id="merchSecondUpload" class="merch_second_upload">
+                        <label for="merchSecondUpload" id="merchBtn" class="btn btn-dark d-block">Choose a file</label>
+                      </div>  
+                    </x-form.border><br/>
+                  </x-form.column>
+        
+                  <x-form.column type="col-md-3">
+                    <x-form.border>
+                      <div class="text-center mb-4 mx-2">
+                        <x-form.thumbnail type="mt-3 mb-2">
+                         <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_third" alt="" style="height: 180px; width: 180px;">
+                        </x-form.thumbnail>
+                        <input type="file" name="merch_third_upload" id="merchThirdUpload" class="merch_third_upload">
+                        <label for="merchThirdUpload" id="merchBtn" class="btn btn-dark d-block">Choose a file</label>
+                      </div>  
+                    </x-form.border><br/>
+        
+                  </x-form.column>
+                  <x-form.column type="col-md-3">
+                    <x-form.border>
+                      <div class="text-center mb-4 mx-2">
+                        <x-form.thumbnail type="mt-3 mb-2">
+                         <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="merch_fourth" alt="" style="height: 180px; width: 180px;">
+                        </x-form.thumbnail>
+                        <input type="file" name="merch_fourth_upload" id="merchFourthUpload" class="merch_fourth_upload">
+                        <label for="merchFourthUpload" id="merchBtn" class="btn btn-dark d-block">Choose a file</label>
+                      </div>  
+                    </x-form.border><br/>
+                  </x-form.column>
+            </x-form.row>
 
+            <br><br>
+
+            <x-form.row>
+
+                <x-form.column type="col-md-6">
+                  <h6 class="mb-3">Merch Details</h6>
+                 @include('components.form.edit-merch-details')
                 </x-form.column>
-                <x-form.column type="col-md-7">
-                  <x-form.heading heading="Music Downloading"/>
-                  @include('components.form.edit-audio-details')
+      
+                <x-form.column type="col-md-6">
+                  <h6 class="mb-3">Shipping Information</h6>
+                  <x-form.shipping-details-input-field/>
                 </x-form.column>
-              
+            
               </x-form.row>
+
           </x-form.body>
         </div>
 

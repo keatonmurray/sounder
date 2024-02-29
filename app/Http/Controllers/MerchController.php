@@ -50,8 +50,9 @@ class MerchController extends Controller
         return redirect('/artist-profile');
     }
 
-    public function editMerch()
-    {
-        return view('artist.profile.panel.edit');
+    public function editMerch($id)
+    {   
+        $results = Merch::find($id);
+        return view('artist.profile.panel.edit')->with('results', $results);
     }
 }
