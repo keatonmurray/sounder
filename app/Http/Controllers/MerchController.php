@@ -55,4 +55,9 @@ class MerchController extends Controller
         $results = Merch::find($id);
         return view('artist.profile.panel.edit')->with('results', $results);
     }
+
+    public function updateMerch()
+    {
+        
+    }
 }
