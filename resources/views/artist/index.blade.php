@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('content')
     <section class="jumbotron-fluid text-center border-0 bg-white">
-        <div class="head px-5 py-4 bg-absolute bg-overlay" style="background-image: url('{{asset('assets/img/bg-img/sanguisugabogg.jpg')}}')">
+        <div class="head px-5 py-4 bg-absolute bg-overlay justify-content-center" style="background-image: url('{{asset('assets/img/bg-img/sanguisugabogg.jpg')}}')">
             <br><br><br><br>
             <div class="text-center mb-2 mt-2">
                 <img src="{{asset('assets/img/bg-img/cover.jpg')}}" class="rounded-circle" style="height: 200px; width: 200px;" >
             </div>
-            <div class="artist-name-heading mt-4 text-uppercase" style="white-space: nowrap; display: block;">
-                <h4 style="font-size: 40px; line-height: 40px; font-weight: 700; color: #ffffff;">{{ Auth::user()->name }}</h4>
+            <div class="artist-name-heading mt-4 text-uppercase">
+                <h2 style="letter-spacing: 2px; font-weight: bold; color: #ffffff;">{{ Auth::user()->name }}</h2>
             </div>
         </div>
         <div class="container-fluid px-5">

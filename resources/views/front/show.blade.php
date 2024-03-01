@@ -2,7 +2,7 @@
 @section('content')
     <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
         <div class="bg-img text-center">
-            <img src="{{asset('storage/' . $results->album_cover)}}">
+            <!--image here -->
         </div>
         <div class="container my-4">  
             <form action="" method="POST">

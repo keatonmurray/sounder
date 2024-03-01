@@ -3,7 +3,7 @@
     <div class="row">
         @if(count($albums) > 0)
             @foreach($albums as $result)
-                <div class="col-6 col-md-3 col-lg-3">
+                <div class="col-6 col-lg-6">
                     <div class="single-album px-2">
                         <a href="/albums/{{$result->id}}">
                             <img src="{{asset('storage/' . $result->album_cover)}}">
