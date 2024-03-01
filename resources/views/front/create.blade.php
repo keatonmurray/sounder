@@ -14,11 +14,11 @@
                 <x-form.heading heading="File Upload"/>
                   <x-form.border>
                       <div class="text-center mb-4 mx-2">
-                        <h6>Album Cover</h6>
+                        <h5>Album Cover</h5>
                           <x-form.thumbnail type="mt-3 mb-2">
                             <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="avatar" alt="" style="height: 200px; width: 200px;">
                           </x-form.thumbnail>
-                          <p>Album cover must be 1000x1000px wide</p>
+                          <h6>Album cover must be 1000x1000px wide</h6>
                           <input type="file" name="album_cover" id="file" class="file-upload">
                           <label for="file" class="btn btn-dark d-block">Choose a file</label>
                       </div>
@@ -45,11 +45,12 @@
                   <x-form.heading heading="Upload Music"/>
                     <x-form.border>
                         <div class="text-center mb-4 mx-2">
-                            <h6>Audio Files</h6>
+                            <h5>Audio Files</h5>
                             <x-form.thumbnail type="mt-3 mb-2">
                               <img src="{{asset('assets/img/bg-img/file-audio-solid.svg')}}" class="" alt="" style="height: 150px; width: 200px;">
                             </x-form.thumbnail>
-                            <p>Multiple select MP3, WAV, or FLAC files</p>
+                            <br>
+                            <h6>Multiple select MP3, WAV, or FLAC files</h6>
                             <input type="file" name="audios[]" id="audio" class="audio" multiple>
                             <label for="audio" class="btn btn-dark d-block">Choose a file</label>
                           </div>

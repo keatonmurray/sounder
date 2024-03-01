@@ -7,15 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-/**
- * Complete search bar functionality
- */
-
 class Albums extends Model
 {
     use HasFactory;
     
     protected $guarded = [];
+    protected $table = 'albums';
+    protected $primaryKey = 'id';
 
     protected $casts = [
         'audios' => 'array'
@@ -23,6 +21,6 @@ class Albums extends Model
 
     public function artists(): BelongsTo
     {
-        return $this->belongsTo(Artist::class);
+        return $this->belongsTo(Artist::class, 'email');
     }
 }

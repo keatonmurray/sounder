@@ -12,7 +12,7 @@ class FrontController extends Controller
     public function index() 
     {
         $data = [
-            'results' => Albums::inRandomOrder()->limit(12)->get(),
+            'results' => Albums::inRandomOrder()->limit(6)->get(),
             'merches' => Merch::inRandomOrder()->limit(12)->get()
         ];
         return view('front.index')->with($data);
@@ -24,7 +24,7 @@ class FrontController extends Controller
     }
 
     public function show(string $id)
-    {
+    {   
         $results = [
             'results' => Albums::find($id),
             'merch' => Merch::find($id)
@@ -44,7 +44,7 @@ class FrontController extends Controller
             'digital_audio_price' => 'required',
             'single_track_price' => 'required',
             'play_limit' => 'required',
-            'audios' => 'required|array', 
+            'audios' => 'required|array',
          ]);
 
         $audios = [];

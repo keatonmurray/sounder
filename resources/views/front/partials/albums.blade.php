@@ -27,7 +27,7 @@
                                     <a href="/albums/{{$music->id}}">
                                         <h5>{{$music->album_title}}</h5>
                                     </a>
-                                    <p>{{$music->artist_name}}</p>
+                                    <p>{{$music->name}}</p>
                                 </div>
                             </div>
                         @endforeach

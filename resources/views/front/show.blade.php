@@ -2,7 +2,7 @@
 @section('content')
     <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-absolute">
         <div class="bg-img text-center">
-            <!-- background img here -->
+            <img src="{{asset('storage/' . $results->album_cover)}}">
         </div>
         <div class="container my-4">  
             <form action="" method="POST">
@@ -28,7 +28,7 @@
                     <div class="col-12 col-md-7 col-lg-8">
                         <div class="featured-artist-content">
                             <div class="section-heading white text-left mb-30">
-                                <p>{{$results->artist_name}}</p>
+                                <p>Artist Name</p>
                                 <h2>{{$results->album_title}}</h2>
                             </div>
                             <div class="song-play-area">
@@ -45,7 +45,7 @@
                                     Follow {{$results->artist_name}}
                                 </button>
                             </div> <br><br><br>
-                            <div class="container mt-4">
+                            <div class="container mt-2">
                                 <p>{{$results->album_description}}</p>
                             </div>
                         </div>

@@ -11,7 +11,7 @@
     <label for="genre" class="form-label">Genre</label>
     <div class="dropdown show d-flex">
       <select class="custom-select d-block w-50" name="genre" required style="cursor: pointer;">
-        <option value="Select Genre">Select Genre</option>
+        <option selected disabled>Select Genre</option>
         <option>Pop</option>
         <option>Metal</option>
         <option>Rock</option>

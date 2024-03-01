@@ -7,7 +7,9 @@ use App\Models\Merch;
 use App\Models\Albums;
 use App\Models\Profile;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -50,19 +52,16 @@ class Artist extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-    public function albums() 
+    
+    public function albums(): HasMany
     {
         return $this->hasMany(Albums::class, 'email', 'email');
     }
 
-    public function merches()
+    public function merches(): HasMany
     {
         return $this->hasMany(Merch::class, 'email', 'email');
     }
 
-    public function profile()
-    {
-        return $this->hasMany(Profile::class, 'profile_name', 'name');
-    }
+    
 }

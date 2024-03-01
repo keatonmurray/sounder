@@ -27,22 +27,23 @@ class ArtistController extends Controller
 
     public function index()
     {
-        $user_id = Auth::guard('artists')->user()->id;
-        $user = Artist::find($user_id);
+        $foreignKey = Auth::guard('artists')->user()->id;
+        $findByForeignKey = Artist::find($foreignKey);
         $results = [
-            'artists' => $user->albums,
-            'merches' => $user->merches
+            'artists' =>    $findByForeignKey->albums,
+            'merches' =>    $findByForeignKey->merches
         ];
         return view('artist.profile.dashboard')->with($results);
     }
     
     public function artistProfile()
     {   
-        $user_id = Auth::guard('artists')->user()->id;
-        $user = Artist::find($user_id);
+        $foreignKey = Auth::guard('artists')->user()->id;
+        $findByForeignKey = Artist::find($foreignKey);
         $results = [
-            'artists' => $user->albums,
-            'merches' => $user->merches
+            'artists' => Artist::find($foreignKey),
+            'albums' => $findByForeignKey->albums,
+            'merches' =>    $findByForeignKey->merches
         ];
         return view('artist.index')->with($results);
     }
