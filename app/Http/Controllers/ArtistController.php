@@ -47,19 +47,4 @@ class ArtistController extends Controller
         ];
         return view('artist.index')->with($results);
     }
-
-    public function artistProfileSettings()
-    {
-        return view('artist.profile.profile-settings');
-    }
-
-    public function updateProfile(Request $request, Artist $id)
-    {
-        $validate = $request->validate([
-            'name' => 'required',
-        ]);
-
-        $id->update($validate);
-        return redirect('/artist');
-    }
 }
