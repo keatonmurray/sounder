@@ -1,6 +1,5 @@
-<div class="mt-30">
-    <br>
-    <div class="row oneMusic-albums">
+<div class="mt-30 h-auto">
+    <div class="row">
         @if(count($merches) > 0)
             @foreach($merches as $result)
                 <div class="col-6 col-md-3 col-lg-3">
