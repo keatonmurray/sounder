@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artist;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,8 +31,8 @@ class ArtistController extends Controller
         $foreignKey = Auth::guard('artists')->user()->id;
         $findByForeignKey = Artist::find($foreignKey);
         $results = [
-            'artists' =>    $findByForeignKey->albums,
-            'merches' =>    $findByForeignKey->merches
+            'artists' => $findByForeignKey->albums,
+            'merches' => $findByForeignKey->merches
         ];
         return view('artist.profile.dashboard')->with($results);
     }
@@ -41,7 +42,7 @@ class ArtistController extends Controller
         $foreignKey = Auth::guard('artists')->user()->id;
         $findByForeignKey = Artist::find($foreignKey);
         $results = [
-            'artists' => $findByForeignKey,
+            'profiles' => Profile::find($foreignKey),
             'albums' => $findByForeignKey->albums,
             'merches' =>    $findByForeignKey->merches
         ];

@@ -36,6 +36,8 @@ Route::get('/add-merch', [FormsController::class, 'addMerchForm'])->middleware('
 Route::post('/save-merch', [MerchController::class, 'saveMerch']);
 Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
+Route::get('/modify-artist-page', [ArtistProfileController::class, 'create'])->middleware('auth:artists');
+Route::post('/modify-artist-profile', [ArtistProfileController::class, 'store'])->middleware('auth:artists');
 Route::get('/artist-profile', [ArtistController::class, 'artistProfile']);
 Route::get('/update-artist-profile/{id}', [ArtistProfileController::class, 'index'])->middleware('auth:artists');
 Route::get('/edit/{id}',[FrontController::class, 'edit'])->middleware('auth:artists');

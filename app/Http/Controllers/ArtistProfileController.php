@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artist;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
 class ArtistProfileController extends Controller
@@ -19,13 +20,33 @@ class ArtistProfileController extends Controller
         return view('artist.profile.create');
     }
 
+    public function store(Request $request)
+    {
+        $validate = $request->validate([
+            'email' => 'required',
+         ]);
+
+
+        if($request->hasFile('profile_picture')) {
+            $validate['profile_picture'] = $request->file('profile_picture')->store('profile_pictures', 'public');
+        }
+
+        if($request->hasFile('cover_photo')) {
+            $validate['cover_photo'] = $request->file('cover_photo')->store('cover_photos', 'public');
+        }
+        
+        
+        Profile::create($validate);
+        return redirect('/artist-profile');
+    }
+
     public function updateProfile(Request $request, Artist $id)
     {
         $validate = $request->validate([
             'name' => 'required',
         ]);
 
-        if($request->hasFile('cover_photo')) {
+        if($request->hasFile('profile_picture')) {
             $validate['profile_picture'] = $request->file('profile_picture')->store('profile_pictures', 'public');
         }
 
