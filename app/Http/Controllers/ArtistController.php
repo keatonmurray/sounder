@@ -41,7 +41,7 @@ class ArtistController extends Controller
         $foreignKey = Auth::guard('artists')->user()->id;
         $findByForeignKey = Artist::find($foreignKey);
         $results = [
-            'artists' => Artist::find($foreignKey),
+            'artists' => $findByForeignKey,
             'albums' => $findByForeignKey->albums,
             'merches' =>    $findByForeignKey->merches
         ];

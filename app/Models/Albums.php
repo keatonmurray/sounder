@@ -21,6 +21,6 @@ class Albums extends Model
 
     public function artists(): BelongsTo
     {
-        return $this->belongsTo(Artist::class, 'email');
+        return $this->belongsTo(Artist::class, 'email', 'email');
     }
 }

@@ -11,7 +11,7 @@
                             <a href="/albums/{{$result->id}}">
                                 <h5>{{$result->album_title}}</h5>
                             </a>
-                            <p>{{$result->name}}</p>
+                            <p>{{$artists->name}}</p>
                         </div>
                     </div>
                 </div>

@@ -26,7 +26,7 @@ class FrontController extends Controller
     public function show(string $id)
     {   
         $results = [
-            'results' => Albums::find($id),
+            'albums' => Albums::find($id),
             'merch' => Merch::find($id)
         ];
         return view('front.show')->with($results);
