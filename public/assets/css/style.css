@@ -365,8 +365,8 @@ img {
   .merch_second_upload, 
   .merch_third_upload, 
   .merch_fourth_upload,
-  .profile-pic-upload,
-  .cover-photo-upload {
+  .artist-profile-photo-upload,
+  .artist-cover-photo-upload {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -380,8 +380,8 @@ img {
   .merch-second-upload + label, 
   .merch-third-upload + label, 
   .merch-fourth-upload + label,
-  .profile-pic-upload + label,
-  .cover-photo-upload + label {
+  .artist-profile-photo-upload + label,
+  .artist-cover-photo-upload + label {
     font-size: 1.25em;
     font-weight: 700;
     color: white;
