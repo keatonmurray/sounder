@@ -11,8 +11,11 @@ class ArtistProfileController extends Controller
 
     public function index($id)
     {   
-        $results = Artist::find($id);
-        return view('artist.profile.profile-settings')->with('results', $results);
+        $results = [
+            'profile' => Profile::find($id),
+            'artist' => Artist::find($id)
+        ];
+        return view('artist.profile.profile-settings')->with($results);
     }
 
     public function create()
@@ -40,11 +43,8 @@ class ArtistProfileController extends Controller
         return redirect('/artist-profile');
     }
 
-    public function updateProfile(Request $request, Artist $id)
+    public function updateProfile(Request $request, Profile $id)
     {
-        $validate = $request->validate([
-            'name' => 'required',
-        ]);
 
         if($request->hasFile('profile_picture')) {
             $validate['profile_picture'] = $request->file('profile_picture')->store('profile_pictures', 'public');
@@ -53,6 +53,17 @@ class ArtistProfileController extends Controller
         if($request->hasFile('cover_photo')) {
             $validate['cover_photo'] = $request->file('cover_photo')->store('cover_photos', 'public');
         }
+
+        $id->update($validate);
+        return redirect('/artist-profile');
+    }
+
+    public function accountSettings(Request $request, Artist $id)
+    {
+        $validate = $request->validate([
+            'name' => 'required',
+            'email' => 'required']
+        );
 
         $id->update($validate);
         return redirect('/artist-profile');
