@@ -4,7 +4,7 @@
         <div class="head px-5 py-4 bg-absolute bg-overlay justify-content-center" style="background-image: url('{{asset('assets/img/bg-img/sanguisugabogg.jpg')}}')">
             <br><br><br><br>
             <div class="text-center mb-2 mt-2">
-                <img src="{{asset('assets/img/bg-img/cover.jpg')}}" class="rounded-circle" style="height: 200px; width: 200px;" >
+                <img src="                {{$artists->profile_picture ? asset('storage/' . $artists->profile_picture) : asset('assets/img/bg-img/no-image.png')}}" class="rounded-circle" style="height: 200px; width: 200px;" >
             </div>
             <div class="artist-name-heading mt-4 text-uppercase">
                 <h2 style="letter-spacing: 2px; font-weight: bold; color: #ffffff;">{{ Auth::user()->name }}</h2>

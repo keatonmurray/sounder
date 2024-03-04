@@ -6,8 +6,9 @@
             <x-form.body>
                 <x-form.heading heading="Profile Settings"/>
                 <br>
-                <form action="/update-profile" method="POST" enctype="multipart/form-data">
+                <form action="/update-artist-profile/{{$results->id}}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
                     <div class="row">
                         <div class="col-12 col-sm-6">
                             <x-form.border>
@@ -30,7 +31,7 @@
                                       <img src="{{asset('assets/img/bg-img/gallery.svg')}}" class="artist-cover-photo" style="height: 200px; width: 200px;">
                                     </x-form.thumbnail>
                                     <p>Cover photo must not exceed 1200x1200 pixels</p>
-                                    <input type="file" name="album_cover" id="coverPhoto" class="artist-cover-photo-upload">
+                                    <input type="file" name="cover_photo" id="coverPhoto" class="artist-cover-photo-upload">
                                     <label for="coverPhoto" class="btn btn-dark d-block">Choose a file</label>
                                 </div>
                             </x-form.border><br/>
