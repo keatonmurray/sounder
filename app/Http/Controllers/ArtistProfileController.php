@@ -14,6 +14,11 @@ class ArtistProfileController extends Controller
         return view('artist.profile.profile-settings')->with('results', $results);
     }
 
+    public function create()
+    {
+        return view('artist.profile.create');
+    }
+
     public function updateProfile(Request $request, Artist $id)
     {
         $validate = $request->validate([
