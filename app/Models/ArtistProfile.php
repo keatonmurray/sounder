@@ -6,7 +6,7 @@ use App\Models\Artist;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Profile extends Model
+class ArtistProfile extends Model
 {
     use HasFactory;
 
