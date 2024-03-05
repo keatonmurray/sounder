@@ -7,7 +7,7 @@ use App\Models\Albums;
 use App\Models\Artist;
 use Illuminate\Http\Request;
 
-class FrontController extends Controller
+class ArtistController extends Controller
 {
     public function index() 
     {
