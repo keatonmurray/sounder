@@ -109,7 +109,7 @@ class ArtistPanelController extends Controller
          * Display the form for editing the merch details
          */
 
-         $results = Merch::find($id);
+        $results = Merch::find($id);
         return view('artist.profile.panel.edit')->with('results', $results);
     }
 
@@ -160,8 +160,11 @@ class ArtistPanelController extends Controller
         return redirect('/artist-profile');
     }
 
-    public function destroy()
+    public function destroy(string $id)
     {
-        
+        $album = Merch::find($id);
+        $album->delete();
+
+        return redirect('/artist-profile');
     }
 }

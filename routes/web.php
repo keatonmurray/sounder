@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormsController;
 use App\Http\Controllers\ArtistController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ArtistPanelController;
 use App\Http\Controllers\ArtistProfileController;
@@ -41,7 +40,7 @@ Route::get('/edit/{id}',[ArtistController::class, 'edit'])->middleware('auth:art
 Route::get('/edit-merch/{id}', [ArtistPanelController::class, 'edit']);
 Route::put('/update/{id}', [ArtistController::class, 'update']);
 Route::put('/update-merch/{id}', [ArtistPanelController::class, 'update']);
-
 Route::delete('/destroy/{id}', [ArtistController::class, 'destroy']);
+Route::delete('/delete-merch/{id}', [ArtistPanelController::class, 'destroy']);
 
 Auth::routes();
