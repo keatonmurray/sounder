@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormsController;
 use App\Http\Controllers\ArtistController;
-use App\Http\Controllers\MerchController;
-use App\Http\Controllers\ArtistPanelController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ArtistPanelController;
 use App\Http\Controllers\ArtistProfileController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\ArtistLandingPageController;
 use App\Http\Controllers\Auth\ArtistRegisterController;
 
 /*
@@ -32,15 +32,15 @@ Route::get('/artist-dashboard', [ArtistPanelController::class, 'index']);
 Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
-Route::get('/add-merch', [FormsController::class, 'addMerchForm'])->middleware('auth:artists');
-Route::post('/save-merch', [MerchController::class, 'saveMerch']);
+Route::get('/add-merch', [ArtistPanelController::class, 'create']);
+Route::post('/save-merch', [ArtistPanelController::class, 'store']);
 Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
-Route::get('/artist-profile', [ArtistPanelController::class, 'artistProfile']);
+Route::get('/artist-profile', [ArtistLandingPageController::class, 'index']);
 Route::get('/edit/{id}',[ArtistController::class, 'edit'])->middleware('auth:artists');
-Route::get('/edit-merch/{id}', [MerchController::class, 'editMerch'])->middleware('auth:artists');
+Route::get('/edit-merch/{id}', [ArtistPanelController::class, 'edit']);
 Route::put('/update/{id}', [ArtistController::class, 'update']);
-Route::put('/update-merch/{id}', [MerchController::class, 'updateMerch']);
+Route::put('/update-merch/{id}', [ArtistPanelController::class, 'update']);
 
 Route::delete('/destroy/{id}', [ArtistController::class, 'destroy']);
 

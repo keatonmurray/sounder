@@ -30,9 +30,4 @@ class FormsController extends Controller
     {
         return view('fan.auth.registration');
     }
-
-    public function addMerchForm() 
-    {
-        return view('components.form.add-merch');
-    }
 }

@@ -165,7 +165,9 @@
                                                     <td>{{$result->ship_from}}</td>
                                                     <td>{{$result->ship_to}}</td>
                                                     <td>
-                                                        <form action="" method="POST">
+                                                        <form action="update-merch/{{$result->id}}" method="POST">
+                                                            @csrf
+                                                            @method('PUT')
                                                             <div class="d-flex justify-content-center py-2">
                                                                 <a href="/edit-merch/{{$result->id}}" class="btn mr-1" id="action-btn" type="button">
                                                                     <i class="fa-solid fa-pen-to-square"></i>
