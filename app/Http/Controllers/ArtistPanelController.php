@@ -7,7 +7,11 @@ use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class ArtistController extends Controller
+/**
+ * Controller responsible for everything that goes within the Artist Panel
+ */
+
+class ArtistPanelController extends Controller
 {
 
     /**

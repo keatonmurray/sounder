@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormsController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\MerchController;
-use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\ArtistPanelController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ArtistProfileController;
@@ -28,7 +28,7 @@ Route::get('/upload-music', [FrontController::class, 'create'])->middleware('aut
 Route::get('/albums/{id}', [FrontController::class, 'show']);
 Route::post('/store', [FrontController::class, 'store']);
 Route::get('/artist-account-signup', [FormsController::class, 'artistSignupForm']);
-Route::get('/artist-dashboard', [ArtistController::class, 'index']);
+Route::get('/artist-dashboard', [ArtistPanelController::class, 'index']);
 Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
 Route::get('/dashboard', [HomeController::class, 'index']);
@@ -36,7 +36,7 @@ Route::get('/add-merch', [FormsController::class, 'addMerchForm'])->middleware('
 Route::post('/save-merch', [MerchController::class, 'saveMerch']);
 Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
-Route::get('/artist-profile', [ArtistController::class, 'artistProfile']);
+Route::get('/artist-profile', [ArtistPanelController::class, 'artistProfile']);
 Route::get('/edit/{id}',[FrontController::class, 'edit'])->middleware('auth:artists');
 Route::get('/edit-merch/{id}', [MerchController::class, 'editMerch'])->middleware('auth:artists');
 Route::put('/update/{id}', [FrontController::class, 'update']);
