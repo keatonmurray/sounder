@@ -32,10 +32,46 @@
             </nav>
             <div class="tab-content mt-30" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    
+                    @if($albums)
+                        <div class="mt-30 h-auto">
+                            <div class="row">
+                                <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+                                    <div class="single-album px-2">
+                                        <a href="/albums/{{$albums->id}}">
+                                            <img src="{{asset('storage/' . $albums->album_cover)}}">
+                                        </a>
+                                        <div class="album-info">
+                                            <a href="/albums/{{$albums->id}}">
+                                                <h5>{{$albums->album_title}}</h5>
+                                            </a>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
                 </div>
                 <div class="tab-pane fade" id="nav-merch" role="tabpanel" aria-labelledby="nav-merch-tab">
-                   
+                    @if($merch)
+                        <div class="mt-30 h-auto">
+                            <div class="row">
+                                <div class="col-6 col-md-3 col-lg-3">
+                                    <div class="single-album px-2">
+                                        <a href="/albums/{{$merch->id}}">
+                                            <img src="{{asset('storage/' . $merch->merch_first_upload)}}">
+                                        </a>
+                                        <div class="album-info">
+                                            <p>${{$merch->merch_price}}</p>
+                                            <a href="/albums/{{$merch->id}}">
+                                                <h5>{{$merch->merch_name}}</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
                 </div>
                 <div class="tab-pane fade" id="nav-tours" role="tabpanel" aria-labelledby="nav-tours-tab">
                     <!--tours section here-->

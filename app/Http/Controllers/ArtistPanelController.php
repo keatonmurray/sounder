@@ -37,6 +37,7 @@ class ArtistPanelController extends Controller
          * Display all results in from the albums and merches table that belongs to
          * the currently signed in Artist
          */
+        
         $foreignKey = Auth::guard('artists')->user()->id;
         $findByForeignKey = Artist::find($foreignKey);
         $results = [
