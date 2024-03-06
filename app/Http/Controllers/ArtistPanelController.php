@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Merch;
+use App\Models\Albums;
 use App\Models\Artist;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\ArtistProfileSettings;
 
 /**
  * Controller responsible for everything that goes within the Artist Panel
@@ -20,10 +22,6 @@ class ArtistPanelController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth:artists');
-    }
 
     /**
      * Show the application dashboard.
@@ -54,6 +52,33 @@ class ArtistPanelController extends Controller
          */
 
          return view('components.form.add-merch');
+    }
+    
+    public function show(string $id)
+    {   
+
+        if(Auth::check())
+        {
+            $foreignKey = Auth::guard('artists')->user()->id;
+            $findByForeignKey = Artist::find($foreignKey);
+            $results = [
+                'profile' => ArtistProfileSettings::find($foreignKey),
+                'albums' => $findByForeignKey->albums,
+                'merches' =>    $findByForeignKey->merches,
+            ];
+
+            return view('artist.show')->with($results);
+
+        } else {
+            
+            $results = [
+                'profile' => ArtistProfileSettings::find($id),
+                'albums' => Albums::find($id),
+                'merch' => Merch::find($id)
+            ];
+
+            return view('artist.show')->with($results);
+        }
     }
 
     public function store(Request $request)

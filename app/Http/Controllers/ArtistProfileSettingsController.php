@@ -18,7 +18,8 @@ class ArtistProfileSettingsController extends Controller
     {
         $validate = $request->validate([
             'profile_picture' => 'required',
-            'cover_photo' => 'required'
+            'cover_photo' => 'required',
+            'email' => 'required'
         ]);
 
         if($request->hasFile('profile_picture')) {

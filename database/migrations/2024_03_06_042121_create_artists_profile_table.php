@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('artists_profile', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('email');
             $table->string('profile_picture');
             $table->string('cover_photo');
             $table->timestamps();
@@ -22,6 +23,7 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
+    
     public function down(): void
     {
         Schema::dropIfExists('artists_profile');

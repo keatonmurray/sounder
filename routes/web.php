@@ -8,7 +8,6 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ArtistPanelController;
 use App\Http\Controllers\ArtistProfileController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\ArtistLandingPageController;
 use App\Http\Controllers\Auth\ArtistRegisterController;
 use App\Http\Controllers\ArtistProfileSettingsController;
 
@@ -36,8 +35,7 @@ Route::get('/add-merch', [ArtistPanelController::class, 'create']);
 Route::post('/save-merch', [ArtistPanelController::class, 'store']);
 Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
-Route::get('/artist-profile', [ArtistLandingPageController::class, 'index']);
-Route::get('/artist/{id}', [ArtistLandingPageController::class, 'show']);
+Route::get('/artist-profile/{id}', [ArtistPanelController::class, 'show']);
 Route::get('/edit/{id}',[ArtistController::class, 'edit'])->middleware('auth:artists');
 Route::get('/edit-merch/{id}', [ArtistPanelController::class, 'edit']);
 Route::post('save-artist-profile', [ArtistProfileSettingsController::class, 'store']);
