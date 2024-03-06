@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Artist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\ArtistProfileSettings;
 
 class ArtistLandingPageController extends Controller
 {
@@ -19,6 +20,7 @@ class ArtistLandingPageController extends Controller
         $foreignKey = Auth::guard('artists')->user()->id;
         $findByForeignKey = Artist::find($foreignKey);
         $results = [
+            'profile' => ArtistProfileSettings::find($foreignKey),
             'albums' => $findByForeignKey->albums,
             'merches' =>    $findByForeignKey->merches
         ];

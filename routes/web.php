@@ -10,6 +10,7 @@ use App\Http\Controllers\ArtistProfileController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ArtistLandingPageController;
 use App\Http\Controllers\Auth\ArtistRegisterController;
+use App\Http\Controllers\ArtistProfileSettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,8 +39,12 @@ Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
 Route::get('/artist-profile', [ArtistLandingPageController::class, 'index']);
 Route::get('/edit/{id}',[ArtistController::class, 'edit'])->middleware('auth:artists');
 Route::get('/edit-merch/{id}', [ArtistPanelController::class, 'edit']);
+Route::post('save-artist-profile', [ArtistProfileSettingsController::class, 'store']);
+Route::get('/update-artist-profile/{id}', [ArtistProfileSettingsController::class, 'edit']);
+Route::put('/update-new-artist-profile/{id}', [ArtistProfileSettingsController::class, 'update']);
 Route::put('/update/{id}', [ArtistController::class, 'update']);
 Route::put('/update-merch/{id}', [ArtistPanelController::class, 'update']);
+Route::put('update-artist-profile/{id}', [ArtistPanelController::class, 'update']);
 Route::delete('/destroy/{id}', [ArtistController::class, 'destroy']);
 Route::delete('/delete-merch/{id}', [ArtistPanelController::class, 'destroy']);
 
