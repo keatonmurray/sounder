@@ -37,6 +37,7 @@ Route::post('/save-merch', [ArtistPanelController::class, 'store']);
 Route::post('/login', [ArtistLoginController::class, 'login']);
 Route::get('/create-an-account', [FormsController::class, 'registerLinks']);
 Route::get('/artist-profile', [ArtistLandingPageController::class, 'index']);
+Route::get('/artist/{id}', [ArtistLandingPageController::class, 'show']);
 Route::get('/edit/{id}',[ArtistController::class, 'edit'])->middleware('auth:artists');
 Route::get('/edit-merch/{id}', [ArtistPanelController::class, 'edit']);
 Route::post('save-artist-profile', [ArtistProfileSettingsController::class, 'store']);
