@@ -22,6 +22,10 @@ class ArtistPanelController extends Controller
      *
      * @return void
      */
+    public function __construct()
+    {
+        $this->middleware('auth:artists', ['except' => ['show']]);
+    }
 
     /**
      * Show the application dashboard.
