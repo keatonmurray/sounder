@@ -42,7 +42,7 @@
                             <div class="container">
                                 <button class="btn btn-light d-block w-100 font-weight-bold">
                                     <i class="fa-solid fa-plus"></i>
-                                    Follow
+                                    Follow {{$albums->artists->name}}
                                 </button>
                             </div> <br><br><br>
                             <div class="container mt-2">
