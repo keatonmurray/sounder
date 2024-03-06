@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Profile extends Model
+class ArtistProfile extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $table = 'artists_profile';
     protected $primaryKey = 'id';
-    protected $table = 'artist_profile';
+    protected $guarded = [];
 
-    public function artist() : BelongsTo 
+    public function artists(): BelongsTo
     {
-        return $this->belongsTo(Artist::class, 'email');
+        return $this->belongsTo(Artist::class, 'email', 'email');
     }
 }

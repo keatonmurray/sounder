@@ -28,7 +28,7 @@
                     <div class="col-12 col-md-7 col-lg-8">
                         <div class="featured-artist-content">
                             <div class="section-heading white text-left mb-30">
-                                <p>Artist Name</p>
+                                <p>{{$albums->artists->name}}</p>
                                 <h2>{{$albums->album_title}}</h2>
                             </div>
                             <div class="song-play-area">

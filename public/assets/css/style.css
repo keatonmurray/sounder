@@ -914,6 +914,10 @@ img {
   width: 100%;
   height: auto; }
 
+  #artistDashboardArea {
+    height: auto;
+    background: #f5f9fa;
+  }
   #artistDashboardArea .container {
     padding-top: 60px;
     padding-bottom: 60px;

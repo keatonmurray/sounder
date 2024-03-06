@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="head py-5 bg-dark"><br></div>
-    <section id="artistDashboardArea" class="py-2" style="height: auto; background: #f5f9fa;">
+    <section id="artistDashboardArea" class="py-2">
         <div class="container">
             <h2 class="lead-heading mb-4">Dashboard</h2>
             <div class="row">
@@ -74,119 +74,119 @@
                         </div>
                     </div>
                 </div>
-                 <div class="tab-pane fade" id="nav-add-music" role="tabpanel" aria-labelledby="nav-add-music-tab">
+                 <div class="tab-pane fade" id="nav-add-music" role="tabpanel" aria-labelledby="nav-add-music-tab" style="height: 100vh;">
                     <div class="row">
                         <div class="col-12">
                             <a href="/upload-music" class="btn btn-dark mb-4 float-right" id="action-btn">Add New Music</a>
-                            <div class="card border">
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <h3 class="mb-4 text-uppercase">All Music</h3>
-                                        <thead>
-                                          <tr>
-                                            <th scope="col">
-                                                <h5>Album Title</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>Action</h5>
-                                            </th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                            @if(count($artists) > 0)
+                            @if(count($artists) > 0)
+                                <div class="card border">
+                                    <div class="card-body">
+                                        <table class="table table-bordered">
+                                            <h3 class="mb-4 text-uppercase">All Music</h3>
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    <h5>Album Title</h5>
+                                                </th>
+                                                <th scope="col">
+                                                    <h5>Action</h5>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
                                                 @foreach($artists as $result)
-                                                <tr> 
-                                                    <td>
-                                                        <a href="/albums/{{$result->id}}"><img src="{{asset('storage/' . $result->album_cover)}}" style="height: 50px; width: 50px;" class="mr-2"></a>
-                                                        {{$result->album_title}}
-                                                    </td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-center py-2">
-                                                            <form action="/destroy/{{$result->id}}" method="POST">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <a href="/edit/{{$result->id}}" class="btn btn-small mr-1" id="action-btn" type="button">
-                                                                    <i class="fa-solid fa-pen-to-square"></i>
-                                                                    Edit
-                                                                </a>
-                                                                <button class="btn ml-1" id="action-btn" type="submit">
-                                                                    <i class="fa-solid fa-trash"></i>
-                                                                    Delete
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                @endforeach
-                                            @endif
-                                        </tbody>
-                                    </table>
+                                                    <tr> 
+                                                        <td>
+                                                            <a href="/albums/{{$result->id}}"><img src="{{asset('storage/' . $result->album_cover)}}" style="height: 50px; width: 50px;" class="mr-2"></a>
+                                                            {{$result->album_title}}
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex justify-content-center py-2">
+                                                                <form action="/destroy/{{$result->id}}" method="POST">
+                                                                    @csrf
+                                                                    @method('DELETE')
+                                                                    <a href="/edit/{{$result->id}}" class="btn btn-small mr-1" id="action-btn" type="button">
+                                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                                        Edit
+                                                                    </a>
+                                                                    <button class="btn ml-1" id="action-btn" type="submit">
+                                                                        <i class="fa-solid fa-trash"></i>
+                                                                        Delete
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                         </div>
                     </div>
                  </div>
-                 <div class="tab-pane fade" id="nav-add-merch" role="tabpanel" aria-labelledby="nav-add-merch-tab">
+                 <div class="tab-pane fade" id="nav-add-merch" role="tabpanel" aria-labelledby="nav-add-merch-tab" style="height: 100vh;">
                     <div class="row">
                         <div class="col-12">
                             <a href="/add-merch" class="btn btn-dark mb-4 float-right" id="action-btn">Add a New Merch</a>
-                            <div class="card border">
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <h3 class="mb-4 text-uppercase">All Merches</h3>
-                                        <thead>
-                                          <tr>
-                                            <th scope="col">
-                                                <h5>Merch Name</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>Price</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>Shipping From</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>Ships To</h5>
-                                            </th>
-                                            <th scope="col">
-                                                <h5>Action</h5>
-                                            </th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                            @if(count($merches) > 0)
+                            @if(count($merches) > 0)
+                                <div class="card border">
+                                    <div class="card-body">
+                                        <table class="table table-bordered">
+                                            <h3 class="mb-4 text-uppercase">All Merches</h3>
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    <h5>Merch Name</h5>
+                                                </th>
+                                                <th scope="col">
+                                                    <h5>Price</h5>
+                                                </th>
+                                                <th scope="col">
+                                                    <h5>Shipping From</h5>
+                                                </th>
+                                                <th scope="col">
+                                                    <h5>Ships To</h5>
+                                                </th>
+                                                <th scope="col">
+                                                    <h5>Action</h5>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
                                                 @foreach($merches as $result)
-                                                <tr> 
-                                                    <td>
-                                                        <a href="/albums/{{$result->id}}"><img src="{{asset('storage/' . $result->merch_first_upload)}}" style="height: 50px; width: 50px;" class="mr-2"></a>
-                                                        {{$result->merch_name}}
-                                                    </td>
-                                                    <td>{{$result->merch_price}}</td>
-                                                    <td>{{$result->ship_from}}</td>
-                                                    <td>{{$result->ship_to}}</td>
-                                                    <td>
-                                                        <form action="delete-merch/{{$result->id}}" method="POST">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <div class="d-flex justify-content-center py-2">
-                                                                <a href="/edit-merch/{{$result->id}}" class="btn mr-1" id="action-btn" type="button">
-                                                                    <i class="fa-solid fa-pen-to-square"></i>
-                                                                    Edit
-                                                                </a>
-                                                                <button class="btn ml-1" id="action-btn" type="submit">
-                                                                    <i class="fa-solid fa-trash"></i>
-                                                                    Delete
-                                                                </button>
-                                                            </div>
-                                                        </form>
-                                                    </td>
-                                                </tr>
+                                                    <tr> 
+                                                        <td>
+                                                            <a href="/albums/{{$result->id}}"><img src="{{asset('storage/' . $result->merch_first_upload)}}" style="height: 50px; width: 50px;" class="mr-2"></a>
+                                                            {{$result->merch_name}}
+                                                        </td>
+                                                        <td>{{$result->merch_price}}</td>
+                                                        <td>{{$result->ship_from}}</td>
+                                                        <td>{{$result->ship_to}}</td>
+                                                        <td>
+                                                            <form action="delete-merch/{{$result->id}}" method="POST">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <div class="d-flex justify-content-center py-2">
+                                                                    <a href="/edit-merch/{{$result->id}}" class="btn mr-1" id="action-btn" type="button">
+                                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                                        Edit
+                                                                    </a>
+                                                                    <button class="btn ml-1" id="action-btn" type="submit">
+                                                                        <i class="fa-solid fa-trash"></i>
+                                                                        Delete
+                                                                    </button>
+                                                                </div>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
                                                 @endforeach
-                                            @endif
-                                        </tbody>
-                                    </table>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                         </div>
                     </div>
                  </div>
