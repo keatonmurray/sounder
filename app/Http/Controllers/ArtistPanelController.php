@@ -61,7 +61,7 @@ class ArtistPanelController extends Controller
     public function show(string $id)
     {   
 
-        if(Auth::check())
+        if(Auth::guard('artists')->user()->id ?? '')
         {
             $foreignKey = Auth::guard('artists')->user()->id;
             $findByForeignKey = Artist::find($foreignKey);
@@ -73,7 +73,9 @@ class ArtistPanelController extends Controller
 
             return view('artist.show')->with($results);
 
-        } else {
+        } else 
+        
+        {
             
             $results = [
                 'profile' => ArtistProfileSettings::find($id),
