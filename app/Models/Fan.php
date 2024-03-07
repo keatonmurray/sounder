@@ -3,14 +3,15 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Music;
+use App\Models\Collections;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Fan extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -48,7 +49,7 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function music() {
-        return $this->hasMany(Music::class, 'id');
+    public function collections(): HasMany {
+        return $this->hasMany(Collections::class, 'email', 'email');
     }
 }
