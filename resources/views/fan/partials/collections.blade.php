@@ -1,15 +1,15 @@
-@if($music)
+
     <div class="row oneMusic-albums">
         <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t g u">
             <div class="single-album">
-                <a href="/albums/{{$result->id}}">
-                    <img src="{{asset('storage/' . $result->album_cover)}}" alt="">
+                <a href="">
+                    <img src="" alt="">
                 </a>
                 <div class="album-info">
-                    <a href="/albums/{{$result->id}}">
-                        <h5>{{$result->artist_name}}</h5>
+                    <a href="">
+                        <h5></h5>
                     </a>
-                    <p>{{$result->album_title}}</p>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -22,6 +22,5 @@
             </div>
         </div>
     </div>
-@else
+
 <p class="text-center">You have not purchased anything yet</p>
-@endif

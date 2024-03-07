@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Music;
+use App\Models\Fan;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $user_id = auth()->user()->id;
-        $user = User::find($user_id);
+        $user = Fan::find($user_id);
         return view('fan.index')->with('music', $user->collections);
     }
 }

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('collections', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('email');
             $table->string('artist_name');
             $table->string('album_title');
             $table->timestamps();
