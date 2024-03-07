@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fan;
+use App\Models\Collections;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -12,10 +14,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth:web');
-    }
 
     /**
      * Show the application dashboard.
@@ -24,8 +22,26 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user_id = auth()->user()->id;
-        $user = Fan::find($user_id);
-        return view('fan.index')->with('music', $user->collections);
+        if(Auth::guard('web')->user()->id ?? '')
+        {
+            $foreignKey = Auth::guard('web')->user()->id;
+            $findByForeignKey = Fan::find($foreignKey);
+            $results = [
+                'albums' => $findByForeignKey->albums,
+                'merches' =>    $findByForeignKey->merches,
+            ];
+
+            return view('fan.index')->with($results);
+
+        } else 
+        
+        {
+            
+            $results = [
+                'albums' => Collections::all()
+            ];
+
+            return view('fan.index')->with($results);
+        }
     }
 }
