@@ -18,7 +18,7 @@
                     <div class="nav nav-tabs nav-fill d-flex w-100 justify-content-center" id="nav-tab" role="tablist">
                         <h4 class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="font-size: 25px; font-weight: 400;"><i class="fa-solid fa-table-cells"></i></h4>
                         <h4 class="nav-item nav-link" id="nav-merch-tab" data-toggle="tab" href="#nav-merch" role="tab" aria-controls="nav-merch" aria-selected="false" style="font-size: 25px; font-weight: 400;"><i class="fa-solid fa-heart"></i></h4>
-                        <h4 class="nav-item nav-link" id="nav-tours-tab" data-toggle="tab" href="#nav-tours" role="tab" aria-controls="nav-tours" aria-selected="false" style="font-size: 25px; font-weight: 400;"><i class="fa-solid fa-music"></i></h4>
+                        <h4 class="nav-item nav-link" id="nav-tours-tab" data-toggle="tab" href="#nav-tours" role="tab" aria-controls="nav-tours" aria-selected="false" style="font-size: 25px; font-weight: 400;"><i class="fa-solid fa-user-plus"></i></h4>
                     </div>
                 </nav>
                 <div class="tab-content mt-30" id="nav-tabContent">
@@ -54,7 +54,7 @@
                     <div class="nav nav-tabs nav-fill d-flex w-100 justify-content-center" id="nav-tab" role="tablist">
                         <h4 class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="font-size: 25px; font-weight: 400;"><i class="fa-solid fa-table-cells"></i></h4>
                         <h4 class="nav-item nav-link" id="nav-merch-tab" data-toggle="tab" href="#nav-merch" role="tab" aria-controls="nav-merch" aria-selected="false" style="font-size: 25px; font-weight: 400;"><i class="fa-solid fa-heart"></i></h4>
-                        <h4 class="nav-item nav-link" id="nav-tours-tab" data-toggle="tab" href="#nav-tours" role="tab" aria-controls="nav-tours" aria-selected="false" style="font-size: 25px; font-weight: 400;"><i class="fa-solid fa-music"></i></h4>
+                        <h4 class="nav-item nav-link" id="nav-tours-tab" data-toggle="tab" href="#nav-tours" role="tab" aria-controls="nav-tours" aria-selected="false" style="font-size: 25px; font-weight: 400;"><i class="fa-solid fa-user-plus"></i></h4>
                     </div>
                 </nav>
                 <div class="tab-content mt-30" id="nav-tabContent">

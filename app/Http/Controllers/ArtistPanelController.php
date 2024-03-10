@@ -37,7 +37,7 @@ class ArtistPanelController extends Controller
     {
         /**
          * Display all results in from the albums and merches table that belongs to
-         * the currently signed in Artist
+         * the currently signed in Artist in the Dashboard View
          */
         
         $foreignKey = Auth::guard('artists')->user()->id;
@@ -46,7 +46,7 @@ class ArtistPanelController extends Controller
             'artists' => $findByForeignKey->albums,
             'merches' => $findByForeignKey->merches
         ];
-        return view('artist.profile.dashboard')->with($results);
+        return view('artist.index')->with($results);
     }
 
     public function create()
@@ -60,6 +60,10 @@ class ArtistPanelController extends Controller
     
     public function show(string $id)
     {   
+
+        /**
+         * Display the main Artist Profile page according to the guard
+         */
 
         if(Auth::guard('artists')->user()->id ?? '')
         {
@@ -78,7 +82,7 @@ class ArtistPanelController extends Controller
         {
             
             $results = [
-                'profile' => ArtistProfileSettings::find($id),
+                'profiles' => ArtistProfileSettings::find($id),
                 'albums' => Albums::find($id),
                 'merch' => Merch::find($id)
             ];

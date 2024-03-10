@@ -164,6 +164,56 @@ img {
   padding-top: 100px;
   padding-bottom: 70px; }
 
+  #artistProfile1{
+    height: auto;
+    padding-bottom: 100px;
+}
+
+#artistProfile1 .artist-profile-section {
+    margin-top: 10%;
+}
+
+#artistProfileInfo img{
+    height: 200px;
+    width: 200px;
+}
+
+#artistProfileInfo .artist-name {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+#artistProfileInfo .country {
+    font-weight: 400;
+    margin-top: -10px;
+    color: #ffffff;
+}
+
+#artistProfileInfo .buttons a {
+  font-weight: bold;
+  border-radius: 12px;
+  border-width: 0;
+}
+
+#artistNavSection {
+    margin-top: 30px;
+    min-height: 500px;
+    height: auto;
+    min-width: 100%;
+}
+
+#artistNavSection .nav-item {
+    font-size: 25px; 
+    font-weight: 400;
+}
+
+.informative-message {
+  margin-top: 180px;
+}
+
+
 /* :: 3.4.0 Section Heading */
 .section-heading {
   position: relative;
