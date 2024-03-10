@@ -72,7 +72,7 @@ class ArtistPanelController extends Controller
             $results = [
                 'profile' => ArtistProfileSettings::find($foreignKey),
                 'albums' => $findByForeignKey->albums,
-                'merches' =>    $findByForeignKey->merches,
+                'merches' => $findByForeignKey->merches,
             ];
 
             return view('artist.show')->with($results);
@@ -80,11 +80,12 @@ class ArtistPanelController extends Controller
         } else 
         
         {
-            
+
+            $foreignKey = Artist::find($id);
             $results = [
                 'profiles' => ArtistProfileSettings::find($id),
-                'albums' => Albums::find($id),
-                'merch' => Merch::find($id)
+                'albums' => $foreignKey->albums,
+                'merch' =>$foreignKey->merch
             ];
 
             return view('artist.show')->with($results);
