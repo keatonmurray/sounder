@@ -11,6 +11,10 @@ class FanProfileSettings extends Model
 {
     use HasFactory;
 
+    protected $table = 'fans_profile';
+    protected $primaryKey = 'id';
+    protected $guarded = [];
+
     public function fan(): BelongsTo
     {
         return $this->belongsTo(Fan::class, 'email', 'email');

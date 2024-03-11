@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FanPanelController;
 use App\Http\Controllers\FormsController;
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\FanPanelController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ArtistPanelController;
 use App\Http\Controllers\ArtistProfileController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\FanProfileSettingsController;
 use App\Http\Controllers\Auth\ArtistRegisterController;
 use App\Http\Controllers\ArtistProfileSettingsController;
 
@@ -39,11 +40,14 @@ Route::get('/artist-profile/{id}', [ArtistPanelController::class, 'show']);
 Route::get('/edit/{id}',[ArtistController::class, 'edit'])->middleware('auth:artists');
 Route::get('/edit-merch/{id}', [ArtistPanelController::class, 'edit']);
 Route::post('save-artist-profile', [ArtistProfileSettingsController::class, 'store']);
+Route::post('save-fan-profile', [FanProfileSettingsController::class, 'store']);
 Route::get('/update-artist-profile/{id}', [ArtistProfileSettingsController::class, 'edit']);
 Route::put('/update-new-artist-profile/{id}', [ArtistProfileSettingsController::class, 'update']);
+Route::get('/update-fan-profile/{id}', [FanProfileSettingsController::class, 'edit']);
 Route::put('/update/{id}', [ArtistController::class, 'update']);
 Route::put('/update-merch/{id}', [ArtistPanelController::class, 'update']);
 Route::put('update-artist-profile/{id}', [ArtistPanelController::class, 'update']);
+Route::put('update-fan-profile/{id}', [FanProfileSettingsController::class, 'update']);
 Route::delete('/destroy/{id}', [ArtistController::class, 'destroy']);
 Route::delete('/delete-merch/{id}', [ArtistPanelController::class, 'destroy']);
 
