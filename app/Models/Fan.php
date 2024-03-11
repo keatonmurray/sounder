@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Collections;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\FanProfileSettings;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -50,7 +51,7 @@ class Fan extends Authenticatable
 
     public function profiles()
     {
-        return $this->hasMany(Collections::class, 'email', 'email');
+        return $this->hasMany(FanProfileSettings::class, 'email', 'email');
     }
 
     public function collections() {
