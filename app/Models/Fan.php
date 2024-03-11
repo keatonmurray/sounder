@@ -22,6 +22,8 @@ class Fan extends Authenticatable
      */
 
     protected $guard = 'web';
+    protected $table = 'fans';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'name',
