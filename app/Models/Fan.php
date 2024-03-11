@@ -7,7 +7,7 @@ use App\Models\Collections;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\FanProfileSettings;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -51,12 +51,12 @@ class Fan extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function profiles()
+    public function profiles(): HasMany
     {
         return $this->hasMany(FanProfileSettings::class, 'email', 'email');
     }
 
-    public function collections() {
+    public function collections(): HasMany {
         return $this->hasMany(Collections::class, 'email', 'email');
     }
 }

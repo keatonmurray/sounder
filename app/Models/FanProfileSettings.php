@@ -15,7 +15,7 @@ class FanProfileSettings extends Model
     protected $primaryKey = 'id';
     protected $guarded = [];
 
-    public function fan(): BelongsTo
+    public function fans(): BelongsTo
     {
         return $this->belongsTo(Fan::class, 'email', 'email');
     }

@@ -37,7 +37,7 @@
                                     </div>
                                 </x-form.border><br/>
                             </div>
-                            <input type="email" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
+                            <input type="hidden" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
                         </div>
                         <div class="text-center mt-30">
                             <button class="btn oneMusic-btn-dark d-block w-100" type="submit">Save Changes</button>
@@ -73,7 +73,7 @@
                                 </div>
                             </x-form.border><br/>
                         </div>
-                        <input type="email" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
+                        <input type="hidden" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
                     </div>
                     <div class="text-center mt-30">
                         <button class="btn oneMusic-btn-dark d-block w-100" type="submit">Save Changes</button>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Fan;
 use App\Models\Collections;
 use Illuminate\Http\Request;
+use App\Models\FanProfileSettings;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -26,26 +27,34 @@ class FanPanelController extends Controller
      */
     public function index()
     {
-        if(Auth::guard('web')->user()->id ?? '')
-        {
-            $foreignKey = Auth::guard('web')->user()->id;
-            $findByForeignKey = Fan::find($foreignKey);
-            $results = [
-                'albums' => $findByForeignKey->albums,
-                'merches' =>    $findByForeignKey->merches,
-            ];
+        /**
+         * Display the main Artist Profile page according to the guard
+         */
 
-            return view('fan.index')->with($results);
-
-        } else 
-        
-        {
-            
-            $results = [
-                'albums' => Collections::all()
-            ];
-
-            return view('fan.index')->with($results);
-        }
+         if(Auth::guard('web')->user()->id ?? '')
+         {
+             $foreignKey = Auth::guard('web')->user()->id;
+             $findByForeignKey = Fan::find($foreignKey);
+             $results = [
+                 'profile' => FanProfileSettings::find($foreignKey),
+                 'albums' => $findByForeignKey->albums,
+                 'merches' => $findByForeignKey->merches,
+             ];
+ 
+             return view('fan.index')->with($results);
+ 
+         } else 
+         
+         {
+ 
+             $foreignKey = Fan::find($id);
+             $results = [
+                 'profiles' => FanProfileSettings::find($id),
+                 'albums' => $foreignKey->albums,
+                 'merch' =>$foreignKey->merches
+             ];
+ 
+             return view('fan.index')->with($results);
+         }
     }
 }
