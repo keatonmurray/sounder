@@ -5,7 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Merch;
 use App\Models\Albums;
-use App\Models\Profile;
+use App\Models\ArtistProfileSettings;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -64,7 +64,7 @@ class Artist extends Authenticatable
 
     public function profiles(): HasMany
     {
-        return $this->hasMany(Profile::class, 'email', 'email');
+        return $this->hasMany(ArtistProfileSettings::class, 'email', 'email');
     }
 
 

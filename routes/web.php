@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FanPanelController;
 use App\Http\Controllers\FormsController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\Auth\LoginController;
@@ -30,7 +30,7 @@ Route::get('/artist-account-signup', [FormsController::class, 'artistSignupForm'
 Route::get('/artist-dashboard', [ArtistPanelController::class, 'index']);
 Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
-Route::get('/dashboard', [HomeController::class, 'index']);
+Route::get('/dashboard', [FanPanelController::class, 'index']);
 Route::get('/add-merch', [ArtistPanelController::class, 'create']);
 Route::post('/save-merch', [ArtistPanelController::class, 'store']);
 Route::post('/login', [ArtistLoginController::class, 'login']);

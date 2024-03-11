@@ -48,6 +48,11 @@ class Fan extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function profiles()
+    {
+        return $this->hasMany(Collections::class, 'email', 'email');
+    }
+
     public function collections() {
         return $this->hasMany(Collections::class, 'email', 'email');
     }

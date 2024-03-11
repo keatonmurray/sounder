@@ -7,7 +7,11 @@ use App\Models\Collections;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+/**
+ * Controller responsible for anything that goes within the Fan Panel 
+ */
+
+class FanPanelController extends Controller
 {
     /**
      * Create a new controller instance.
