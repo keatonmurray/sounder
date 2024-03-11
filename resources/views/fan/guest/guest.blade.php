@@ -4,14 +4,14 @@
         <div class="artist-profile-section">
             <div id="artistProfileInfo">
                 <img src="{{$profiles->profile_picture ? asset('storage/' . $profiles->profile_picture) : asset('assets/img/bg-img/no-image.png')}}" class="rounded-circle" ></br>
-                <h2 class="artist-name">{{$profiles->artists->name}}</h2>
+                <h2 class="artist-name">{{$profiles->fans->name}}</h2>
                 <h6 class="country">Montreal, CA</h6>
                 <div class="buttons">
                     <a href="" id="followBtn" class="btn btn-light mt-2 mr-1">
                         <i class="fa-solid fa-user-plus"></i> Follow
                     </a>
                     <a href="" id="messageBtn" class="btn btn-light mt-2 ml-1">
-                        <i class="fa-solid fa-message"></i> Message
+                        <i class="fa-solid fa-share"></i> Share Profile
                     </a>
                 </div>
             </div>
@@ -20,19 +20,18 @@
     <div id="artistNavSection">
         <div class="container">
             <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                <h4 class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Albums</h4>
-                <h4 class="nav-item nav-link" id="nav-merch-tab" data-toggle="tab" href="#nav-merch" role="tab" aria-controls="nav-merch" aria-selected="false">Merch</h4>
-                <h4 class="nav-item nav-link" id="nav-tours-tab" data-toggle="tab" href="#nav-tours" role="tab" aria-controls="nav-tours" aria-selected="false">Tours</h4>
+                <h4 class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Collections <p>0</p></h4>
+                <h4 class="nav-item nav-link" id="nav-merch-tab" data-toggle="tab" href="#nav-merch" role="tab" aria-controls="nav-merch" aria-selected="false">Wishlist <p>0</p></h4>
             </div>
             <div class="tab-content mt-30" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    @include('artist.guest.partials.albums')
+               
                 </div>
                 <div class="tab-pane fade" id="nav-merch" role="tabpanel" aria-labelledby="nav-merch-tab">
-                    @include('artist.guest.partials.merch')
+                
                 </div>
                 <div class="tab-pane fade" id="nav-tours" role="tabpanel" aria-labelledby="nav-tours-tab">
-                    @include('artist.guest.partials.tours')
+               
                 </div>
             </div>
         </div>

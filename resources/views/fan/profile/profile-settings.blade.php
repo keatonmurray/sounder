@@ -16,7 +16,7 @@
                                     <div class="text-center mb-4 mx-2">
                                     <h6>Profile Picture</h6>
                                         <x-form.thumbnail type="mt-3 mb-2">
-                                        <img src="{{ asset('assets/img/bg-img/no-image.png')}}" class="artist-profile-photo" style="height: 200px; width: 200px;">
+                                            <img src="{{$profile->profile_picture ? asset('storage/' . $profile->profile_picture) : asset('assets/img/bg-img/no-image.svg')}}" class="artist-profile-photo" style="height: 200px; width: 200px;">
                                         </x-form.thumbnail>
                                         <p>Profile photo must not exceed 600x600 pixels</p>
                                         <input type="file" name="profile_picture" id="profilePic" class="artist-profile-photo-upload">
@@ -29,7 +29,7 @@
                                     <div class="text-center mb-4 mx-2">
                                     <h6>Cover Photo</h6>
                                         <x-form.thumbnail type="mt-3 mb-2">
-                                        <img src="{{ asset('assets/img/bg-img/no-image.png')}}" class="artist-cover-photo" style="height: 200px; width: 200px;">
+                                            <img src="{{$profile->cover_photo ? asset('storage/' . $profile->cover_photo) : asset('assets/img/bg-img/no-image.svg')}}" class="artist-cover-photo" style="height: 200px; width: 200px;">
                                         </x-form.thumbnail>
                                         <p>Cover photo must not exceed 1200x1200 pixels</p>
                                         <input type="file" name="cover_photo" id="coverPhoto" class="artist-cover-photo-upload">
@@ -52,7 +52,7 @@
                                 <div class="text-center mb-4 mx-2">
                                 <h6>Profile Picture</h6>
                                     <x-form.thumbnail type="mt-3 mb-2">
-                                    <img src="{{ asset('assets/img/bg-img/no-image.png')}}" class="artist-profile-photo" style="height: 200px; width: 200px;">
+                                    <img src="{{asset('assets/img/bg-img/no-image.svg')}}" class="artist-profile-photo" style="height: 200px; width: 200px;">
                                     </x-form.thumbnail>
                                     <p>Profile photo must not exceed 600x600 pixels</p>
                                     <input type="file" name="profile_picture" id="profilePic" class="artist-profile-photo-upload">

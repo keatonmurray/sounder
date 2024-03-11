@@ -31,7 +31,7 @@ Route::get('/artist-account-signup', [FormsController::class, 'artistSignupForm'
 Route::get('/artist-dashboard', [ArtistPanelController::class, 'index']);
 Route::post('/artist/register', [ArtistRegisterController::class, 'register']);
 Route::get('/fan-account-signup', [FormsController::class, 'fanSignupForm']);
-Route::get('/dashboard', [FanPanelController::class, 'index']);
+Route::get('/dashboard/{id}', [FanPanelController::class, 'index']);
 Route::get('/add-merch', [ArtistPanelController::class, 'create']);
 Route::post('/save-merch', [ArtistPanelController::class, 'store']);
 Route::post('/login', [ArtistLoginController::class, 'login']);
@@ -43,6 +43,7 @@ Route::post('save-artist-profile', [ArtistProfileSettingsController::class, 'sto
 Route::post('save-fan-profile', [FanProfileSettingsController::class, 'store']);
 Route::get('/update-artist-profile/{id}', [ArtistProfileSettingsController::class, 'edit']);
 Route::put('/update-new-artist-profile/{id}', [ArtistProfileSettingsController::class, 'update']);
+Route::put('/update-new-fan-profile/{id}', [FanProfileSettingsController::class, 'update']);
 Route::get('/update-fan-profile/{id}', [FanProfileSettingsController::class, 'edit']);
 Route::put('/update/{id}', [ArtistController::class, 'update']);
 Route::put('/update-merch/{id}', [ArtistPanelController::class, 'update']);

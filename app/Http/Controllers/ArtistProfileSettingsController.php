@@ -31,7 +31,7 @@ class ArtistProfileSettingsController extends Controller
         }
 
         ArtistProfileSettings::create($validate);
-         return redirect('/artist-profile');
+         return redirect('/dashboard');
 
     }
    
@@ -57,7 +57,7 @@ class ArtistProfileSettingsController extends Controller
         }
 
          $id->update($validate);
-         return redirect('/artist-profile');
+         return redirect('/dashboard');
 
     }
 

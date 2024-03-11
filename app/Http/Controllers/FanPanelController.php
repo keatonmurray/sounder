@@ -25,7 +25,7 @@ class FanPanelController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(string $id)
     {
         /**
          * Display the main Artist Profile page according to the guard
