@@ -85,7 +85,7 @@ class ArtistPanelController extends Controller
             $results = [
                 'profiles' => ArtistProfileSettings::find($id),
                 'albums' => $foreignKey->albums,
-                'merch' =>$foreignKey->merch
+                'merch' =>$foreignKey->merches
             ];
 
             return view('artist.show')->with($results);

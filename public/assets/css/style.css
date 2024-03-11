@@ -204,6 +204,11 @@ img {
     min-width: 100%;
 }
 
+#artistNavSection .container #nav-tab {
+  min-width: 310px;
+  width: 100%;
+}
+
 #artistNavSection .nav-item {
     font-size: 25px; 
     font-weight: 400;
