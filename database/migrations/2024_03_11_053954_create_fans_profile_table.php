@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('fans_profile', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('email');
+            $table->string('profile_picture');
+            $table->string('cover_photo');
             $table->timestamps();
         });
     }
