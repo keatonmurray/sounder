@@ -18,6 +18,8 @@
                             </a>
                             <form action="/add-to-wishlist" method="POST">
                                 @csrf
+                                <input type="text" name="item" value="{{$albums->id}}">
+                                <input type="email" name="email" value="{{$albums->email}}">
                                 <button class="btn btn-light ml-2 w-100 font-weight-bold" type="submit">
                                     <i class="fa-solid fa-heart mr-1"></i>
                                     Add to wishlist

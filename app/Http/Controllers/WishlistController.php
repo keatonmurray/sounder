@@ -14,5 +14,8 @@ class WishlistController extends Controller
             'email' => 'required',
             'item' => 'required'
         ]);
+
+        Wishlists::create($validate);
+        return redirect('/dashboard');
     }
 }

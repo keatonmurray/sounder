@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fan;
+use App\Models\Wishlists;
 use App\Models\Collections;
 use Illuminate\Http\Request;
 use App\Models\FanProfileSettings;
@@ -28,7 +29,7 @@ class FanPanelController extends Controller
     public function index(string $id)
     {
         /**
-         * Display the main Artist Profile page according to the guard
+         * Display the main Fan Profile page according to the guard
          */
 
          if(Auth::guard('web')->user()->id ?? '')
@@ -39,6 +40,7 @@ class FanPanelController extends Controller
                  'profile' => FanProfileSettings::find($foreignKey),
                  'albums' => $findByForeignKey->albums,
                  'merches' => $findByForeignKey->merches,
+                 'wishlist' => Wishlists::find($foreignKey)->count()
              ];
  
              return view('fan.index')->with($results);
