@@ -8,6 +8,6 @@ class WishlistController extends Controller
 {
     public function store()
     {
-        
+        echo "Added to wishlist!";
     }
 }

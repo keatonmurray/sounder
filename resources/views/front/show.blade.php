@@ -16,7 +16,8 @@
                                 <i class="fa-brands fa-paypal mr-1"></i>
                                 Buy for ${{$albums->digital_audio_price}}
                             </a>
-                            <form action="" method="POST">
+                            <form action="/add-to-wishlist" method="POST">
+                                @csrf
                                 <button class="btn btn-light ml-2 w-100 font-weight-bold" type="submit">
                                     <i class="fa-solid fa-heart mr-1"></i>
                                     Add to wishlist
