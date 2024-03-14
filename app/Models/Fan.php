@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Wishlists;
 use App\Models\Collections;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\FanProfileSettings;
@@ -58,5 +59,10 @@ class Fan extends Authenticatable
 
     public function collections(): HasMany {
         return $this->hasMany(Collections::class, 'email', 'email');
+    }
+
+    public function wishlists(): HasMany
+    {
+        return $this->hasMany(Wishlists::class, 'email', 'email');
     }
 }
