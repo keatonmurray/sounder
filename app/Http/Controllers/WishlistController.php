@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Fan;
+use App\Models\Wishlists;
 use Illuminate\Http\Request;
 
 class WishlistController extends Controller
 {
-    public function store()
+    public function store(Request $request)
     {
-        echo "Added to wishlist!";
+        $validate = $request->validate([
+            'email' => 'required',
+            'item' => 'required'
+        ]);
     }
 }
