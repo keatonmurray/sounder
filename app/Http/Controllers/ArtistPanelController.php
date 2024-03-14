@@ -73,6 +73,8 @@ class ArtistPanelController extends Controller
                 'profile' => ArtistProfileSettings::find($foreignKey),
                 'albums' => $findByForeignKey->albums,
                 'merches' => $findByForeignKey->merches,
+                'album_count' => $findByForeignKey->albums->count(),
+                'merch_count' => $findByForeignKey->merches->count()
             ];
 
             return view('artist.show')->with($results);
