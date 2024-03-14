@@ -40,7 +40,8 @@ class FanPanelController extends Controller
                  'profile' => FanProfileSettings::find($foreignKey),
                  'albums' => $findByForeignKey->albums,
                  'merches' => $findByForeignKey->merches,
-                 'wishlist' => Wishlists::find($foreignKey)->count()
+                 'wishlist' => $findByForeignKey->wishlists->count(),
+                 'collections' => $findByForeignKey->collections->count()
              ];
  
              return view('fan.index')->with($results);
